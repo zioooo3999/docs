@@ -1,0 +1,49 @@
+---
+title: "3.1 System Architecture"
+description: "Headless architecture overview of the Tempe Park website — how the frontend, backend, and CMS interact."
+icon: "layer-group"
+---
+
+The Tempe Park website was built using a **headless architecture** approach, where the frontend and backend systems are separated to increase flexibility, scalability, and performance.
+
+---
+
+## Architecture Layers
+
+In this architecture:
+
+<CardGroup cols={2}>
+  <Card title="Frontend" color="#10b981" icon="mobile">
+    The frontend functions as a **presentation layer** that interacts directly with users.
+
+    Developed using **Next.js**, which supports:
+
+    - **Server-Side Rendering (SSR)** to improve performance and SEO
+    - **Static Site Generation (SSG)** for fast, pre-built pages
+  </Card>
+
+  <Card title="Backend (CMS)" color="#10b981" icon="server">
+    The backend functions as a **content management center** and data provider via API.
+
+    Powered by **Strapi**, which provides a **RESTful API** to manage and distribute content to the frontend.
+  </Card>
+</CardGroup>
+
+---
+
+## This Architecture Allows
+
+<Steps>
+  <Step title="Flexible content management by non-technical teams">
+  </Step>
+  <Step title="Optimal website performance">
+  </Step>
+  <Step title="Ease of integration with third-party services">
+  </Step>
+  <Step title="Scalability for future development">
+  </Step>
+</Steps>
+
+---
+
+## System Flow

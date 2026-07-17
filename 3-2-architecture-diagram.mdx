@@ -1,0 +1,91 @@
+---
+title: "3.2 Architecture Diagram"
+description: "Visual and descriptive breakdown of the Tempe Park website system architecture and its connected components."
+icon: "diagram-project"
+---
+
+Conceptually, the system architecture can be described as follows:
+
+<Frame>
+  ![Architecture Diagram](/images/0.png)
+</Frame>
+
+The Tempe Park website architecture consists of three main parts, namely **User**, **Frontend**, **Backend (CMS)**, and **External Services** which are connected according to feature requirements.
+
+---
+
+## 1. User Access to the Website
+
+- The flow begins when the **User** accesses the Tempe Park website via a browser.
+- Requests from users will be directed to the **Frontend** built using **Next.js**.
+- The frontend is responsible for displaying pages, managing navigation, and handling user interactions.
+
+---
+
+## 2. Data Fetching Process (Content Fetching)
+
+When a page requires data (e.g., articles, programs, or facility information):
+
+<Steps>
+  <Step title="Frontend sends request to Backend CMS via API">
+  </Step>
+  <Step title="Backend uses Strapi to manage content">
+  </Step>
+  <Step title="Backend fetches data from Database (PostgreSQL/MySQL)">
+  </Step>
+  <Step title="Data is returned to the frontend in JSON format">
+  </Step>
+  <Step title="The frontend renders the data into a view that can be seen by the user">
+  </Step>
+</Steps>
+
+---
+
+## 3. Interaction with External Services
+
+Besides displaying content, the frontend is also connected to several external services:
+
+<CardGroup cols={3}>
+  <Card title="WhatsApp" color="#22c55e" icon="message">
+    Used as a **communication channel**.
+
+    Users can click the → button to be directed to open the WhatsApp chat.
+  </Card>
+
+  <Card title="Social Media (Instagram, TikTok, X)" color="#6366f1" icon="share-nodes">
+    Functions as a **promotional and engagement media**.
+
+    Users will be redirected to the official social media page.
+  </Card>
+
+  <Card title="MOBI Ticketing" color="#f59e0b" icon="ticket">
+    Used for the **ticket purchase process**.
+
+    Users will be redirected to an external ticketing system or connected via API (if available).
+  </Card>
+</CardGroup>
+
+---
+
+## 4. Backend (CMS) Responsibilities
+
+Backend has the main responsibilities:
+
+- Manage all website content (articles, events, programs, etc.)
+- Providing API for frontend
+- Setting user access (admin/editor)
+
+With the use of **Strapi**:
+
+- Non-technical teams can update content without developer assistance.
+- Centralized and structured content
+
+---
+
+## 5. Role of Database
+
+The database serves as the primary storage:
+
+- Save all content data
+- Supports read/write operations from CMS
+- Ensuring data consistency and security

@@ -1,0 +1,34 @@
+---
+title: "4.1. Overview"
+description: "Overview of the database design, headless CMS integration, and Strapi abstraction layer for the Tempe Park system."
+sidebarTitle: "4.1. Overview"
+icon: "binoculars"
+---
+
+## Overview
+
+The Tempe Park website's database is designed to support structured, flexible, and easily expandable content management, in line with the system's headless CMS architecture approach. The database serves as the central repository for all data used by the website, including page content, articles, programs, activities, and other supporting information.
+
+The database system used is a relational database (such as PostgreSQL or MySQL) integrated with Strapi as a content management layer. In this case, Strapi acts as an abstraction layer that manages data structures, relationships between entities, and provides an API that will be consumed by the frontend built using next js.
+
+---
+
+## Technical Highlights
+
+<CardGroup cols={3}>
+  <Card title="Relational Database Layer" color="#10b981" icon="database">
+    Utilizes PostgreSQL or MySQL as a solid, relational foundation for flexible data management.
+  </Card>
+
+  <Card title="Strapi Headless CMS" color="#38bdf8" icon="layer-group">
+    Serves as an abstraction layer managing data schemas, entity relationships, and content pipelines.
+  </Card>
+
+  <Card title="Next.js API Consumption" color="#f59e0b" icon="code">
+    Exposes decoupled API endpoints tailored for seamless integration with the Next.js frontend.
+  </Card>
+</CardGroup>
+
+<Note>
+  **Note:** Ensure all relational integrity rules and foreign key constraints in the database are aligned with Strapi's content type schema definitions.
+</Note>
