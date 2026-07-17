@@ -1,0 +1,220 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Mintlify Starter Kit",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Documentation",
+          "href": "https://mintlify.com/docs",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://mintlify.com/blog",
+          "icon": "newspaper"
+        }
+      ]
+    },
+    "dropdowns": [
+      {
+        "dropdown": "Tempe Park Company Profile Website Documentation",
+        "groups": [
+          {
+            "group": "HOME",
+            "pages": [
+              "welcome"
+            ]
+          },
+          {
+            "group": "Functional Design Document",
+            "pages": [
+              "overview",
+              "list-of-contents",
+              "introduction",
+              {
+                "group": "Front End Website Tempe Park",
+                "pages": [
+                  "front-end-website-tempe-park",
+                  {
+                    "group": "3.1. Home Page",
+                    "pages": [
+                      "3-2-plan-your-visit",
+                      "3-1-1",
+                      "3-1-2",
+                      "3-1-4-journey-section",
+                      "3-1-5",
+                      "3-1-6"
+                    ]
+                  },
+                  {
+                    "group": "3.2. Plan Your Visit",
+                    "pages": [
+                      "overview-1",
+                      "3-2-1-hero-section",
+                      "3-2-2-buy-ticket-section",
+                      "3-2-3-visitors-guide-section",
+                      "3-2-4",
+                      "3-2-5",
+                      "3-2-6-calendar-popup"
+                    ]
+                  },
+                  {
+                    "group": "3.3 Experience",
+                    "pages": [
+                      "overview-2",
+                      "3-3-1-hero-section-header-and-banner",
+                      "3-3-3-activities-section",
+                      "3-3-4-facilities-section"
+                    ],
+                    "icon": "file"
+                  },
+                  {
+                    "group": "3.4. Attraction, Activities, Facilities Detail",
+                    "pages": [
+                      "overview-3",
+                      "3-4-1-hero-section-header-and-banner",
+                      "3-4-2",
+                      "3-4-3-opening-hours-and-requirements-detail",
+                      "3-4-4-related-attractions-activities-facilities-detail"
+                    ]
+                  },
+                  {
+                    "group": "3.5. News Article",
+                    "pages": [
+                      "overview-4",
+                      "3-51-image-slide-card-section",
+                      "3-5-2-other-insight-section"
+                    ]
+                  },
+                  {
+                    "group": "3.6. News Article Detail",
+                    "pages": [
+                      "3-6-news-article-detail",
+                      "3-6-1-content-attraction-activities-and-facilities-detail",
+                      "3-6-2-content-product-detail",
+                      "3-6-3-related-article-section"
+                    ]
+                  },
+                  {
+                    "group": "3.7. Education",
+                    "pages": [
+                      "overview-5",
+                      "3-7-1-hero-section",
+                      "3-7-3-fun-facts-section",
+                      "3-7-4-tempe-warrior-and-hero-section",
+                      "3-7-5-school-programs-section",
+                      "3-7-2"
+                    ]
+                  },
+                  {
+                    "group": "3.8 Article School Programs",
+                    "pages": [
+                      "overview-6",
+                      "3-8-1-hero-section",
+                      "3-8-2-article-detail-section",
+                      "3-8-3-explore-other-school-program-section"
+                    ]
+                  },
+                  {
+                    "group": "3.9. Innovation",
+                    "pages": [
+                      "over-view",
+                      "3-9-1-hero-section-banner-and-headert",
+                      "3-9-2-our-product-section",
+                      "3-9-3",
+                      "3-9-4-collaboration-section",
+                      "3-9-5-inquires-section",
+                      "3-9-6-product-detail"
+                    ]
+                  },
+                  {
+                    "group": "3.10. Search Result ",
+                    "pages": [
+                      "3-10-1-search-result-positive",
+                      "3-10-2-search-result-negative"
+                    ]
+                  },
+                  "3-11-faq",
+                  "3-12-contact-us",
+                  {
+                    "group": "3.13. About Us",
+                    "pages": [
+                      "overview-7",
+                      "3-13-1-hero-section-header-and-banner",
+                      "3-11-2-foundation-section-header-and-banner",
+                      "3-13-3-vision-and-mission-section",
+                      "3-13-4-adviser-section"
+                    ]
+                  },
+                  "3-14-safety-and-guidelines",
+                  "3-15-photography-policy",
+                  {
+                    "group": "3.16. Career",
+                    "pages": [
+                      "overview-8",
+                      "3-16-1-list-career",
+                      "3-16-2-search-career",
+                      "3-16-3-job-detail"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Technical Design Document",
+            "pages": []
+          },
+          {
+            "group": "User Guide",
+            "pages": []
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:hi@mintlify.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://app.mintlify.com"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  }
+}
