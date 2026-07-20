@@ -1,3 +1,19 @@
 ---
-title: "4-2-137-upload-folders-parent-lnk"
+title: "4.2.137. Upload_folders_parent_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `upload_folders_parent_lnk` |
+| Description | Folder hierarchy relationship. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `folder_id` | `int4` | Yes | ID folder |
+| `inv_folder_id` | `int4` | Yes | Parent folder |
+| `folder_ord` | `float8` | Yes | Order |

@@ -1,3 +1,21 @@
 ---
-title: "4-2-31-components-education-funfacts-sections-cmps"
+title: "4.2.31. Components_education_funfacts_sections_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `components_education_funfacts_sections_cmps` |
+| Description | Relation table to connect fun facts section with dynamic components. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `entity_id` | `int4` | Yes | Reference section |
+| `cmp_id` | `int4` | Yes | Component ID |
+| `component_type` | `varchar(255)` | Yes | Component type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Order |

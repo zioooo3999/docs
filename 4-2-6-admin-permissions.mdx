@@ -1,3 +1,27 @@
 ---
-title: "4-2-6-admin-permissions"
+title: "4.2.6. admin_permissions"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `admin_permissions` |
+| Description | Stores a list of permissions used in the Strapi CMS system. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `action` | `varchar(255)` | Yes | Permission action |
+| `subject` | `varchar(255)` | Yes | Target permission |
+| `properties` | `varchar(255)` | Yes | Additional properties |
+| `conditions` | `varchar(255)` | Yes | Condition |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

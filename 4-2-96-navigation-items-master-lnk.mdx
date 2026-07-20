@@ -1,3 +1,19 @@
 ---
-title: "4-2-96-navigation-items-master-lnk"
+title: "4.2.96. Navigation_items_master_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `navigations_items_master_lnk` |
+| Description | The relationship between navigation items and the main navigation. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `navigation_item_id` | `int4` | Yes | ID navigation item |
+| `navigation_id` | `int4` | Yes | ID navigation |
+| `navigation_item_ord` | `float8` | Yes | Order |

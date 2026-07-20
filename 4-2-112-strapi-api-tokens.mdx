@@ -1,3 +1,31 @@
 ---
-title: "4-2-112-strapi-api-tokens"
+title: "4.2.112. Strapi_api_tokens"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_api_tokens` |
+| Description | Table for storing API tokens used for system access. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `Yes` | Yes | Identifier |
+| `name` | `Yes` | Yes | Nama token |
+| `description` | `Yes` | Yes | Description |
+| `type` | `Yes` | Yes | Token type |
+| `access_key` | `Yes` | Yes | Access key |
+| `encrypted_key` | `text` | Yes | Encrypted key |
+| `last_used_at` | `timestamp(6)` | Yes | Last used |
+| `expires_at` | `timestamp(6)` | Yes | Expired |
+| `lifespan` | `you8` | Yes | Time of occurrence |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

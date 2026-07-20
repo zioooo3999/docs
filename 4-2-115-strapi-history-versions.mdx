@@ -1,3 +1,24 @@
 ---
-title: "4-2-115-strapi-history-versions"
+title: "4.2.115. Strapi_history_versions"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_history_versions` |
+| Description | Table for storing database schema snapshots. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `content_type` | `varchar(255)` | Yes | Content type |
+| `related_document_id` | `varchar(255)` | Yes | Document ID |
+| `local` | `varchar(255)` | Yes | Local |
+| `status` | `varchar(255)` | Yes | Status |
+| `data` | `jsonb` | Yes | Version data |
+| `schema` | `jsonb` | Yes | Schema |
+| `created_at` | `timestamp(6)` | Yes | Time created |
+| `created_by_id` | `int4` | Yes | Made by |

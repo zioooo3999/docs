@@ -1,3 +1,21 @@
 ---
-title: "4-2-86-general-pages-cmps"
+title: "4.2.86. General_pages_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `general_pages_cmps` |
+| Description | The relationship between general pages and components. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `entity_id` | `int4` | Yes | ID entity |
+| `cmp_id` | `int4` | Yes | Component ID |
+| `component_type` | `varchar(255)` | Yes | Component type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Order |

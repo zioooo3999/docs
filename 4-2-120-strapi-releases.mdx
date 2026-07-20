@@ -1,3 +1,28 @@
 ---
-title: "4-2-120-strapi-releases"
+title: "4.2.120. Strapi_releases"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_releases` |
+| Description | Table for storing content release information. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `name` | `varchar(255)` | Yes | Nama release |
+| `released_at` | `timestamp(6)` | Yes | Release time |
+| `scheduled_at` | `timestamp(6)` | Yes | Timetable |
+| `timezone` | `varchar(255)` | Yes | Time zone |
+| `status` | `varchar(255)` | Yes | Status |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

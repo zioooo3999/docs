@@ -1,3 +1,25 @@
 ---
-title: "4-2-126-strapi-workflows"
+title: "4.2.126. Strapi_workflows"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_workflows` |
+| Description | Table for storing content workflow. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `name` | `varchar(255)` | Yes | Nama workflow |
+| `content_types` | `varchar(255)` | Yes | Content type |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

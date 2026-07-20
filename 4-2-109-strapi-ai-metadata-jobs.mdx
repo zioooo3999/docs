@@ -1,3 +1,19 @@
 ---
-title: "4-2-109-strapi-ai-metadata-jobs"
+title: "4.2.109. Strapi_ai_metadata_jobs"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_ai_metadata_jobs` |
+| Description | Table for storing AI localization (multi-language) process jobs on content. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `status` | `varchar(255)` | No | Status job |
+| `created_at` | `timestamp(6)` | Yes | Time created |
+| `completed_at` | `timestamp(6)` | Yes | Finish time |

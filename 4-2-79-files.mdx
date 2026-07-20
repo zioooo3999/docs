@@ -1,3 +1,39 @@
 ---
-title: "4-2-79-files"
+title: "4.2.79. Files"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `files` |
+| Description | Table for storing metadata of files/media uploaded via the system (Strapi Media Library). |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `name` | `varchar(255)` | Yes | Question |
+| `alternative_text` | `varchar(255)` | Yes | Answer |
+| `caption` | `text` | Yes | Order |
+| `focal_point` | `jsonb` | Yes | Focal point |
+| `width` | `int4` | Yes | Wide |
+| `height` | `int4` | Yes | High |
+| `formats` | `jsonb` | Yes | Format file |
+| `hash` | `varchar(255)` | Yes | Hash file |
+| `ext` | `varchar(255)` | Yes | Extension |
+| `mime` | `varchar(255)` | Yes | MIME type |
+| `size` | `numeric` | Yes | File size |
+| `url` | `text` | Yes | URL file |
+| `preview_url` | `text` | Yes | URL preview |
+| `provider` | `varchar(255)` | Yes | Provider storage |
+| `provider_metadata` | `jsonb` | Yes | Additional metadata |
+| `folder_path` | `varchar(255)` | Yes | Path folder |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

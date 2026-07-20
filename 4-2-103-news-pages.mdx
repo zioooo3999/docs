@@ -1,3 +1,27 @@
 ---
-title: "4-2-103-news-pages"
+title: "4.2.103. News_pages"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `news_pages` |
+| Description | Configure the news listing page. 76 |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `listing_section_heading` | `varchar(255)` | Yes | Heading list |
+| `search_placeholder` | `varchar(255)` | Yes | Placeholder search |
+| `all_categories_label` | `varchar(255)` | Yes | Category labels |
+| `load_more_label` | `varchar(255)` | Yes | Label load more |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

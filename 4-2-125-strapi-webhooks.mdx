@@ -1,3 +1,21 @@
 ---
-title: "4-2-125-strapi-webhooks"
+title: "4.2.125. Strapi_webhooks"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_webhooks` |
+| Description | Table to store webhook configuration. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `name` | `varchar(255)` | Yes | Nama webhook |
+| `url` | `text` | Yes | URL endpoint |
+| `headers` | `jsonb` | Yes | Header |
+| `events` | `jsonb` | Yes | Event |
+| `enabled` | `bool` | Yes | Active status |

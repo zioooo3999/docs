@@ -1,3 +1,34 @@
 ---
-title: "4-2-69-education-programs"
+title: "4.2.69. Education_programs"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `education_programs` |
+| Description | Table to store data on educational programs available at Tempe Park. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `title` | `varchar(255)` | Yes | Program title |
+| `slug` | `varchar(255)` | Yes | URL slug |
+| `description` | `text` | Yes | Description |
+| `short_description` | `text` | Yes | Short description |
+| `target_group` | `varchar(255)` | Yes | Target participants |
+| `program_type` | `varchar(255)` | Yes | Type of program |
+| `duration` | `varchar(255)` | Yes | Duration |
+| `capacity` | `int4` | Yes | Capacity |
+| `note` | `text` | Yes | Notes |
+| `about_summary` | `text` | Yes | Summary |
+| `booking_url` | `varchar(255)` | Yes | URL booking |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

@@ -1,3 +1,19 @@
 ---
-title: "4-2-123-strapi-transfer-token-permissions-token-lnk"
+title: "4.2.123. Strapi_transfer_token_permissions_token_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_transfer_token_permissions_token_lnk` |
+| Description | Relationship table between token transfer and permission. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `transfer_token_permission_id` | `varchar(255)` | Yes | ID permission |
+| `transfer_token_id` | `timestamp(6)` | Yes | ID token |
+| `transfer_token_permission_ord` | `timestamp(6)` | Yes | Order |

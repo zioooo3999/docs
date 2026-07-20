@@ -1,3 +1,22 @@
 ---
-title: "4-2-65-contact-us-list"
+title: "4.2.65. Contact_us_list"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `contact_us_list` |
+| Description | The main table for the Contact Us page that contains the component-based content structure. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Document identifier from Strapi |
+| `created_at` | `timestamp(6)` | Yes | Data creation time |
+| `updated_at` | `timestamp(6)` | Yes | Last update time |
+| `published_at` | `timestamp(6)` | Yes | Content publish time |
+| `created_by_id` | `int4` | Yes | Creator user ID |
+| `updated_by_id` | `int4` | Yes | Last updated user ID |

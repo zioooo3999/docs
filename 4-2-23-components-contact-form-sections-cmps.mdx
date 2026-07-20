@@ -1,3 +1,21 @@
 ---
-title: "4-2-23-components-contact-form-sections-cmps"
+title: "4.2.23. Components_contact_form_sections_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `components_contact_form_sections_cmps` |
+| Description | Relation table to connect contact form with other dynamic components. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `entity_id` | `int4` | Yes | Form section reference |
+| `cmp_id` | `int4` | Yes | Component ID |
+| `component_type` | `varchar(255)` | Yes | Component type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Order |

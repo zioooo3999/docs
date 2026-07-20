@@ -1,3 +1,20 @@
 ---
-title: "4-2-75-facilities-related-facilities-lnk"
+title: "4.2.75. Facilities_related_facilities_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `facilities_related_facilities_lnk` |
+| Description | Self-reference relation table to connect facilities with other facilities. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `facility_id` | `int4` | Yes | Main facility ID |
+| `inv_facility_id` | `int4` | Yes | Related facility ID |
+| `facility_ord` | `varchar(255)` | Yes | Order |
+| `inv_facility_ord` | `varchar(255)` | Yes | Order of relations |

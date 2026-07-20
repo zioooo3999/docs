@@ -1,3 +1,21 @@
 ---
-title: "4-2-2-about-us-list-cmps"
+title: "4.2.2. About_us_list_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `about_us_list_cmps` |
+| Description | The relation table used to connect About Us with the dynamic components (dynamic zone) in Strapi. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `entity_id` | `int4` | Yes | Reference to about_us_list |
+| `cmp_id` | `int4` | Yes | Component ID |
+| `component_type` | `varchar(255)` | Yes | Component type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Component order |

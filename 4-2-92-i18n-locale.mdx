@@ -1,3 +1,25 @@
 ---
-title: "4-2-92-i18n-locale"
+title: "4.2.92. I18n_locale"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `i18n_locale` |
+| Description | Table for storing language configuration (internationalization). |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `name` | `varchar(255)` | Yes | Language name |
+| `code` | `varchar(255)` | Yes | Language code |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

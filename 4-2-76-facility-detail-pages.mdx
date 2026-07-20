@@ -1,3 +1,30 @@
 ---
-title: "4-2-76-facility-detail-pages"
+title: "4.2.76. Facility_detail_pages"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `facility_detail_pages` |
+| Description | Facility detail page configuration table. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `sidebar_label_opening_hours_weekdays` | `varchar(255)` | Yes | Label weekdays |
+| `sidebar_label_opening_hours_weekend` | `varchar(255)` | Yes | Label weekend |
+| `sidebar_label_age_requirements` | `text` | Yes | Label age |
+| `sidebar_label_note` | `text` | Yes | Label note |
+| `related_section_heading` | `varchar(255)` | Yes | Related titles |
+| `related_cta_label` | `varchar(255)` | Yes | Label CTA |
+| `related_cta_url` | `varchar(255)` | Yes | CTA URL |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

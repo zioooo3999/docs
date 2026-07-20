@@ -1,3 +1,18 @@
 ---
-title: "4-2-7-admin-permissions-role-lnk"
+title: "4.2.7. Admin_permissions_role_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `admin_permissions_role_lnk` |
+| Description | Table of relationships between permissions and roles in the admin system. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `permission_id` | `int4` | Yes | Permission reference |
+| `role_id` | `int4` | Yes | Role reference |

@@ -1,3 +1,25 @@
 ---
-title: "4-2-84-general-detail-pages"
+title: "4.2.84. General_detail_pages"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `general_detail_pages` |
+| Description | General detail page configuration table. 63 |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `breadcrumb_parent_label` | `varchar(255)` | Yes | Alt text logo |
+| `share_section_title` | `varchar(255)` | Yes | Tagline |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

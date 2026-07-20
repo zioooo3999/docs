@@ -1,3 +1,21 @@
 ---
-title: "4-2-106-plan-your-visits-cmps"
+title: "4.2.106. Plan_your_visits_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `plan_your_visits_cmps` |
+| Description | Relationship of Plan Your Visit page components. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `entity_id` | `int4` | Yes | Page ID |
+| `cmp_id` | `int4` | Yes | Component ID |
+| `component_type` | `varchar(255)` | Yes | Component type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Order |

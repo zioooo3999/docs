@@ -1,3 +1,29 @@
 ---
-title: "4-2-82-footers"
+title: "4.2.82. Footers"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `footers` |
+| Description | Table to store website footer configuration. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `logo_all` | `varchar(255)` | Yes | Alt text logo |
+| `tagline` | `varchar(255)` | Yes | Tagline |
+| `address` | `text` | Yes | Address |
+| `phone` | `jsonb` | Yes | Phone number |
+| `email` | `int4` | Yes | Email |
+| `copyright_text` | `int4` | Yes | Copyright |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

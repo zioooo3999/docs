@@ -1,3 +1,26 @@
 ---
-title: "4-2-8-admin-roles"
+title: "4.2.8. Admin_roles"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `admin_roles` |
+| Description | Store user role data in CMS. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `name` | `varchar(255)` | Yes | Role name |
+| `code` | `varchar(255)` | Yes | Role code |
+| `description` | `varchar(255)` | Yes | Description |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

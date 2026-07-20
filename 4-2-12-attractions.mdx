@@ -1,3 +1,28 @@
 ---
-title: "4-2-12-attractions"
+title: "4.2.12. Attractions"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `attractions` |
+| Description | This table stores data on attractions available at Tempe Park with an activity-like structure. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `title` | `varchar(255)` | Yes | Name of attraction |
+| `slug` | `varchar(255)` | Yes | URL slug |
+| `description` | `text` | Yes | Description |
+| `short_description` | `text` | Yes | Short description |
+| `opening_hours_weekdays` | `varchar(255)` | Yes | Jam weekday |
+| `opening_hours_weekend` | `varchar(255)` | Yes | Jam weekend |
+| `age_requirements` | `varchar(255)` | Yes | Age limit |
+| `note` | `text` | Yes | Notes |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `local` | `varchar(255)` | Yes | Language |

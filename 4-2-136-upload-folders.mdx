@@ -1,3 +1,26 @@
 ---
-title: "4-2-136-upload-folders"
+title: "4.2.136. Upload_folders"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `upload_folders` |
+| Description | Table for storing file upload folders. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `name` | `varchar(255)` | Yes | Action |
+| `path_id` | `varchar(255)` | Yes | Description |
+| `path` | `varchar(255)` | Yes | Type role |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

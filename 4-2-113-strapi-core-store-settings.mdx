@@ -1,3 +1,21 @@
 ---
-title: "4-2-113-strapi-core-store-settings"
+title: "4.2.113. Strapi_core_store_settings"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_core_store_settings` |
+| Description | Table for storing Strapi's internal configuration. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `key` | `varchar(255)` | Yes | Key setting |
+| `value` | `int4` | Yes | Mark |
+| `type` | `varchar(255)` | Yes | Type |
+| `environment` | `varchar(255)` | Yes | Environment |
+| `tag` | `varchar(255)` | Yes | Tag |

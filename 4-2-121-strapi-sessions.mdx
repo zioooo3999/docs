@@ -1,3 +1,32 @@
 ---
-title: "4-2-121-strapi-sessions"
+title: "4.2.121. Strapi_sessions"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_sessions` |
+| Description | Table for storing user sessions. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `user_id` | `varchar(255)` | Yes | ID user |
+| `session_id` | `varchar(255)` | Yes | Session ID |
+| `child_id` | `varchar(255)` | Yes | Child session |
+| `device_id` | `varchar(255)` | Yes | Device ID |
+| `origin` | `varchar(255)` | Yes | Origin |
+| `expires_at` | `timestamp(6)` | Yes | Expired |
+| `absolute_expires_at` | `timestamp(6)` | Yes | Expired absolut |
+| `status` | `varchar(255)` | Yes | Status |
+| `type` | `varchar(255)` | Yes | Type |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

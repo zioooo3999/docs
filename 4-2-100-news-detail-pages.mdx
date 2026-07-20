@@ -1,3 +1,27 @@
 ---
-title: "4-2-100-news-detail-pages"
+title: "4.2.100. News_detail_pages"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `news_detail_pages` |
+| Description | Configure the news detail page. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `breadcrumb_parent_label` | `varchar(255)` | Yes | Category name |
+| `related_section_heading` | `varchar(255)` | Yes | Slug |
+| `related_cta_label` | `varchar(255)` | Yes | Label CTA |
+| `related_cta_url` | `varchar(255)` | Yes | CTA URL |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

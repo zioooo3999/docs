@@ -1,3 +1,21 @@
 ---
-title: "4-2-20-components-button-button-multiples-cmps"
+title: "4.2.20. Components_button_button_multiples_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `components_button_button_multiples_cmps` |
+| Description | A relation table that connects multiple button containers with individual button components. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `entity_id` | `int4` | Yes | Reference to multiple buttons |
+| `cmp_id` | `int4` | Yes | Button component ID |
+| `component_type` | `varchar(255)` | Yes | Component type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Display order |

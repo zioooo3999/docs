@@ -1,3 +1,23 @@
 ---
-title: "4-2-67-education-pages"
+title: "4.2.67. Education_pages"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `education_pages` |
+| Description | Main table for dynamic component based education page. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

@@ -1,3 +1,31 @@
 ---
-title: "4-2-71-events"
+title: "4.2.71. Events"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `events` |
+| Description | Table for storing data on events or activities taking place at Tempe Park. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `title` | `varchar(255)` | Yes | Program title |
+| `slug` | `varchar(255)` | Yes | URL slug |
+| `description` | `text` | Yes | Description |
+| `short_description` | `text` | Yes | Short description |
+| `start_date` | `varchar(255)` | Yes | Target participants |
+| `end_date` | `varchar(255)` | Yes | Type of program |
+| `location` | `varchar(255)` | Yes | Duration |
+| `event_type` | `int4` | Yes | Capacity |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

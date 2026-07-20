@@ -1,3 +1,30 @@
 ---
-title: "4-2-66-contact-us-list-cmps"
+title: "4.2.66. Contact_us_list_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `contact_us_list_cmps` |
+| Description | Relation table to connect Contact Us with dynamic components. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `int4` | Yes | Identifier |
+| `breadcrumb_parent_label` | `int4` | Yes | Label breadcrumb |
+| `sidebar_cta_label` | `varchar(255)` | Yes | Label CTA |
+| `sidebar_cta_url` | `varchar(255)` | Yes | CTA URL |
+| `schedule_section_heading` | `varchar(255)` | Yes | Schedule title |
+| `related_section_heading` | `varchar(255)` | Yes | Related titles |
+| `related_cta_label` | `varchar(255)` | Yes | Label CTA |
+| `related_cta_url` | `varchar(255)` | Yes | CTA URL |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |
+| `published_at` | `timestamp(6)` | Yes | Published |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

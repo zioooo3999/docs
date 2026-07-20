@@ -1,3 +1,26 @@
 ---
-title: "4-2-9-admin-users"
+title: "4.2.9. Admin_users"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `admin_users` |
+| Description | This table stores the data of admin users who have access to the Strapi CMS. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `firstname` | `varchar(255)` | Yes | First name |
+| `lastname` | `varchar(255)` | Yes | Last name |
+| `username` | `varchar(255)` | Yes | Username |
+| `email` | `varchar(255)` | Yes | Email |
+| `password` | `varchar(255)` | Yes | Password (hashed) |
+| `is_active` | `boolean` | Yes | Active status |
+| `blocked` | `boolean` | Yes | Block status |
+| `prefered_language` | `varchar(255)` | Yes | Language |
+| `created_at` | `timestamp(6)` | Yes | Created |
+| `updated_at` | `timestamp(6)` | Yes | Updated |

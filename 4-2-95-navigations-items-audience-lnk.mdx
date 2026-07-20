@@ -1,3 +1,19 @@
 ---
-title: "4-2-95-navigations-items-audience-lnk"
+title: "4.2.95. Navigations_items_audience_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `navigations_items_audience_lnk` |
+| Description | The relationship between navigation items and audience. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `navigation_item_id` | `int4` | Yes | ID navigation item |
+| `audience_id` | `int4` | Yes | ID audience |
+| `audience_ord` | `float8` | Yes | Order |

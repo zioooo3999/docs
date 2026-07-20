@@ -1,3 +1,18 @@
 ---
-title: "4-2-116-strapi-migrations"
+title: "4.2.116. Strapi_migrations"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_migrations` |
+| Description | Table for recording database migrations. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `name` | `json` | Yes | Schema JSON |
+| `time` | `timestamp(6)` | Yes | Time |

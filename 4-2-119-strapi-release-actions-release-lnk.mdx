@@ -1,3 +1,19 @@
 ---
-title: "4-2-119-strapi-release-actions-release-lnk"
+title: "4.2.119. Strapi_release_actions_release_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_release_actions_release_lnk` |
+| Description | The relationship between release and action. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `release_action_id` | `int4` | Yes | ID action |
+| `release_id` | `int4` | Yes | ID release |
+| `release_action_ord` | `float8` | Yes | Order |

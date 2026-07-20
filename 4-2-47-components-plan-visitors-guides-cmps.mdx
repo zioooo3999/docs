@@ -1,3 +1,21 @@
 ---
-title: "4-2-47-components-plan-visitors-guides-cmps"
+title: "4.2.47. Components_plan_visitors_guides_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `components_plan_visitors_guides_cmps` |
+| Description | Relation table to connect visitor guides with other dynamic components. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `entity_id` | `int4` | Yes | Visitor guide reference |
+| `cmp_id` | `int4` | Yes | Component ID |
+| `component_type` | `varchar(255)` | Yes | Component type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Order |

@@ -1,3 +1,24 @@
 ---
-title: "4-2-14-audience"
+title: "4.2.14. Audience"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `audience` |
+| Description | Saves target audience categories for content or programs. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `name` | `varchar(255)` | Yes | Nama audience |
+| `created_at` | `timestamp(6)` | Yes | Created time |
+| `updated_at` | `timestamp(6)` | Yes | Updated time |
+| `published_at` | `timestamp(6)` | Yes | Publish time |
+| `created_by_id` | `int4` | Yes | Created by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

@@ -1,3 +1,19 @@
 ---
-title: "4-2-80-files-folder-lnk"
+title: "4.2.80. Files_folder_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `files_folder_lnk` |
+| Description | Table for the relationship between files and folders in the media library. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `file_id` | `int4` | Yes | Reference to file |
+| `folder_id` | `int4` | Yes | Reference to folder |
+| `file_ord` | `varchar(255)` | Yes | Order of files in a folder |

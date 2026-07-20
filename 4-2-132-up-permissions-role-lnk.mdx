@@ -1,3 +1,19 @@
 ---
-title: "4-2-132-up-permissions-role-lnk"
+title: "4.2.132. Up_permissions_role_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `up_permissions_role_lnk` |
+| Description | The relationship between permission and role. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `permission_id` | `int4` | Yes | ID permission |
+| `role_id` | `int4` | Yes | ID role |
+| `permission_ord` | `float8` | Yes | Order |

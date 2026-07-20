@@ -1,3 +1,31 @@
 ---
-title: "4-2-5-activity-detail-pages"
+title: "4.2.5. Activity_detail_pages"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `activity_detail_pages` |
+| Description | This table stores the content configuration for the activity detail page, including UI labels and CTAs. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Document identifier |
+| `breadcrumb_parent_label` | `varchar(255)` | Yes | Label breadcrumb |
+| `sidebar_label_opening_hours_weekdays` | `varchar(255)` | Yes | Label sidebar weekday |
+| `sidebar_label_opening_hours_weekend` | `varchar(255)` | Yes | Label sidebar weekend |
+| `sidebar_label_age_requirements` | `varchar(255)` | Yes | Label age |
+| `sidebar_label_note` | `varchar(255)` | Yes | Label note |
+| `related_section_heading` | `varchar(255)` | Yes | Heading related section |
+| `related_cta_label` | `varchar(255)` | Yes | Label CTA |
+| `related_cta_url` | `varchar(255)` | Yes | CTA URL |
+| `created_at` | `timestamp(6)` | Yes | Time created |
+| `updated_at` | `timestamp(6)` | Yes | Update time |
+| `published_at` | `timestamp(6)` | Yes | Publish time |
+| `created_by_id` | `int4` | Yes | Maker |
+| `updated_by_id` | `int4` | Yes | Updater |
+| `local` | `varchar(255)` | Yes | Language |

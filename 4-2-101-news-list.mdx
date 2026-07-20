@@ -1,3 +1,30 @@
 ---
-title: "4-2-101-news-list"
+title: "4.2.101. News_list"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `news_list` |
+| Description | Main table for news/article data. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `title` | `varchar(255)` | Yes | Title |
+| `slug` | `varchar(255)` | Yes | Slug |
+| `excerpt` | `varchar(255)` | Yes | Summary |
+| `content` | `varchar(255)` | Yes | Content |
+| `author` | `varchar(255)` | Yes | Writer |
+| `published_date` | `date` | Yes | Publish date |
+| `tags` | `varchar(255)` | Yes | Tag |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

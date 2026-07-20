@@ -1,3 +1,23 @@
 ---
-title: "4-2-1-about-us-list"
+title: "4.2.1. About_us_list"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `About_us_list` |
+| Description | This table is used to store the main data of the About Us page in the form of a collection that is connected to the dynamic components in the Strapi CMS. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Document identifier from Strapi |
+| `created_at` | `timestamp(6)` | Yes | Data creation time |
+| `updated_at` | `timestamp(6)` | Yes | Last update time |
+| `published_at` | `timestamp(6)` | Yes | Content publish time |
+| `created_by_id` | `int4` | Yes | Creator user ID |
+| `updated_by_id` | `int4` | Yes | Last updated user ID |
+| `local` | `varchar(255)` | Yes | Content language |

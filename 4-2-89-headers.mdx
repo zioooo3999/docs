@@ -1,3 +1,26 @@
 ---
-title: "4-2-89-headers"
+title: "4.2.89. Headers"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `headers` |
+| Description | Table to store website header configuration. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `logo_all` | `varchar(255)` | Yes | Alt text logo |
+| `cta_label` | `varchar(255)` | Yes | CTA button label |
+| `cta_url` | `varchar(255)` | Yes | Tombol CTA URL |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

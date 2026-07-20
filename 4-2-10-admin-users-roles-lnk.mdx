@@ -1,3 +1,20 @@
 ---
-title: "4-2-10-admin-users-roles-lnk"
+title: "4.2.10. Admin_users_roles_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `admin_users_roles_lnk` |
+| Description | Relationship table between admin user and role. 22 |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `user_id` | `int4` | Yes | User reference |
+| `role_id` | `int4` | Yes | Role reference |
+| `role_ord` | `float8` | Yes | Role order |
+| `user_ord` | `float8` | Yes | User order |

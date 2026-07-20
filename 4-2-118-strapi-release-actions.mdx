@@ -1,3 +1,28 @@
 ---
-title: "4-2-118-strapi-release-actions"
+title: "4.2.118. Strapi_release_actions"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_release_actions` |
+| Description | Table for storing content release actions. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `Yes` | Yes | Identifier |
+| `type` | `Yes` | Yes | Action type |
+| `content_type` | `Yes` | Yes | Content type |
+| `entry_document_id` | `Yes` | Yes | ID entry |
+| `local` | `Yes` | Yes | Local |
+| `is_entry_valid` | `text` | Yes | Validation |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

@@ -1,3 +1,25 @@
 ---
-title: "4-2-87-globals"
+title: "4.2.87. Globals"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `globals` |
+| Description | Website global configuration table. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `site_name` | `varchar(255)` | Yes | Our website |
+| `site_description` | `text` | Yes | Website description |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

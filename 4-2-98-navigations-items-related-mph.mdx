@@ -1,3 +1,21 @@
 ---
-title: "4-2-98-navigations-items-related-mph"
+title: "4.2.98. Navigations_items_related_mph"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `navigations_items_related_mph` |
+| Description | Polymorphic relationship between navigation items and other entities. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `navigation_item_id` | `int4` | Yes | ID item |
+| `related_id` | `int4` | Yes | ID parent |
+| `related_type` | `varchar(255)` | Yes | Relationship type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Order |

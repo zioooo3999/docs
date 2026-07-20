@@ -1,3 +1,19 @@
 ---
-title: "4-2-114-strapi-database-schema"
+title: "4.2.114. Strapi_database_schema"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_database_schema` |
+| Description | Table for storing database schema snapshots. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `schema` | `json` | Yes | Schema JSON |
+| `time` | `timestamp(6)` | Yes | Time |
+| `hash` | `varchar(255)` | Yes | Time |

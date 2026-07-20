@@ -1,3 +1,31 @@
 ---
-title: "4-2-134-up-users"
+title: "4.2.134. Up_users"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `up_users` |
+| Description | Table for storing user data. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `username` | `varchar(255)` | Yes | Action |
+| `email` | `varchar(255)` | Yes | Description |
+| `provider` | `varchar(255)` | Yes | Type role |
+| `password` | `varchar(255)` | Yes | Password |
+| `reset_password_token` | `varchar(255)` | Yes | Token reset password |
+| `confirmation_token` | `varchar(255)` | Yes | Confirmation token |
+| `confirmed` | `bool` | Yes | Confirmation status |
+| `blocked` | `bool` | Yes | Block status |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |

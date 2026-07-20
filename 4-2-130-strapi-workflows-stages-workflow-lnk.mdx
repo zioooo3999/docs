@@ -1,3 +1,19 @@
 ---
-title: "4-2-130-strapi-workflows-stages-workflow-lnk"
+title: "4.2.130. Strapi_workflows_stages_workflow_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_workflows_stages_workflow_lnk` |
+| Description | The relationship between workflow stages and permissions. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `workflow_stage_id` | `int4` | Yes | ID stage |
+| `workflow_id` | `int4` | Yes | ID workflow |
+| `workflow_stage_ord` | `float8` | Yes | Order |

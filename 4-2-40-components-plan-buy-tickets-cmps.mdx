@@ -1,3 +1,21 @@
 ---
-title: "4-2-40-components-plan-buy-tickets-cmps"
+title: "4.2.40. Components_plan_buy_tickets_cmps"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `components_plan_buy_tickets_cmps` |
+| Description | Relation table to connect the buy tickets section with the dynamic components. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `entity_id` | `int4` | Yes | Reference section |
+| `cmp_id` | `int4` | Yes | Component ID |
+| `component_type` | `varchar(255)` | Yes | Component type |
+| `field` | `varchar(255)` | Yes | Field name |
+| `order` | `float8` | Yes | Order |

@@ -1,3 +1,32 @@
 ---
-title: "4-2-3-activities"
+title: "4.2.3. Activities"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `activities` |
+| Description | This table stores data on activities available at Tempe Park, including description information, operating hours, and age restrictions. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `int4` | Yes | Document identifier |
+| `title` | `int4` | Yes | Activity title |
+| `slug` | `varchar(255)` | Yes | URL slug |
+| `description` | `varchar(255)` | Yes | Full description |
+| `short_description` | `varchar(255)` | Yes | Short description |
+| `opening_hours_weekdays` | `varchar(255)` | Yes | Weekday operating hours |
+| `opening_hours_weekend` | `varchar(255)` | Yes | Weekend operating hours |
+| `age_requirements` | `varchar(255)` | Yes | Age limit |
+| `note` | `text` | Yes | Additional notes |
+| `is_highlight` | `boolean` | Yes | Highlight marker |
+| `created_at` | `timestamp(6)` | Yes | Time created |
+| `updated_at` | `timestamp(6)` | Yes | Update time |
+| `published_at` | `timestamp(6)` | Yes | Publish time |
+| `created_by_id` | `int4` | Yes | Maker |
+| `updated_by_id` | `int4` | Yes | Updater |
+| `local` | `varchar(255)` | Yes | Language |

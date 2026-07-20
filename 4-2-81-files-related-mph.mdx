@@ -1,3 +1,19 @@
 ---
-title: "4-2-81-files-related-mph"
+title: "4.2.81. Files_related_mph"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `files_related_mph 61` |
+| Description | Polymorphic table for linking files with various other entities. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `file_id` | `int4` | Yes | Reference to file |
+| `related_id` | `int4` | Yes | Related entity ID |
+| `related_type` | `varchar(255)` | Yes | Entity type |

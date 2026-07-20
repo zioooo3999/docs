@@ -1,3 +1,25 @@
 ---
-title: "4-2-26-components-dynamic-flexbox-1s"
+title: "4.2.26. Components_dynamic_flexbox_1s"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `components_dynamic_flexbox_1s` |
+| Description | Component table for dynamic display configuration based on flexbox layout |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `readmore_button_text` | `varchar(255)` | Yes | Read more button text |
+| `view_all_text` | `varchar(255)` | Yes | View all button text |
+| `source_type` | `varchar(255)` | Yes | Data sources (e.g., articles, events) |
+| `layout` | `varchar(255)` | Yes | Layout types |
+| `columns` | `int4` | Yes | Number of columns |
+| `items_limit` | `int4` | Yes | Item quantity limit |
+| `show_category_badge` | `boolean` | Yes | Show category badges |
+| `show_excerpt` | `boolean` | Yes | Show summary |
+| `item_cta_label` | `varchar(255)` | Yes | Label CTA item |

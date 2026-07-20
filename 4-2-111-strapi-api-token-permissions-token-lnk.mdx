@@ -1,3 +1,19 @@
 ---
-title: "4-2-111-strapi-api-token-permissions-token-lnk"
+title: "4.2.111. Strapi_api_token_permissions_token_lnk"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_api_token_permissions_token_lnk` |
+| Description | Relationship table between API token and permission. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `api_token_permission_id` | `int4` | Yes | ID permission |
+| `api_token_id` | `int4` | Yes | ID token |
+| `api_token_permission_ord` | `timestamp(6)` | Yes | Order |

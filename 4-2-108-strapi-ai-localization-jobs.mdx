@@ -1,3 +1,23 @@
 ---
-title: "4-2-108-strapi-ai-localization-jobs"
+title: "4.2.108. Strapi_ai_localization_jobs"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `strapi_ai_localization_jobs` |
+| Description | Table for storing AI localization (multi-language) process jobs on content. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `content_type` | `varchar(255)` | No | Content type |
+| `related_document_id` | `varchar(255)` | No | Related document ID |
+| `source_locale` | `varchar(255)` | No | Source language |
+| `target_locales` | `jsonb` | No | List of target languages |
+| `status` | `varchar(255)` | No | Process status |
+| `created_at` | `timestamp(6)` | Yes | Time created |
+| `updated_at` | `timestamp(6)` | Yes | Update time |

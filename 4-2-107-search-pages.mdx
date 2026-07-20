@@ -1,3 +1,28 @@
 ---
-title: "4-2-107-search-pages"
+title: "4.2.107. Search_pages"
 ---
+
+## Table details
+
+| Item | Value |
+| --- | --- |
+| Table name | `search_pages` |
+| Description | Search page configuration table. |
+
+## Fields
+
+| Field name | Type | Nullable | Description |
+| --- | --- | --- | --- |
+| `id` | `int4` | No | Primary key |
+| `document_id` | `varchar(255)` | Yes | Identifier |
+| `navbar_heading` | `varchar(255)` | Yes | Navbar title |
+| `page_heading` | `varchar(255)` | Yes | Page title |
+| `counter` | `varchar(255)` | Yes | Counter results |
+| `created_at` | `timestamp(6)` | Yes | Date created |
+| `updated_at` | `timestamp(6)` | Yes | Update date |
+| `published_at` | `timestamp(6)` | Yes | Publish date |
+| `created_by_id` | `int4` | Yes | Made by |
+| `updated_by_id` | `int4` | Yes | Updated by |
+| `local` | `varchar(255)` | Yes | Language |
+| `no_results` | `varchar(255)` | Yes | Message missing |
+| `no_results_hint` | `varchar(255)` | Yes | Search hints |
