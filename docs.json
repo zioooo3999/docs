@@ -347,6 +347,7 @@
               {
                 "group": "2. Content Management System",
                 "pages": [
+                  "user-guide/cms/overview",
                   "user-guide/cms/login",
                   {
                     "group": "1.2. Content Manager",

@@ -1,3 +1,57 @@
 ---
-title: "login"
+title: "Login"
+sidebarTitle: "Login"
+description: "User guide for accessing the Tempe Park Content Management Platform, admin authentication, and password recovery procedures."
 ---
+
+To open the Content Management Platform page, the user who wants to log in must first have an admin role, then please open your browser, then type in the column _URL_ :
+
+[**https://tempepark-cms.mengs.cloud/admin**](https://tempepark-cms.mengs.cloud/admin)
+
+Then the system will direct you to the login page as shown in the following image.
+
+<Frame>
+  ![Screenshot 2026 07 20 150307](/images/Screenshot-2026-07-20-150307.png)
+</Frame>
+
+1. **_Email_**, is a column that contains _email_ admin owned.
+2. **_Password_**, is a column that contains the password you have.
+3. **_Login_**, is a button that functions to validate user data who wants to enter the admin page.
+4. **Remember me,** Validate the CMS user so that the login information is saved by the system.
+5. **Forgot your password?**, is a button to go to Password Recovery access, this button can be accessed by users when they forget their account password.
+
+---
+
+## Password Recovery
+
+When the user presses the “ button**Forgot your Password?”,** then a page will appear as below:
+
+<Frame>
+  ![Screenshot 2026 07 20 150344](/images/Screenshot-2026-07-20-150344.png)
+</Frame>
+
+1. **_Email_**, is a column that contains _email_ admin owned.
+2. **Send Email,** is a button to verify the user's email, the system will send an email format to the email that has been filled in by the user.
+3. Next, the user must click on the URL or link that was sent via email, then the user must create a new password to log in.
+
+---
+
+## Quick Workflow Highlights
+
+<CardGroup cols={3}>
+  <Card title="Admin Authorization" color="#10b981" icon="user-shield">
+    Ensures secure authentication restricted exclusively to accounts with registered admin privileges.
+  </Card>
+
+  <Card title="Session Persistence" color="#38bdf8" icon="clock-rotate-left">
+    Supports "Remember me" functionality to securely preserve active session state across browser instances.
+  </Card>
+
+  <Card title="Self-Service Reset" color="#f59e0b" icon="key">
+    Automated password recovery pipeline utilizing email verification link validation.
+  </Card>
+</CardGroup>
+
+<Note>
+  **Note:** Ensure your email inbox is monitored after requesting a password reset. Verify that the password recovery link is executed before token expiration.
+</Note>
