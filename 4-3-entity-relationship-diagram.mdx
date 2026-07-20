@@ -1,3 +1,31 @@
 ---
 title: "4-3-entity-relationship-diagram"
 ---
+
+The following Entity Relationship Diagram (ERD) illustrates the relational structure of the database in the system, including the relationships between key entities such as users, roles, workflows, and content management. Many-to-many relationships are implemented using link tables (\_lnk), while dynamic components use a polymorphic pattern through the \*\_cmps table.
+
+<Frame>
+  ![0 (1)](/images/0-\(1\).png)
+</Frame>
+
+---
+
+## Technical Highlights
+
+<CardGroup cols={3}>
+  <Card title="Relational Core" color="#10b981" icon="diagram-project">
+    Maps key system entities including users, roles, workflow processes, and content domain models.
+  </Card>
+
+  <Card title="Link Tables (_lnk)" color="#38bdf8" icon="link">
+    Handles many-to-many (N:M) entity relationships cleanly through dedicated junction tables.
+  </Card>
+
+  <Card title="Polymorphic Schema (*_cmps)" color="#f59e0b" icon="cubes">
+    Executes flexible, dynamic component structures using Strapi's polymorphic schema tables.
+  </Card>
+</CardGroup>
+
+<Note>
+  **Note:** Ensure all junction tables (`_lnk`) correctly enforce composite foreign key constraints to maintain referential integrity across dynamic relations.
+</Note>

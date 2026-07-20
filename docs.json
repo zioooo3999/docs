@@ -138,7 +138,7 @@
                     ]
                   },
                   {
-                    "group": "3.10. Search Result ",
+                    "group": "3.10. Search Result",
                     "pages": [
                       "3-10-1-search-result-positive",
                       "3-10-2-search-result-negative"
@@ -179,7 +179,7 @@
               "document-version-and-authorization-1",
               "Overview",
               {
-                "group": " High-Level Design",
+                "group": "High-Level Design",
                 "pages": [
                   "3-1-system-architecture",
                   "3-2-architecture-diagram",
@@ -340,7 +340,38 @@
           },
           {
             "group": "User Guide",
-            "pages": []
+            "pages": [
+              "user-guide/overview",
+              "user-guide/list-of-contents",
+              "user-guide/document-version-and-authorization",
+              {
+                "group": "2. Content Management System",
+                "pages": [
+                  "user-guide/cms/login",
+                  {
+                    "group": "1.2. Content Manager",
+                    "pages": [
+                      {
+                        "group": "1.2.1. Collection Types",
+                        "pages": [
+                          "user-guide/cms/collection-types/activity-module",
+                          "user-guide/cms/collection-types/attraction-module",
+                          "user-guide/cms/collection-types/event-calendar-module",
+                          "user-guide/cms/collection-types/facility-module",
+                          "user-guide/cms/collection-types/faq-module",
+                          "user-guide/cms/collection-types/faq-category-module",
+                          "user-guide/cms/collection-types/news-module",
+                          "user-guide/cms/collection-types/news-category-module",
+                          "user-guide/cms/collection-types/page-module",
+                          "user-guide/cms/collection-types/product-module",
+                          "user-guide/cms/collection-types/product-category-module"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
