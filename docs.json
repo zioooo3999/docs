@@ -355,17 +355,108 @@
                       {
                         "group": "1.2.1. Collection Types",
                         "pages": [
-                          "user-guide/cms/collection-types/activity-module",
-                          "user-guide/cms/collection-types/attraction-module",
-                          "user-guide/cms/collection-types/event-calendar-module",
-                          "user-guide/cms/collection-types/facility-module",
-                          "user-guide/cms/collection-types/faq-module",
-                          "user-guide/cms/collection-types/faq-category-module",
-                          "user-guide/cms/collection-types/news-module",
-                          "user-guide/cms/collection-types/news-category-module",
-                          "user-guide/cms/collection-types/page-module",
-                          "user-guide/cms/collection-types/product-module",
-                          "user-guide/cms/collection-types/product-category-module"
+                          "user-guide/cms/collection-types/collection-types-overview",
+                          {
+                            "group": "Activity Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/activity-module",
+                              "user-guide/cms/collection-types/activity-module-create-new-entry",
+                              "user-guide/cms/collection-types/activity-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "Attraction Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/attraction-module",
+                              "user-guide/cms/collection-types/attraction-module-create-new-entry",
+                              "user-guide/cms/collection-types/attraction-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "Event / Calendar Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/event-calendar-module",
+                              "user-guide/cms/collection-types/event-calendar-module-create-new-entry",
+                              "user-guide/cms/collection-types/event-calendar-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "Facility Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/facility-module",
+                              "user-guide/cms/collection-types/facility-module-create-new-entry",
+                              "user-guide/cms/collection-types/facility-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "FAQ Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/faq-module",
+                              "user-guide/cms/collection-types/faq-module-create-new-entry",
+                              "user-guide/cms/collection-types/faq-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "FAQ Category Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/faq-category-module",
+                              "user-guide/cms/collection-types/faq-category-module-create-new-entry",
+                              "user-guide/cms/collection-types/faq-category-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "News Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/news-module",
+                              "user-guide/cms/collection-types/news-module-create-new-entry",
+                              "user-guide/cms/collection-types/news-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "News Category Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/news-category-module",
+                              "user-guide/cms/collection-types/news-category-module-create-new-entry",
+                              "user-guide/cms/collection-types/news-category-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "Page Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/page-module",
+                              "user-guide/cms/collection-types/page-module-create-setup-homepage",
+                              "user-guide/cms/collection-types/page-module-create-setup-plan-your-visit",
+                              "user-guide/cms/collection-types/page-module-create-setup-experience",
+                              "user-guide/cms/collection-types/page-module-create-setup-experience-detail",
+                              "user-guide/cms/collection-types/page-module-create-setup-education",
+                              "user-guide/cms/collection-types/page-module-create-setup-education-detail",
+                              "user-guide/cms/collection-types/page-module-create-setup-news",
+                              "user-guide/cms/collection-types/page-module-create-setup-news-detail",
+                              "user-guide/cms/collection-types/page-module-create-setup-innovation",
+                              "user-guide/cms/collection-types/page-module-create-setup-innovation-detail",
+                              "user-guide/cms/collection-types/page-module-create-setup-about-us",
+                              "user-guide/cms/collection-types/page-module-create-setup-career",
+                              "user-guide/cms/collection-types/page-module-create-setup-career-detail",
+                              "user-guide/cms/collection-types/page-module-create-setup-contact-us",
+                              "user-guide/cms/collection-types/page-module-create-setup-faq"
+                            ]
+                          },
+                          {
+                            "group": "Product Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/product-module",
+                              "user-guide/cms/collection-types/product-module-create-new-entry",
+                              "user-guide/cms/collection-types/product-module-edit"
+                            ]
+                          },
+                          {
+                            "group": "Product Category Module",
+                            "pages": [
+                              "user-guide/cms/collection-types/product-category-module",
+                              "user-guide/cms/collection-types/product-category-module-create-new-entry",
+                              "user-guide/cms/collection-types/product-category-module-edit"
+                            ]
+                          }
                         ]
                       }
                     ]

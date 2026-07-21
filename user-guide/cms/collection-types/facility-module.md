@@ -15,185 +15,58 @@ This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` a
 </Note>
 
 ## Reference view
-<Frame>
-  ![Facility Module reference page](/images/collection-types/facility-module-reference-page-30.png)
-</Frame>
-
-<AccordionGroup>
-  <Accordion title="1.2.1.4. Facility Module">
-
-    <Warning>
-      Review multilingual, status, and relationship fields before publishing content.
-    </Warning>
-
-    The Facilities module in the Tempe Park CMS is used to manage information about the  
-    various facilities available at Tempe Park. This module serves as a tool for managing facility  
-    content, which will then be displayed on the website's front page as supporting information  
-    for visitors.  
-    Through this module, administrators can add and organize various facility information, such  
-    as facility name, description, image, location, and other supporting information as needed.  
-    The facility content displayed aims to provide visitors with an overview of the facilities and  
-    services available during their stay at Tempe Park.  
-    Here is the main view of the Facility menu:  
-    **No Elements Function**  
-    1 Search Button Click this icon to search for the desired keyword,  
-    the keyword will appear based on general  
-    information data, namely title, slug, and  
-    short_description  
-    2 Filter Button Use this button to search for keywords within a  
-    specific field, such as searching for keywords in only  
-    one field. When the user clicks, they will be  
-    prompted to select a field and then type in  
-    keywords that match the data in that field.  
-    3 Checkbox Button Use this button if the user wants to perform  
-    multiple actions, such as deleting, publishing, or  
-    unpublishing more than one record simultaneously.  
-    Clicking multiple records will bring up the publish,  
-    unpublish, and delete buttons. Clicking one of the  
-    action options will cause the selected record to  
-    respond accordingly.  
-    4 Id Data ID information from the facility module  
-    5 Slug Facility data slug information  
-    6 Short_Description Brief description information of the facility  
-    7 Available In Multilingual data information allows users to edit  
-    data using this button. Select multi-language based  
-    on the data to be selected. After clicking multi-  
-    language, the user will be directed to edit the data in  
-    the selected multi-language.  
-    8 Status Data status information whether it has been  
-    published or is a draft  
-    9 Multilingual Button Use this button if the user wants to switch  
-    languages. The data displayed will be based on the  
-    multilingual data entered. Available languages are  
-    English, Indonesian, and Chinese.  
-    10 Settings Use this button if the user wants to display fields or  
-    columns according to their wishes.  
-    11 Tombol Create New Entry Use this button if the user wants to add new facility  
-    data to the system.  
-    The following is a frontend view based on data taken from the Facility collection module.  
-    The contents of this module will become the frontend content on the Experience section  
-    of the Facilities page:
-  </Accordion>
-
-  <Accordion title="1.2.1.4.1. Create New Entry">
-
-    <Tip>
-      Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
-    </Tip>
-
-    The Create New Entry feature in the Facility module is used to add new facility data  
-    available at Tempe Park. This feature allows administrators to input various facility  
-    information, such as the facility name, description, image, location, and other supporting  
-    information, which will be displayed on the website.  
-    Facility data that is successfully added will be stored in the system and can be published on  
-    the Tempe Park website frontpage as information for visitors.  
-    Here is the main view of the New Facility page:  
-    **No Elements Function**  
-    1 Tab Draft Use this form tab when the user wants to add  
-    (editable form) new data entry  
-    2 Tab Published Use this form tab if the user wants to see the data  
-    that has been inputted (published). The form on this  
-    tab is read only and cannot be edited.  
-    3 Title Enter the facility title  
-    4 Slug Enter slug facility  
-    5 Description Enter facility description  
-    6 Publish Use this button if the user wants to directly publish  
-    (implement it on the website landing page) the data  
-    that will be entered into the system. Data that has  
-    been published in the collection can also be used as  
-    a relationship to data from other modules.  
-    7 Save button Use this button if the user wants to save new data  
-    that will be entered into the system. The saved data  
-    will have a Draft status, not a Published one.  
-    8 Multilingual Use this button to switch languages. When the user  
-    clicks this button, 3 languages will appear, namely  
-    English, Indonesian, and Chinese. When a new user  
-    adds 1 multilingual data, this button can be used to  
-    add a language version to the data.  
-    9 short_description Enter a short description of the facility  
-    10 Cover image Enter cover image for facility section  
-    11 Gallery Select multiple gallery images for the facility section  
-    12 opening_hours_weekdays Enter the operating hours of the facility to be  
-    included in Tempe Park.  
-    13 opening_hours_weekdend Enter the closing hours of the facility to be included  
-    in Tempe Park.  
-    14 age_requirement Enter the recommended age of the facilities to be  
-    included in Tempe Park.  
-    15 Note Enter facility notes  
-    16 related_facilities Select related facilities to be included in Tempe Park  
-    17 is_highlight Select false if the facility to be entered will not be  
-    highlighted, select true otherwise.
-  </Accordion>
-
-  <Accordion title="1.2.1.4.2. Edit">
-
-    The Edit Data feature in the Facility module is used to update or modify facility information  
-    stored in the system. Administrators can make changes to facility data such as the facility  
-    name, description, image, location, and other information as needed.  
-    Changes to data made through this feature will immediately affect the facility information  
-    displayed on the Tempe Park website after the data is successfully saved, so that the  
-    information available to visitors remains accurate and up-to-date.  
-    The following is the main view of the Edit Facility page:  
-    **No Elements Function**  
-    1 Tab Draft Use this form tab when the user wants to add  
-    (editable form) new data entry  
-    2 Tab Published Use this form tab if the user wants to see the data  
-    that has been inputted (published). The form on this  
-    tab is read only and cannot be edited.  
-    3 Title Enter facility title changes  
-    4 Slug Enter facility slug changes  
-    5 Description Enter changes to the facility description  
-    6 Publish Use this button if the user wants to directly publish  
-    (implement it on the website landing page) the data  
-    that will be entered into the system. Data that has  
-    been published in the collection can also be used as  
-    a relationship to data from other modules.  
-    7 Save button Use this button if the user wants to save new data  
-    that will be entered into the system. The saved data  
-    will have a Draft status, not a Published one.  
-    8 Set up Preview Use this button to preview the results of the added  
-    data input on the front page. The data that I just  
-    changed and then previewed has not been saved in  
-    the system. If you want to save it, you have to save  
-    it first.  
-    9 Multilingual Use this button to switch languages. When the user  
-    clicks this button, 3 languages will appear, namely  
-    English, Indonesian, and Chinese. When a new user  
-    adds 1 multilingual data, this button can be used to  
-    add a language version to the data.  
-    10 short_description Enter changes to the short description of the facility  
-    11 Cover image Enter cover image changes for the facility section  
-    12 Gallery Select multiple gallery image changes for the facility  
-    section, maximum 3 images  
-    13 opening_hours_weekdays Enter changes to the operating hours of the facilities  
-    to be included in Tempe Park.  
-    14 opening_hours_weekdend Enter changes to the closing hours of the facilities to  
-    be entered in Tempe Park.  
-    15 age_requirement Enter changes to the recommended age of facilities  
-    to be included in Tempe Park.  
-    16 Note Enter changes to facility notes  
-    17 related_facilities Select some to make changes related to the facilities  
-    that will be included in Tempe Park.  
-    18 is_highlight Select false if the facility to be entered will not be  
-    highlighted, select true otherwise.
-  </Accordion>
-
-</AccordionGroup>
-
-## Screenshots
 
 <Frame>
-  ![Facility menu](/images/collection-types/facility-module-menu.png)
 </Frame>
 
-<Frame>
-  ![Facility frontend view](/images/collection-types/facility-module-frontend-view.png)
-</Frame>
+<Warning>
+  Review multilingual, status, and relationship fields before publishing content.
+</Warning>
 
-<Frame>
-  ![New Facility page](/images/collection-types/facility-module-create-new-entry.png)
-</Frame>
-
-<Frame>
-  ![Edit Facility page](/images/collection-types/facility-module-edit.png)
-</Frame>
+The Facilities module in the Tempe Park CMS is used to manage information about the  
+various facilities available at Tempe Park. This module serves as a tool for managing facility  
+content, which will then be displayed on the website's front page as supporting information  
+for visitors.  
+Through this module, administrators can add and organize various facility information, such  
+as facility name, description, image, location, and other supporting information as needed.  
+The facility content displayed aims to provide visitors with an overview of the facilities and  
+services available during their stay at Tempe Park.  
+Here is the main view of the Facility menu:  
+**No Elements Function**  
+1 Search Button Click this icon to search for the desired keyword,  
+the keyword will appear based on general  
+information data, namely title, slug, and  
+short_description  
+2 Filter Button Use this button to search for keywords within a  
+specific field, such as searching for keywords in only  
+one field. When the user clicks, they will be  
+prompted to select a field and then type in  
+keywords that match the data in that field.  
+3 Checkbox Button Use this button if the user wants to perform  
+multiple actions, such as deleting, publishing, or  
+unpublishing more than one record simultaneously.  
+Clicking multiple records will bring up the publish,  
+unpublish, and delete buttons. Clicking one of the  
+action options will cause the selected record to  
+respond accordingly.  
+4 Id Data ID information from the facility module  
+5 Slug Facility data slug information  
+6 Short_Description Brief description information of the facility  
+7 Available In Multilingual data information allows users to edit  
+data using this button. Select multi-language based  
+on the data to be selected. After clicking multi-  
+language, the user will be directed to edit the data in  
+the selected multi-language.  
+8 Status Data status information whether it has been  
+published or is a draft  
+9 Multilingual Button Use this button if the user wants to switch  
+languages. The data displayed will be based on the  
+multilingual data entered. Available languages are  
+English, Indonesian, and Chinese.  
+10 Settings Use this button if the user wants to display fields or  
+columns according to their wishes.  
+11 Tombol Create New Entry Use this button if the user wants to add new facility  
+data to the system.  
+The following is a frontend view based on data taken from the Facility collection module.  
+The contents of this module will become the frontend content on the Experience section  
+of the Facilities page:

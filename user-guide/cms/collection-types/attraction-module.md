@@ -15,184 +15,56 @@ This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` a
 </Note>
 
 ## Reference view
-<Frame>
-  ![Attraction Module reference page](/images/collection-types/attraction-module-reference-page-16.png)
-</Frame>
-
-<AccordionGroup>
-  <Accordion title="1.2.1.2. Attraction Module">
-
-    <Warning>
-      Review multilingual, status, and relationship fields before publishing content.
-    </Warning>
-
-    The Attractions module in the Tempe Park CMS is used to manage information about the  
-    various attractions and featured rides available at Tempe Park. This module serves as a  
-    medium for managing attraction content, which will then be displayed on the website's  
-    front page as the primary information for visitors.  
-    Through this module, administrators can add and organize various attraction information,  
-    such as attraction name, description, images, location, facilities, and other supporting  
-    information as needed. The content managed in this module aims to provide an overview  
-    of the experiences and attractions visitors can enjoy at Tempe Park.  
-    The following is the main display of the Activity menu:  
-    **No Elements Function**  
-    1 Search Button Click this icon to search for the desired keyword,  
-    the keyword will appear based on general  
-    information data, namely title, slug, and  
-    short_description  
-    2 Filter Button Use this button to search for keywords within a  
-    specific field, such as searching for keywords in only  
-    one field. When the user clicks, they will be  
-    prompted to select a field and then type in  
-    keywords that match the data in that field.  
-    3 Checkbox Button Use this button if the user wants to perform  
-    multiple actions, such as deleting, publishing, or  
-    unpublishing more than one record simultaneously.  
-    Clicking multiple records will bring up the publish,  
-    unpublish, and delete buttons. Clicking one of the  
-    action options will cause the selected record to  
-    respond accordingly.  
-    4 Id Data ID information from attraction module  
-    5 Slug Attraction data slug information  
-    6 Short_Description Short description information of the attraction  
-    7 Available In Multilingual data information allows users to edit  
-    data using this button. Select multi-language based  
-    on the data to be selected. After clicking multi-  
-    language, the user will be directed to edit the data in  
-    the selected multi-language.  
-    8 Status Data status information whether it has been  
-    published or is a draft  
-    9 Multilingual Button Use this button if the user wants to switch  
-    languages. The data displayed will be based on the  
-    multilingual data entered. Available languages are  
-    English, Indonesian, and Chinese.  
-    10 Tombol Create New Entry Use this button if the user wants to add new  
-    position data to the system.  
-    The following is a frontend view based on data taken from the Attraction collection  
-    module. The contents of this module will become the frontend content on the Attraction  
-    Experience section page:
-  </Accordion>
-
-  <Accordion title="1.2.1.2.1. Create New Entry">
-
-    <Tip>
-      Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
-    </Tip>
-
-    The Create New Entry feature in the Attraction module is used to add new attractions or  
-    rides available at Tempe Park. This feature allows administrators to input various attraction  
-    information, such as the attraction name, description, images, location, facilities, and other  
-    supporting information, which will be displayed on the website.  
-    The attraction data that is successfully added will be stored in the system and can be  
-    published on the Tempe Park website frontpage as information for visitors.  
-    Here is the main view of the New Entry Attraction page:  
-    **No Elements Function**  
-    1 Tab Draft Use this form tab when the user wants to add  
-    (editable form) new data entry  
-    2 Tab Published Use this form tab if the user wants to see the data  
-    that has been inputted (published). The form on this  
-    tab is read only and cannot be edited.  
-    3 Title Enter the attraction title  
-    4 Slug Enter the attraction slug  
-    5 Description Enter attraction description  
-    6 Publish Use this button if the user wants to directly publish  
-    (implement it on the website landing page) the data  
-    that will be entered into the system. Data that has  
-    been published in the collection can also be used as  
-    a relationship to data from other modules.  
-    7 Save button Use this button if the user wants to save new data  
-    that will be entered into the system. The saved data  
-    will have a Draft status, not a Published one.  
-    8 Multilingual Use this button to switch languages. When the user  
-    clicks this button, 3 languages will appear, namely  
-    English, Indonesian, and Chinese. When a new user  
-    adds 1 multilingual data, this button can be used to  
-    add a language version to the data.  
-    9 short_description Enter a short description of the attraction  
-    10 Cover image Enter the cover image of the attraction section  
-    11 Gallery Enter gallery attraction image  
-    12 opening_hours_weekdays Enter the operational opening hours of the Tempe  
-    Park attraction agenda on weekdays.  
-    13 opening_hours_weekend Enter the operational opening hours of the Tempe  
-    Park attraction agenda on holidays  
-    14 age_requirement Enter age recommendations for Tempe Park  
-    attractions.  
-    15 Note Enter attraction note  
-    16 related_activities Click the dropdown to select some related Tempe  
-    Park activities to add.  
-    17 is_highlight Select false if the attraction data to be added will  
-    not be highlighted, select true otherwise.
-  </Accordion>
-
-  <Accordion title="1.2.1.2.2. Edit">
-
-    The Edit Data feature in the Attraction module is used to update or modify attraction  
-    information stored in the system. Administrators can make changes to attraction data, such  
-    as the attraction name, description, images, location, amenities, and other information as  
-    needed.  
-    Changes to data made through this feature will immediately affect the attraction  
-    information displayed on the Tempe Park website after the data is successfully saved, so  
-    that the information available to visitors remains accurate, interesting, and up-to-date.  
-    Here is the main view of the Edit attraction page:  
-    **No Elements Function**  
-    1 Tab Draft Use this form tab when the user wants to add  
-    (editable form) new data entry  
-    2 Tab Published Use this form tab if the user wants to see the data  
-    that has been input (published), the form on this tab  
-    is read only and cannot be edited.  
-    3 Title Enter the attraction title changes  
-    4 Slug Enter attraction slug changes  
-    5 Description Enter changes to the attraction description  
-    6 Publish Use this button if the user wants to directly publish  
-    (implement it on the website landing page) the data  
-    that will be entered into the system. Data that has  
-    been published in the collection can also be used as  
-    a relationship to data from other modules.  
-    7 Save button Use this button if the user wants to save new data  
-    that will be entered into the system. The saved data  
-    will have a Draft status, not a Published one.  
-    8 Set up Preview Use this button to preview previously entered  
-    content.  
-    9 Multilingual Use this button to switch languages. When the user  
-    clicks this button, 3 languages will appear, namely  
-    English, Indonesian, and Chinese. When a new user  
-    adds 1 multilingual data, this button can be used to  
-    add a language version to the data.  
-    10 short_description Enter changes to the short description of the  
-    attraction  
-    10 Cover image Enter changes to the cover image of the attraction  
-    section  
-    11 Gallery Enter changes to the attraction gallery image, the  
-    gallery image can be added with several images  
-    12 opening_hours_weekdays Enter changes to the operational opening hours of  
-    the Tempe Park attraction agenda on weekdays  
-    13 opening_hours_weekend Enter changes to the operational opening hours of  
-    the Tempe Park attraction agenda on holidays.  
-    14 age_requirement Input change Age recommendations for Tempe Park  
-    attractions  
-    15 Note Input change note attraction  
-    16 related_activities Click the dropdown to select some related Tempe  
-    Park activities to add.  
-    17 is_highlight Select false if the attraction data to be added will  
-    not be highlighted, select true otherwise.
-  </Accordion>
-
-</AccordionGroup>
-
-## Screenshots
 
 <Frame>
-  ![Attraction menu](/images/collection-types/attraction-module-menu.png)
 </Frame>
 
-<Frame>
-  ![Attraction frontend view](/images/collection-types/attraction-module-frontend-view.png)
-</Frame>
+<Warning>
+  Review multilingual, status, and relationship fields before publishing content.
+</Warning>
 
-<Frame>
-  ![New Entry Attraction page](/images/collection-types/attraction-module-create-new-entry.png)
-</Frame>
-
-<Frame>
-  ![Edit Attraction page](/images/collection-types/attraction-module-edit.png)
-</Frame>
+The Attractions module in the Tempe Park CMS is used to manage information about the  
+various attractions and featured rides available at Tempe Park. This module serves as a  
+medium for managing attraction content, which will then be displayed on the website's  
+front page as the primary information for visitors.  
+Through this module, administrators can add and organize various attraction information,  
+such as attraction name, description, images, location, facilities, and other supporting  
+information as needed. The content managed in this module aims to provide an overview  
+of the experiences and attractions visitors can enjoy at Tempe Park.  
+The following is the main display of the Activity menu:  
+**No Elements Function**  
+1 Search Button Click this icon to search for the desired keyword,  
+the keyword will appear based on general  
+information data, namely title, slug, and  
+short_description  
+2 Filter Button Use this button to search for keywords within a  
+specific field, such as searching for keywords in only  
+one field. When the user clicks, they will be  
+prompted to select a field and then type in  
+keywords that match the data in that field.  
+3 Checkbox Button Use this button if the user wants to perform  
+multiple actions, such as deleting, publishing, or  
+unpublishing more than one record simultaneously.  
+Clicking multiple records will bring up the publish,  
+unpublish, and delete buttons. Clicking one of the  
+action options will cause the selected record to  
+respond accordingly.  
+4 Id Data ID information from attraction module  
+5 Slug Attraction data slug information  
+6 Short_Description Short description information of the attraction  
+7 Available In Multilingual data information allows users to edit  
+data using this button. Select multi-language based  
+on the data to be selected. After clicking multi-  
+language, the user will be directed to edit the data in  
+the selected multi-language.  
+8 Status Data status information whether it has been  
+published or is a draft  
+9 Multilingual Button Use this button if the user wants to switch  
+languages. The data displayed will be based on the  
+multilingual data entered. Available languages are  
+English, Indonesian, and Chinese.  
+10 Tombol Create New Entry Use this button if the user wants to add new  
+position data to the system.  
+The following is a frontend view based on data taken from the Attraction collection  
+module. The contents of this module will become the frontend content on the Attraction  
+Experience section page:

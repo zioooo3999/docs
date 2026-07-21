@@ -1,6 +1,6 @@
 ---
-title: "Activity Module"
-sidebarTitle: "Activity"
+title: "Activity Module - Edit"
+sidebarTitle: "Edit"
 description: "The Activity module in the Tempe Park CMS is used to manage information about the various activities and events available at Tempe Park."
 ---
 
@@ -19,18 +19,61 @@ This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` a
 <Frame>
 </Frame>
 
-<Warning>
-  Review multilingual, status, and relationship fields before publishing content.
-</Warning>
+The
 
-The Activity module in the Tempe Park CMS is used to manage information about the  
-various activities and events available at Tempe Park. This module serves as a medium for  
-managing activity content, which will then be displayed on the website's front page as  
-information for visitors.  
-Through this module, administrators can add and organize various activity data, such as  
-activity name, description, images, schedule, location, and other supporting information as  
-needed. The activity content displayed aims to provide visitors with an overview of the  
-experiences and activities available at Tempe Park.  
+## Procedure
+
+<Steps>
+  <Step title="Review the form">
+
+Edit Data feature in the Activity module is used to update or modify activity information  
+already stored in the system. Administrators can make changes to activity data, such as  
+activity name, description, image, schedule, location, and other information as needed.  
+Changes to data made through this feature will immediately affect the activity information  
+displayed on the Tempe Park website after the data is successfully saved, so that the  
+information available to visitors remains accurate and up-to-date.  
+The following is the main view of the Edit activity page.
+
+  </Step>
+  <Step title="Complete the form">
+
+**No Elements Function**  
+1 Tab Draft Use this form tab when the user wants to edit  
+(editable form) data.  
+2 Tab Published Use this form tab if the user wants to see the data  
+that has been inputted (published). The form on this  
+tab is read only and cannot be edited.  
+3 Title Enter activity title changes  
+4 Slug Enter activity slug changes  
+5 Description Enter changes to the activity description  
+6 Publish Use this button if the user wants to immediately  
+publish (apply to the website landing page) the  
+modified data, which will be saved in the system.  
+Data published in the collection can also be used as  
+a relationship to other module data.  
+7 Save button Use this button if the user wants to save or retain  
+data changes. The saved data will have a Draft  
+status, not a Published one.  
+8 Set up preview Use this button to preview previously entered  
+content.  
+9 Multilingual Use this button to switch languages. When the user  
+clicks this button, 3 languages will appear, namely  
+English, Indonesian, and Chinese. When a new user  
+adds 1 multilingual data, this button can be used to  
+add a language version to the data.  
+10 short_description Enter changes to the short description of the  
+activity.  
+11 cover_image Enter changes to the activity cover image  
+12 gallery Enter several gallery images (maximum 3) for the  
+activity  
+13 operning_hours_weekdays Enter Tempe Park's weekday operating hours  
+14 opening_hours_weekend Enter Tempe Park holiday operating hours  
+15 age_recruitment Enter the recommended age for an activity.  
+16 Note Enter Tempe Park activity notes  
+17 related_activity Enter the related activity Tempe Park will add.  
+18 is_highlight Select false if the content to be entered is not  
+highlighted, select true if the content will be  
+highlighted.  
 The following is the main display of the Activity menu:  
 **No Elements Function**  
 1 Search Button Click this icon to search for the desired keyword,  
@@ -67,7 +110,7 @@ English, Indonesian, and Chinese.
 11 Settings Use this button if the user wants to display fields or  
 columns according to their wishes.  
 12 Tombol Create New Entry Use this button if the user wants to add new  
-position data to the system.  
-The following is a Frontend View based on data taken from the Activity collection module.  
-The contents of this module will become the frontend content on the Experience section  
-of the Activities page:
+position data to the system.
+
+  </Step>
+</Steps>
