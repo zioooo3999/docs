@@ -1,5 +1,5 @@
 ---
-title: "Page Module - Create/Setup Carrer Detail"
+title: "Page Module - Create/Setup Career Detail"
 sidebarTitle: "Career Detail"
 description: "Guide for configuring the Career Detail page layout, including job requirements, responsibilities, and application call-to-actions in the Tempe Park CMS."
 ---

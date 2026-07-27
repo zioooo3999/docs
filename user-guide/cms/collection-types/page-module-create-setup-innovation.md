@@ -1,5 +1,5 @@
 ---
-title: "Page Module - Create/Setup Innovatio"
+title: "Page Module - Create/Setup Innovation"
 sidebarTitle: "Innovation"
 description: "Guide for configuring the Innovation page, including products, menu inspiration, collaborations, and partnership inquiries in the Tempe Park CMS."
 ---

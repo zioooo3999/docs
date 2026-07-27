@@ -1,5 +1,5 @@
 ---
-title: "Page Module - Create/Setup Educat"
+title: "Page Module - Create/Setup Education"
 sidebarTitle: "Education"
 description: "Step-by-step guide for building and configuring the 'Education' page in the Tempe Park CMS using the Page Builder."
 ---

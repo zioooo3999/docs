@@ -1,6 +1,6 @@
 ---
 title: "Page Module - Create/Setup Experience"
-sidebarTitle: "Experien"
+sidebarTitle: "Experience"
 description: "Step-by-step guide for building and configuring the 'Experience' page in the Tempe Park CMS using the Page Builder."
 ---
 

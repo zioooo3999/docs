@@ -1,5 +1,5 @@
 ---
-title: "Page Module - Create/ Setup News Detail"
+title: "Page Module - Create/Setup News Detail"
 sidebarTitle: "News Detail"
 description: "Guide for configuring the News Detail page layout, metadata, and sidebar ticket components in the Tempe Park CMS."
 ---

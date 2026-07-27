@@ -1,5 +1,5 @@
 ---
-title: "Page Module - Create/Setup Carrer"
+title: "Page Module - Create/Setup Career"
 sidebarTitle: "Career"
 description: "Step-by-step guide for configuring the 'Career' page in the Tempe Park CMS using the Page Builder, including hero headers and job listing filters."
 ---
