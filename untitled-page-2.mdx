@@ -1,0 +1,47 @@
+---
+title: "Backup & Restore Guide"
+---
+
+## **8.1 Backup**
+
+The backup covers three components: the database, the source code, and the object storage.
+
+The database is backed up using pg\_dump in custom format, with the date included in the file name so that each backup can be identified:
+
+pg\_dump -Fc -d tempepark -f tempepark\_\[date\].dump
+
+<br />Backup & Restore Guide
+
+The source code is backed up through the Git remote by keeping the production branch up to date, or alternatively by archiving the application folder using tar.
+
+The object storage is backed up by mirroring the MinIO bucket to a backup location:
+
+mc mirror \[alias\]/tempe-park \[backup-path\]
+
+<br />
+
+The equivalent aws s3 sync command may be used instead if the AWS CLI is preferred.
+
+## **8.2 Restore**
+
+To restore the database, create the database and the role first, then restore the dump file:
+
+pg\_restore --no-owner --role=\[user\] -d tempepark \[file\].dump
+
+<br />
+
+To restore the source code, clone the repository, check out the intended branch, install the dependencies, and rebuild the application:
+
+git clone \[repo-url\]
+
+git checkout \[branch\]
+
+npm install
+
+npm run build
+
+<br />
+
+To restore the object storage, mirror the backup contents back into the MinIO bucket.
+
+<br />

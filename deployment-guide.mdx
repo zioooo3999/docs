@@ -1,0 +1,69 @@
+---
+title: "Deployment Guide"
+---
+
+## **7.1 Deployment Process**
+
+Deployment to the production environment follows a fixed sequence of steps:
+
+1. Check out the production branch.
+2. Pull the latest source code on the server.
+3. Install the dependencies.
+4. Build the application.
+5. Apply the environment configuration.
+6. Restart the service.
+7. Verify the deployment.
+
+## **7.2 Update Source Code**
+
+On the server, pull the latest changes from the production branch, reinstall the dependencies to account for any package changes, and rebuild the application:
+
+git pull origin \[production-branch\]
+
+npm install
+
+npm run build
+
+<br />
+
+## **7.3 Restart Service**
+
+Restart the application using the mechanism configured on the server — a process manager such as pm2, a systemd unit, or Docker. The typical commands for each option are as follows.
+
+Using pm2:
+
+pm2 restart \[app-name\]
+
+<br />
+
+Using Docker:
+
+docker compose up -d --build
+
+<br />
+
+Using systemd:
+
+sudo systemctl restart \[service-name\]
+
+<br />
+
+## **7.4 Deployment Verification**
+
+Repeat the checks described in section 5.5 against the production URLs. In addition, confirm that a recently edited piece of content in the CMS is correctly reflected on the frontend, which verifies that the connection between the backend and the frontend is functioning as expected.
+
+## **7.5 Rollback Procedure**
+
+If the deployment fails or causes issues in production, roll back to the previous stable version by checking out the corresponding tag or commit, reinstalling the dependencies, rebuilding the application, and restarting the service:
+
+git checkout \[previous-tag-or-commit\]
+
+npm install
+
+npm run build
+
+<br />
+
+Restart the service afterwards using the same mechanism described in section 7.3. If a database migration also needs to be reverted, restore the database from the most recent backup as described in section 8.
+
+<br />

@@ -1,0 +1,31 @@
+---
+title: "Administrator Guide"
+---
+
+## **_13.1 User Management_**
+
+Admin (CMS) users are managed under Settings -\> Administration Panel -\> Users. Create a user, assign a role, and the user receives access to the admin panel. \[Screenshot: admin users\]
+
+## **_13.2 Roles & Permissions_**
+
+Admin roles are configured under Settings -\> Administration Panel -\> Roles. API access for the frontend and public consumers is configured under Settings -\> Users & Permissions Plugin -\> Roles, where each content type's find/findOne permissions are enabled per role. \[Screenshot: roles & permissions\]
+
+## **_13.3 Reset Password_**
+
+A user can reset their own password from the account menu. An administrator can also reset a user's password from Settings -\> Administration Panel -\> Users.
+
+## **_13.4 Basic CMS Configuration_**
+
+Core configuration lives in the backend config/ folder (server, database, admin, plugins) and in the .env file. See the Configuration Guide for the full list of variables.
+
+## **_13.5 Editable Configuration Locations_**
+
+•  Environment variables: .env (backend) and .env.local (frontend).
+
+•  Application configuration: config/server.ts, config/database.ts, config/admin.ts, config/plugins.ts.
+
+## **_13.6 Application Restart Procedure_**
+
+Restart the backend and frontend using the server's configured mechanism (see section 6.3).
+
+<br />

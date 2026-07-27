@@ -1,0 +1,49 @@
+---
+title: "Server Operation & Maintenance Guide"
+---
+
+## **9.1 Docker Operation**
+
+Routine container operations are performed with the following commands. Container status can be viewed with docker ps, and a container can be restarted with docker restart \[name\] or docker compose restart \[service\]. Images are updated by pulling the latest version and recreating the containers:
+
+docker ps
+
+docker restart \[name\]
+
+docker compose pull && docker compose up -d
+
+<br />
+
+Unused images can be removed with docker image prune. The broader docker system prune also cleans up other unused resources and should be used with care, as it removes networks and volumes that may still be needed:
+
+docker image prune
+
+docker system prune
+
+<br />
+
+## **9.2 Storage Management**
+
+Media files are stored in the MinIO bucket named tempe-park. Server disk capacity can be monitored with df -h, while bucket usage can be reviewed through the MinIO console or its metrics endpoint.
+
+The following must never be deleted: the contents of the MinIO bucket, the PostgreSQL data directory, and the .env files.
+
+## **9.3 Log Management**
+
+Application logs consist of the process output from Strapi and Next.js, accessible through the mechanism configured on the server — pm2 logs, docker logs, or journalctl. Web server logs are located at /var/log/nginx/access.log and /var/log/nginx/error.log.
+
+When investigating an issue, check the application log first, then the web server log.
+
+## **9.4 Basic Health Check**
+
+If the website becomes unreachable, perform the check in the following order: Docker containers, then the web server (Nginx), then the database (PostgreSQL), then the object storage (MinIO), and finally the disk capacity.
+
+## **9.5 Patching & Update Procedure**
+
+Before performing any update, back up the database, the source code, and the object storage. The update itself may cover the application, the Docker image, the operating system, and the dependencies, as needed.
+
+After the update is applied, verify the system using the checks described in section 5.5. If the update fails, roll back following the procedure in section 7.5.
+
+Updates should be performed during a low-traffic maintenance window to minimise the impact on users.
+
+<br />

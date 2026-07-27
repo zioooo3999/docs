@@ -335,7 +335,16 @@
                   },
                   "4-3-entity-relationship-diagram"
                 ]
-              }
+              },
+              "untitled-page-1",
+              "configuration-guide",
+              "deployment-guide",
+              "untitled-page-2",
+              "server-operation-and-maintenance-guide",
+              "untitled-page-3",
+              "sitemap",
+              "cms-guide",
+              "untitled-page-4"
             ]
           },
           {
@@ -532,13 +541,7 @@
               },
               {
                 "group": "Sitemap",
-                "pages": [
-                  "struktur-menu-website",
-                  "daftar-seluruh-halaman",
-                  "url-setiap-halaman",
-                  "keterangan-halaman-static",
-                  "halaman-yang-kelola-melalui-cms"
-                ]
+                "pages": []
               },
               {
                 "group": "CMS Guide",
