@@ -1,0 +1,46 @@
+---
+title: "Single Types Permissions"
+sidebarTitle: "Single Types Permissions"
+description: "User guide for configuring access rights across single-instance content structures and global site settings in the Tempe Park CMS."
+---
+
+## Overview
+
+The **Single Types Permissions** setting allows administrators to configure granular access rights for a specific role across single-instance content structures in the CMS (such as _Footer_, _Header_, or _Search-page_).
+
+Unlike collection types, single types represent unique pages or global layout elements. Setting these permissions controls who can view, edit, or publish site-wide configurations.
+
+---
+
+## Permission Configuration Matrix
+
+<Frame>
+  ![Single Types Permissions Configuration](/images/Group-5.png "Single Types Permissions Configuration")
+</Frame>
+
+| Column / Action | Function & Description |
+| :-- | :-- |
+| **CREATE (1)** | Grants authority to initialize data for a single-type module if it has not been created yet. |
+| **READ (2)** | Permits users to view the content and structural configuration of the single type. |
+| **UPDATE (3)** | Enables users to modify or edit existing settings and content within the single type. |
+| **DELETE (4)** | Grants authority to clear or remove existing entry data from the single type. |
+| **PUBLISH (5)** | Allows users to publish or unpublish changes made to single-type components directly to the live website. |
+
+---
+
+## How to Configure Single Types Permissions
+
+1. **Access Single Types Tab:** Click on the **Single Types** tab at the top of the permission matrix.
+2. **Assign Specific Capabilities:**
+   - Check **CREATE** (1) to allow initial data setup.
+   - Check **READ** (2) to grant viewing capabilities.
+   - Check **UPDATE** (3) to permit editing of global elements.
+   - Check **DELETE** (4) to allow clearing single-type data.
+   - Check **PUBLISH** (5) to grant authority to push structural updates live.
+3. **Save Settings:** Save the role configuration to enforce access rules across all assigned users.
+
+---
+
+<Note>
+  **Important:** Global elements like _Footer_ and _Header_ impact the entire website. Restrict **UPDATE** and **PUBLISH** rights for Single Types to high-level administrators.
+</Note>

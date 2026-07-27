@@ -4,70 +4,60 @@ sidebarTitle: "Event / Calendar"
 description: "The Event / Calendar module in the Tempe Park CMS is used to manage event and calendar information displayed on the Tempe Park website."
 ---
 
-<CardGroup cols={3}>
-  <Card title="Manage content" icon="calendar-days" color="#10b981">Use this module to manage structured CMS content for Tempe Park.</Card>
-  <Card title="Publish workflow" icon="clock" color="#38bdf8">Save content as Draft or publish it for the website frontpage.</Card>
-  <Card title="Relationships" icon="map-pin" color="#f59e0b">Use related data, categories, images, and multilingual fields where the module provides them.</Card>
-</CardGroup>
+## Overview
 
-<Note>
-This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` and organizes it into Mintlify components for easier scanning.
-</Note>
+The **Event / Calendar** module in the Tempe Park CMS is used to manage information about the schedule of events, activities, and special programs held at Tempe Park based on specific dates. This module serves as a tool for managing the activity calendar, which is then displayed on the website so visitors can easily view available schedules and plan their visits.
 
-## Reference view
+Through this module, administrators can add and organize various event details—such as event names, dates, operating hours, locations, descriptions, media assets, and supporting notices. With date-driven management, every event is presented in a structured and intuitive format on the visitor-facing platform.
+
+---
+
+## Main Menu Controls<br /><br />
 
 <Frame>
+  ![0 (15)](/images/0-\(15\).png "0 (15)")
 </Frame>
 
-<Warning>
-  Review multilingual, status, and relationship fields before publishing content.
-</Warning>
+Here is the primary layout and control functions of the **Event / Calendar** menu:
 
-The Event/Calendar module in the Tempe Park CMS is used to manage information about  
-the schedule of events, activities, and activities held at Tempe Park based on specific dates.  
-This module serves as a tool for managing the activity calendar, which will then be displayed  
-on the website so visitors can see the schedule of activities and events available.  
-Through this module, administrators can add and organize various event information, such  
-as the event name, date, time, location, description, images, and other supporting  
-information as needed. With calendar-based management, each event can be displayed in  
-a more structured and easily understood manner by website visitors.  
-Here is the main view of the Event / Calendar menu:  
-**No Elements Function**  
-1 Search Button Click this icon to search for the desired keyword,  
-the keyword will appear based on general  
-information data, namely title, slug, and  
-short_description  
-2 Filter Button Use this button to search for keywords within a  
-specific field, such as searching for keywords in only  
-one field. When the user clicks, they will be  
-prompted to select a field and then type in  
-keywords that match the data in that field.  
-3 Checkbox Button Use this button if the user wants to perform  
-multiple actions, such as deleting, publishing, or  
-unpublishing more than one record simultaneously.  
-Clicking multiple records will bring up the publish,  
-unpublish, and delete buttons. Clicking one of the  
-action options will cause the selected record to  
-respond accordingly.  
-4 Id Data ID information from the event/calendar  
-module  
-5 Slug Event/calendar data slug information  
-6 Short_Description Short description information of the event/calendar  
-7 Available In Multilingual data information allows users to edit  
-data using this button. Select multi-language based  
-on the data to be selected. After clicking multi-  
-language, the user will be directed to edit the data in  
-the selected multi-language.  
-8 Status Data status information whether it has been  
-published or is a draft  
-9 Multilingual Button Use this button if the user wants to switch  
-languages. The data displayed will be based on the  
-multilingual data entered. Available languages are  
-English, Indonesian, and Chinese.  
-10 Settings Use this button if the user wants to display fields or  
-columns according to their wishes.  
-11 Tombol Create New Entry Use this button if the user wants to add new Event /  
-Calendar data to the system.  
-The following is a frontend view based on data taken from the Event/Calendar collection  
-module. The contents of this module will become the frontend content on the Plan Your  
-Visit section of the Calendar page:
+| No | Field / Element | Function & Description |
+| :-: | :-- | :-- |
+| **1** | **Search Button** | Click this icon to search for desired keywords across general fields: `title`, `slug`, and `short_description`. |
+| **2** | **Filter Button** | Filter entries by specific attributes (e.g., searching within a single specific column). Select a field and enter matching criteria. |
+| **3** | **Checkbox Button** | Perform batch operations on multiple records simultaneously, such as bulk publishing, unpublishing, or deleting entries. |
+| **4** | **Id** | Unique identifier record for the event/calendar data. |
+| **5** | **Slug** | URL-friendly slug string generated for the event record. |
+| **6** | **Short\_Description** | Concise summary of the scheduled event or activity. |
+| **7** | **Available In** | Indicates available language translations. Click to jump directly to editing localized content versions. |
+| **8** | **Status** | Displays whether the event record is currently in `Draft` or `Published` state. |
+| **9** | **Multilingual Button** | Switch current workspace view between **English**, **Indonesian**, and **Chinese**. |
+| **10** | **Settings** | Customize visible grid columns and field display preferences. |
+| **11** | **Create New Entry** | Click to open the creation form and add a new event/calendar record. |
+
+---
+
+## Frontend Presentation
+
+Content managed within this collection populates the calendar and event schedules featured in the **Plan Your Visit** section on the Tempe Park website:<br /><br />
+
+<Frame>
+  ![0 (16)](/images/0-\(16\).png "0 (16)")
+</Frame>
+
+<CardGroup cols={3}>
+  <Card title="Plan Your Visit Integration" color="#10b981" icon="calendar-days">
+    Directly feeds scheduled activities, date ranges, and time slots to the visitor planning hub.
+  </Card>
+
+  <Card title="Multilingual Calendar" color="#38bdf8" icon="language">
+    Provides synchronized schedule descriptions across English, Indonesian, and Chinese.
+  </Card>
+
+  <Card title="Batch Event Management" color="#f59e0b" icon="list-check">
+    Manage seasonal programming efficiently with multi-select publish, unpublish, and archive tools.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Always verify date bounds, localized titles, and status tags before publishing event schedules to ensure website visitors receive accurate timing information.
+</Warning>

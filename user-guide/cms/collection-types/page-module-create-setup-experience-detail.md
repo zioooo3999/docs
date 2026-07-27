@@ -1,96 +1,58 @@
+---
+title: "Page Module - Create/Setup Experience Detail"
+sidebarTitle: "Experience Detail"
+description: "Guide for setting up the Experience Detail page layout and sidebar content in the Tempe Park CMS."
+---
 
+## Overview
+
+The **Create/Setup Experience Detail** feature is used to build the detail page for specific experiences. It utilizes the **Page Builder** mechanism to manage core details such as operating hours, age requirements, and related attraction links, ensuring a consistent and informative layout for every experience entry.
 
 <Tip>
   Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
 </Tip>
 
-## Procedure
+---
 
-<Steps>
-  <Step title="Review the form">
+## Form Configuration
 
-The Create Setup Experience Detail feature in the Page module is used to create an  
-Experience Detail page, which is also part of the Experience page on the front page. This  
-setup is used to organize the content of the Tempe Park website's Experience Detail front  
-page, which uses the Page Builder mechanism. Through this feature, administrators can  
-manage Experience Detail content, such as detail content, a section explaining operating  
-hours, and related attraction sections.  
-Here is the main view of Create Setup Experience Detail:
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1-2** | **Tabs** | Switch between **Draft** (editable) and **Published** (read-only view). |
+| **3-4** | **Title / Slug** | Define the page identity and URL structure. |
+| **5-6** | **SEO** | Click `(+)` to configure `metaTitle`, `metaDescription`, and `shareImage`. |
+| **7** | **Add Component** | Access structural block components to build the page. |
+| **10** | **Multilingual** | Toggle between English, Indonesian, and Chinese. |
 
-  </Step>
-  <Step title="Complete the form">
+---
 
-**No Sub Elements Function**  
-**No**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the  
-data that has been inputted (published). The form  
-on this tab is read only and cannot be edited.  
-3 title Enter the title or page title  
-4 slug Enter the page slug.  
-5 this Column to fill in seo grouping to fill in seo page.  
-6 No entry yet. Click to add Click the (+) button to display the SEO input  
-one.  
-column. After clicking, the metaTitle,  
-metaDescription, and shareImage columns will  
-appear. Fill them in according to the page you  
-want to add.  
-7 Add a component to Use or click this button to add the component  
-blocks  
-blocks needed to structure the cms content on a  
-page.  
-8 Publish Use this button if the user wants to directly  
-publish (implement it on the website landing  
-page) the data that will be entered into the  
-system. Data that has been published in the  
-collection can also be used as a relationship to  
-data from other modules.  
-9 Save button Use this button if the user wants to save new  
-data that will be entered into the system. The  
-saved data will have a Draft status, not a  
-Published one.  
-10 Multilingual Button Use this button if the user wants to switch  
-languages. The data displayed will be based on  
-the multilingual data entered. Available languages  
-are English, Indonesian, and Chinese.  
-To complete the content using this page builder module, follow these steps. (In this case, it's  
-the Plan Your Visit page.)  
-Experience Detail  
-11 experience To display this component, the user must click  
-the button in step number 7, then click this  
-component group.  
-12 Experience Detail Click this component to setup the experience  
-page details such as labeling.  
-13 content_type Select one of the experience details to be used. If  
-the content comes from the attraction section,  
-select the attraction in this column. This applies  
-to all sections on the Experience page.  
-14 breadcrumb_parent_label Enter the parent breadcrumb labeling from the  
-Experience Detail page.  
-15 sidebar_label_opening_ho Enter labeling opening hours weekdays content  
-urs_weekdays  
-in the sidebar  
-16 sidebar_label_opening_ho Enter labeling opening hours weekend content in  
-urs_weekend  
-the sidebar  
-17 sidebar_label_age_requir Enter the labeling age requirement of the  
-ements  
-content in the sidebar.  
-18 sidebar_label_note Enter the labeling note for the content in the  
-sidebar.  
-19 related_attraction_sectio Enter a labeling heading or title for the Related  
-n_heading  
-Attraction section.  
-20 related_attraction_cta_la Enter the labeling of the CTA button for Explore  
-bel  
-More in the related attraction content section.  
-21 related_attraction_cta_ur Enter the URL of the CTA button in the related  
-l  
-attraction content.  
-22 related_attraction_item_c Enter the labeling of the CTA button in each  
-ta_label  
-related attraction content.
+## Experience Detail Setup
 
-  </Step>
-</Steps>
+To populate the page content, follow these steps using the Page Builder:
+
+### Component Configuration
+
+- **Access:** Click **Add a component to blocks** (7) and select the **Experience** component group (11).
+- **Initialization:** Click on **Experience Detail** (12) to begin configuring the layout.
+
+### Configuration Fields
+
+| Field | Description |
+| :-- | :-- |
+| **content\_type** | Select the source type (e.g., `attraction`) to map the dynamic content. |
+| **breadcrumb\_parent\_label** | Label for the parent breadcrumb on the detail page. |
+| **sidebar\_label\_opening\_hours\_weekdays** | Custom label for weekday opening hours. |
+| **sidebar\_label\_opening\_hours\_weekend** | Custom label for weekend opening hours. |
+| **sidebar\_label\_age\_requirements** | Label for the age requirement display in the sidebar. |
+| **sidebar\_label\_note** | Label for the notes/additional information section. |
+
+### Related Attraction Settings
+
+- **related\_attraction\_section\_heading:** Enter the section title for related attractions.
+- **related\_attraction\_cta\_label:** Label for the main "Explore More" button.
+- **related\_attraction\_cta\_url:** URL destination for the main CTA.
+- **related\_attraction\_item\_cta\_label:** Label for the CTA button attached to individual related items.
+
+<Warning>
+  Ensure the `content_type` correctly matches your collection source to prevent empty sections on the front end.
+</Warning>

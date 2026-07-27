@@ -1,46 +1,40 @@
+---
+title: "Product Category Module - Create New Entry"
+sidebarTitle: "Create New Category"
+description: "Guide for adding new product categories in the Tempe Park CMS to organize products on the website front page."
+---
 
+## Overview
+
+The **Create New Entry** submenu in the Product Category module allows administrators to add new categories. This facilitates the logical grouping of products on the website, making it easier for visitors to navigate and discover specific items.
 
 <Tip>
   Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
 </Tip>
 
+---
+
+## Form Configuration
+
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1-2** | **Tabs** | Switch between **Draft** (editable) and **Published** (read-only view). |
+| **3** | **Name** | Enter the name of the new product category. |
+| **4** | **Slug** | Define the URL slug for the category. |
+| **5-6** | **Publish / Save** | Push the category live immediately or save changes as a draft. |
+| **7** | **Multilingual** | Toggle between English, Indonesian, and Chinese to add localized versions of the category data. |
+
+---
+
 ## Procedure
 
-<Steps>
-  <Step title="Review the form">
+1. **Select Tab:** Choose the **Draft** tab (1) to begin inputting new category information.
+2. **Enter Details:** Populate the **Name** (3) and **Slug** (4) fields.
+3. **Localize Content:** Click the **Multilingual** button (7) to input the category name and slug for other supported languages (Indonesian, English, and Chinese) if required.
+4. **Finalize:**
+   - Click **Save button** (6) to store the data as a Draft.
+   - Click **Publish** (5) to make the category immediately available for product grouping on the website.
 
-The Create New Entry submenu in the Product Category module is used to add new product  
-category data to be displayed on the Tempe Park website. This feature allows  
-administrators to input product category information as needed, such as category name,  
-description, image, and other attributes available in the CMS form.  
-The category data that is successfully added will be saved in the system and can be used as  
-a product grouping on the website front page.  
-Here is the main view of the New News page:
-
-  </Step>
-  <Step title="Complete the form">
-
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been input (published), the form on this tab  
-is read only and cannot be edited.  
-3 Name Enter the news category name  
-4 Slug Enter the news category slug  
-5 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-6 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-7 Multilingual Use this button to switch languages. When the user  
-clicks this button, 3 languages will appear, namely  
-English, Indonesian, and Chinese. When a new user  
-adds 1 multilingual data, this button can be used to  
-add a language version to the data.
-
-  </Step>
-</Steps>
+<Note>
+  Once successfully added and published, these categories will be available for selection when creating or editing products in the main Product module.
+</Note>

@@ -1,0 +1,57 @@
+---
+title: "Create User"
+sidebarTitle: "Create User"
+description: "User guide for creating, assigning roles to, and inviting new administrative users in the Tempe Park CMS."
+---
+
+## Overview
+
+The **Create User** feature in the User Management module is used to create and authorize a new account to access the Tempe Park CMS. Administrators can input essential account details—including name, email address, and assigned role—ensuring that each user receives appropriate permissions based on their responsibilities.
+
+Once created, the system sends an invitation to the designated user, enabling them to set up their account and log into the CMS according to their assigned authority.
+
+---
+
+## Form Configuration
+
+<Frame>
+  ![Create User Form](/images/Group-1-\(1\).png "Create User Form")
+</Frame>
+
+| Field / Action | Requirement | Function & Description |
+| :-- | :-- | :-- |
+| **First Name** | _Required_ | Enter the user's given name in the **First name** field. |
+| **Last Name** | _Optional_ | Enter the user's surname or family name in the **Last name** field. |
+| **Email** | _Required_ | Provide a valid email address. This address is used to send account invitations and for CMS authentication. |
+| **User's Roles** | _Required_ | Select one or multiple roles from the dropdown menu to define system access levels. |
+| **Invite User** | _Action_ | Click the **Invite user** button to finalize creation and dispatch the email invitation link. |
+
+---
+
+## User Roles & Permissions
+
+<Frame>
+  ![User Roles Selection](/images/Screenshot-2026-07-23-100553.png "User Roles Selection")
+</Frame>
+
+Assigning the correct role ensures system security and proper workflow management within the CMS.
+
+<AccordionGroup>
+  <Accordion title="Author" icon="pen">
+    An **Author** can create, edit, and manage their own draft content entries within the CMS. They cannot publish content directly to the live website without administrative review.
+  </Accordion>
+
+  <Accordion title="Editor" icon="user-check">
+    An **Editor** has broader content management privileges. They can review, edit, approve, and publish content created by any user (including Authors), as well as manage all published entries on the website.
+  </Accordion>
+
+  <Accordion title="Super Admin" icon="shield-check">
+    A **Super Admin** possesses full, unrestricted access to the entire system. In addition to managing all content, they can manage user accounts, assign roles, configure system settings, and control administrative permissions across the CMS.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Note>
+  **Best Practice:** Always apply the principle of least privilege when assigning roles. Grant **Super Admin** status only to authorized system administrators.
+</Note>

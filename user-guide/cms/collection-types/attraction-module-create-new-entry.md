@@ -1,61 +1,64 @@
-
+---
+title: "Create New Entry Attraction"
+---
 
 <Tip>
-  Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
+  Use the **Save** button to store content as a Draft, or click **Publish** when the data is ready to appear live on the website frontpage.
 </Tip>
 
-## Procedure
+## Overview
+
+The **Create New Entry** feature in the Attraction module is used to add new attractions or rides available at Tempe Park.
+
+This interface allows administrators to input comprehensive attraction information—including titles, descriptions, operational hours, media galleries, and age requirements—which will be displayed across the website once published.
+
+---
+
+## Form Fields & Interface Reference
+
+<Frame>
+  ![0 (11) 1](/images/0-\(11\)-1.png "0 (11) 1")
+</Frame>
+
+<Frame>
+  ![0 (12) 1](/images/0-\(12\)-1.png "0 (12) 1")
+</Frame>
+
+| No | Field / Element | Description & Function |
+| :-- | :-- | :-- |
+| **1** | **Draft Tab** | Editable form tab used when creating or modifying a draft entry. |
+| **2** | **Published Tab** | Read-only view showing the current published version of the attraction data. |
+| **3** | **Title** | Input the primary name/title of the attraction. |
+| **4** | **Slug** | Input the URL-friendly slug for the attraction page. |
+| **5** | **Description** | Detailed description outlining features and highlights of the attraction. |
+| **6** | **Publish** | Instantly publishes the entry to the website frontpage and enables cross-module relationships. |
+| **7** | **Save** | Stores the current entry as a **Draft** without making it publicly visible. |
+| **8** | **Multilingual Switcher** | Switch or add content versions in **English**, **Indonesian**, or **Chinese**. |
+| **9** | **short\_description** | Concise summary of the attraction for card previews and search results. |
+| **10** | **Cover image** | Main featured image display for the attraction section. |
+| **11** | **Gallery** | Upload multiple secondary images showcasing the attraction. |
+| **12** | **opening\_hours\_weekdays** | Operational opening hours on standard weekdays. |
+| **13** | **opening\_hours\_weekend** | Operational opening hours on weekends and holidays. |
+| **14** | **age\_requirement** | Age restrictions or recommended visitor age parameters. |
+| **15** | **Note** | Additional visitor notices, guidelines, or safety reminders. |
+| **16** | **related\_activities** | Dropdown selection to link relevant Tempe Park activities. |
+| **17** | **is\_highlight** | Toggle `true` to feature/highlight the attraction on the homepage, or `false` otherwise. |
+
+---
+
+## Step-by-Step Procedure
 
 <Steps>
-  <Step title="Review the form">
-
-The Create New Entry feature in the Attraction module is used to add new attractions or  
-rides available at Tempe Park. This feature allows administrators to input various attraction  
-information, such as the attraction name, description, images, location, facilities, and other  
-supporting information, which will be displayed on the website.  
-The attraction data that is successfully added will be stored in the system and can be  
-published on the Tempe Park website frontpage as information for visitors.  
-Here is the main view of the New Entry Attraction page:
-
+  <Step title="Review Form Requirements">
+    Navigate to the **Attractions** module and click **\+ Add New Entry**. Ensure all mandatory media assets (cover image, gallery) and operational details are prepared.
   </Step>
-  <Step title="Complete the form">
-
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been inputted (published). The form on this  
-tab is read only and cannot be edited.  
-3 Title Enter the attraction title  
-4 Slug Enter the attraction slug  
-5 Description Enter attraction description  
-6 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-7 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-8 Multilingual Use this button to switch languages. When the user  
-clicks this button, 3 languages will appear, namely  
-English, Indonesian, and Chinese. When a new user  
-adds 1 multilingual data, this button can be used to  
-add a language version to the data.  
-9 short_description Enter a short description of the attraction  
-10 Cover image Enter the cover image of the attraction section  
-11 Gallery Enter gallery attraction image  
-12 opening_hours_weekdays Enter the operational opening hours of the Tempe  
-Park attraction agenda on weekdays.  
-13 opening_hours_weekend Enter the operational opening hours of the Tempe  
-Park attraction agenda on holidays  
-14 age_requirement Enter age recommendations for Tempe Park  
-attractions.  
-15 Note Enter attraction note  
-16 related_activities Click the dropdown to select some related Tempe  
-Park activities to add.  
-17 is_highlight Select false if the attraction data to be added will  
-not be highlighted, select true otherwise.
-
+  <Step title="Fill Required Fields">
+    Enter the **Title**, **Slug**, and main **Description**. Ensure localized text is added via the **Multilingual** switcher if translation is required for English, Indonesian, or Chinese.
+  </Step>
+  <Step title="Configure Operational Details & Media">
+    Upload the **Cover image** and **Gallery** photos, set the **Opening Hours**, **Age Requirement**, and select any **Related Activities** from the dropdown menu.
+  </Step>
+  <Step title="Save or Publish">
+    Click **Save** to keep the record as a draft for internal review, or click **Publish** to push the attraction live onto the Tempe Park landing page.
   </Step>
 </Steps>

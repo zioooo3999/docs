@@ -1,65 +1,70 @@
 ---
-title: "News Category Module - Edit"
-sidebarTitle: "Edit"
-description: "The News Category module in the Tempe Park CMS is used to manage categories for News content."
+title: "Edit Entry"
+sidebarTitle: "Edit Entry News Category"
+description: "User guide for editing and updating existing news category entries in the Tempe Park CMS."
 ---
 
-<CardGroup cols={3}>
-  <Card title="Manage content" icon="tags" color="#10b981">Use this module to manage structured CMS content for Tempe Park.</Card>
-  <Card title="Publish workflow" icon="folder-tree" color="#38bdf8">Save content as Draft or publish it for the website frontpage.</Card>
-  <Card title="Relationships" icon="newspaper" color="#f59e0b">Use related data, categories, images, and multilingual fields where the module provides them.</Card>
-</CardGroup>
+## Overview
 
-<Note>
-This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` and organizes it into Mintlify components for easier scanning.
-</Note>
+The **Edit Data** feature in the News Category module is used to update or modify news category data stored in the system. Administrators can change category names, slugs, and localized content as needed.
 
-## Reference view
+Changes to data made through this feature will immediately affect the news grouping displayed on the Tempe Park website after the data is successfully saved, ensuring that the news information structure remains neat, relevant, and easy to understand for visitors.
+
+---
+
+## Form Fields & Interface Reference
 
 <Frame>
+  ![Edit News Category Page](/images/0-\(44\).png "Edit News Category Page")
 </Frame>
 
-The
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1** | **Tab Draft** _(editable form)_ | Switch to this tab when editing active form fields. |
+| **2** | **Tab Published** | Read-only view showing the current live content on the frontend. |
+| **3** | **Name** | Update the news category name. |
+| **4** | **Slug** | Modify the URL-friendly news category slug identifier. |
+| **5** | **Publish** | Save and deploy changes immediately to the live website landing page. |
+| **6** | **Save** | Preserve edits as a **Draft** without publishing them publicly. |
+| **7** | **Set up Preview** | Preview content layout on the frontpage before saving modifications. |
+| **8** | **Multilingual** | Switch between localized languages (**English**, **Indonesian**, **Chinese**). |
 
-## Procedure
+---
+
+## Step-by-Step Procedure
 
 <Steps>
-  <Step title="Review the form">
-
-Edit Data feature in the News Category module is used to update or modify news  
-category data stored in the system. Administrators can change category names and other  
-information as needed.  
-Changes to data made through this feature will immediately affect the news grouping  
-displayed on the Tempe Park website after the data is successfully saved, so that the news  
-information structure remains neat, relevant, and easy to understand for visitors.  
-The following is the main view of the Edit News Category page:
-
+  <Step title="Review the Form Interface">
+    Navigate to the News Category list and select the category entry you wish to modify to load the editor.
   </Step>
-  <Step title="Complete the form">
-
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been input (published), the form on this tab  
-is read only and cannot be edited.  
-3 Name Enter the news category name change  
-4 Slug Enter news category slug changes  
-5 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-6 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-7 Set up Preview Use this button to preview previously entered  
-content.  
-8 Multilingual Use this button to switch languages. When the user  
-clicks this button, 3 languages will appear, namely  
-English, Indonesian, and Chinese. When a new user  
-adds 1 multilingual data, this button can be used to  
-add a language version to the data.
-
+  <Step title="Update Category Name & Slug">
+    Modify the category **Name** and the URL-friendly **Slug** as needed in the draft form.
+  </Step>
+  <Step title="Preview & Save or Publish">
+    Use **Set up Preview** to check category changes, then click **Save** to preserve edits in **Draft** state or click **Publish** to push updates live to the website.
   </Step>
 </Steps>
+
+---
+
+## Key Features
+
+<CardGroup cols={3}>
+  <Card title="Live Preview" color="#10b981" icon="eye">
+    Preview changes to category nomenclature before applying updates to the live site.
+  </Card>
+
+  <Card title="Structural Alignment" color="#38bdf8" icon="folder-tree">
+    Maintain a neat and relevant news taxonomy by updating category slugs and names.
+  </Card>
+
+  <Card title="Multilingual Sync" color="#f59e0b" icon="language">
+    Manage and synchronize updates across English, Indonesian, and Chinese translations.
+  </Card>
+</CardGroup>
+
+---
+
+<Note>
+  **Note:** Remember to verify localized entries in all languages using the **Multilingual** switcher to ensure proper category filtering on translated frontend pages.
+</Note>

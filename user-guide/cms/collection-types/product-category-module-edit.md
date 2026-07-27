@@ -4,64 +4,42 @@ sidebarTitle: "Edit"
 description: "The Product Category module in the Tempe Park CMS is used to manage categories for product data."
 ---
 
-<CardGroup cols={3}>
-  <Card title="Manage content" icon="tags" color="#10b981">Use this module to manage structured CMS content for Tempe Park.</Card>
-  <Card title="Publish workflow" icon="folder-tree" color="#38bdf8">Save content as Draft or publish it for the website frontpage.</Card>
-  <Card title="Relationships" icon="shopping-bag" color="#f59e0b">Use related data, categories, images, and multilingual fields where the module provides them.</Card>
-</CardGroup>
+## Overview
+
+The **Edit Data** feature in the Product Category module allows administrators to update category information. Changes made here, such as modifying the category name, slug, or updating the list of products associated with the category, will be reflected on the website immediately after saving.
 
 <Note>
-This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` and organizes it into Mintlify components for easier scanning.
+  This page preserves the original documentation wording and organizes it into Mintlify components for easier scanning.
 </Note>
 
-## Reference view
+---
 
-<Frame>
-</Frame>
+## Form Configuration
 
-The
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1-2** | **Tabs** | Switch between **Draft** (editable) and **Published** (read-only view). |
+| **3** | **Name** | Update the product category name. |
+| **4** | **Slug** | Modify the category URL slug. |
+| **5** | **Products** | Use the dropdown to select and add specific products to this category. |
+| **6** | **Products List** | View the current list of products already assigned to this category. |
+| **7-8** | **Publish / Save** | Apply changes to the live site or save as a draft. |
+| **9** | **Set up Preview** | Preview content changes before committing them to the database. |
 
-## Procedure
+---
 
-<Steps>
-  <Step title="Review the form">
+## Editing Procedure
 
-Edit Data submenu in the Product Category module is used to update or modify  
-product category information stored in the system. Administrators can make changes to  
-category data, such as updating the category name, changing the image, changing the  
-description, or adjusting other information as needed.  
-Data changes made through this feature will immediately affect the display of product  
-categories on the Tempe Park website after the data is successfully saved.  
-The following is the main display of the Edit Product Category page:
+1. **Select Tab:** Access the **Draft** tab (1) to begin making modifications to the existing category.
+2. **Update Details:** Edit the **Name** (3) and **Slug** (4) as required.
+3. **Manage Product Association:**
+   - Click **Products** (5) to open the selection dropdown.
+   - Choose the products to include in this category.
+   - Verify the updated selection in the **Products List** (6).
+4. **Preview & Finalize:**
+   - Use **Set up Preview** (9) to check your changes. Note that previews are for verification and do not save data to the system.
+   - Click **Save button** (8) to keep changes as a draft or **Publish** (7) to push updates live to the Tempe Park website.
 
-  </Step>
-  <Step title="Complete the form">
-
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been input (published), the form on this tab  
-is read only and cannot be edited.  
-3 Name Enter product category name changes  
-4 Slug Enter product category slug changes  
-5 Products Click to bring up a dropdown to select which  
-products will be included as or included in the  
-product category to be added.  
-6 Products List List of products that have been added to the  
-product category list  
-7 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-8 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-9 Set up Preview Use this button to preview previously entered  
-content. Content previewed before clicking the  
-publish or save button will not be saved to the  
-system or database.
-
-  </Step>
-</Steps>
+<Warning>
+  Modifications to the category slug or name will immediately affect the website’s navigation and URL structure. Please ensure all links remain consistent after updating.
+</Warning>

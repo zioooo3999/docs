@@ -1,69 +1,72 @@
 ---
-title: "FAQ Category Module - Edit"
-sidebarTitle: "Edit"
-description: "The FAQ Category module in the Tempe Park CMS is used to manage categories for FAQ content."
+title: "Edit Entry"
+sidebarTitle: "Edit Entry FAQ Category"
+description: "User guide for editing and updating existing FAQ category entries in the Tempe Park CMS."
 ---
 
-<CardGroup cols={3}>
-  <Card title="Manage content" icon="tags" color="#10b981">Use this module to manage structured CMS content for Tempe Park.</Card>
-  <Card title="Publish workflow" icon="folder-tree" color="#38bdf8">Save content as Draft or publish it for the website frontpage.</Card>
-  <Card title="Relationships" icon="list-checks" color="#f59e0b">Use related data, categories, images, and multilingual fields where the module provides them.</Card>
-</CardGroup>
+## Overview
 
-<Note>
-This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` and organizes it into Mintlify components for easier scanning.
-</Note>
+The **Edit Data** feature in the FAQ Category module is used to update or modify FAQ category data stored in the system. Administrators can change category names, slugs, display ordering, and associated FAQ linkages as needed.
 
-## Reference view
+Data changes made through this feature will immediately affect the FAQ grouping displayed on the Tempe Park website after the data is successfully saved, ensuring that the FAQ information structure remains neat, relevant, and easy to understand for visitors.
+
+---
+
+## Form Fields & Interface Reference
 
 <Frame>
+  ![Edit FAQ Category Page](/images/0-\(34\).png "Edit FAQ Category Page")
 </Frame>
 
-The
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1** | **Tab Draft** _(editable form)_ | Switch to this tab when editing active form fields. |
+| **2** | **Tab Published** | Read-only view showing the current live content on the frontend. |
+| **3** | **Name** | Update the FAQ Category name. |
+| **4** | **Order** | Adjust the numerical sequence number for frontend tab ordering. |
+| **5** | **Slug** | Modify the URL-friendly identifier for the category page. |
+| **6** | **Faqs** | Click the dropdown to update or modify linked FAQ entries. |
+| **7** | **Publish** | Save and deploy changes immediately to the live website landing page. |
+| **8** | **Save** | Preserve edits as a **Draft** without publishing them publicly. |
+| **9** | **Set up Preview** | Preview content layout on the frontpage before saving modifications. |
+| **10** | **Multilingual** | Switch between localized languages (**English**, **Indonesian**, **Chinese**). |
 
-## Procedure
+---
+
+## Step-by-Step Procedure
 
 <Steps>
-  <Step title="Review the form">
-
-Edit Data feature in the FAQ Category module is used to update or modify FAQ  
-category data stored in the system. Administrators can change category names and other  
-information as needed.  
-Data changes made through this feature will immediately affect the FAQ grouping displayed  
-on the Tempe Park website after the data is successfully saved, so that the FAQ information  
-structure remains neat, relevant, and easy to understand for visitors.  
-The following is the main view of the Edit FAQ Category page:
-
+  <Step title="Review the Form Interface">
+    Navigate to the FAQ Category list and select the category entry you wish to modify to load the editor.
   </Step>
-  <Step title="Complete the form">
-
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been input (published), the form on this tab  
-is read only and cannot be edited.  
-3 Name Enter the name change FAQ Category  
-4 Order Enter the change in the FAQ sequence number that  
-will be displayed on the front page.  
-5 Slug Enter the FAQ Category slug changes to be added.  
-6 Faqs Click the dropdown to select some changes to the  
-faq options.  
-7 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-8 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-9 Set up Preview Use this button to preview previously entered  
-content.  
-10 Multilingual Use this button to switch languages. When the user  
-clicks this button, 3 languages will appear, namely  
-English, Indonesian, and Chinese. When a new user  
-adds 1 multilingual data, this button can be used to  
-add a language version to the data.
-
+  <Step title="Update Form Fields">
+    Modify the category attributes (such as category **Name**, **Slug**, numerical **Order**, or linked **Faqs**).
+  </Step>
+  <Step title="Preview & Save or Publish">
+    Use **Set up Preview** to check changes on the frontpage, then click **Save** to preserve edits in **Draft** state or click **Publish** to push updates live to the website.
   </Step>
 </Steps>
+
+---
+
+## Key Features
+
+<CardGroup cols={3}>
+  <Card title="Live Preview" color="#10b981" icon="eye">
+    Preview category changes and structural layout prior to publishing.
+  </Card>
+
+  <Card title="Relational Management" color="#38bdf8" icon="diagram-project">
+    Update associated FAQ relationships using the multi-select dropdown.
+  </Card>
+
+  <Card title="Multilingual Updates" color="#f59e0b" icon="language">
+    Synchronize localized category names across English, Indonesian, and Chinese.
+  </Card>
+</CardGroup>
+
+---
+
+<Note>
+  **Note:** Always verify localized versions across all languages in the **Multilingual** dropdown prior to publishing changes to preserve consistent site navigation.
+</Note>

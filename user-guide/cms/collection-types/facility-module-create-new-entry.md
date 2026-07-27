@@ -1,60 +1,86 @@
-
+---
+title: "Facility Mdule - Create New Entry"
+sidebarTitle: "Create New Entry"
+description: "User guide for creating and configuring new facility entries in the Tempe Park CMS."
+---
 
 <Tip>
-  Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
+  Use the **Save** button to keep content as a Draft, or click **Publish** when the data is ready to appear on the website frontpage.
 </Tip>
 
-## Procedure
+## Overview
+
+The **Create New Entry** feature in the Facility module is used to add new facility data available at Tempe Park. This feature allows administrators to input various facility information—such as facility names, descriptions, images, locations, and operational hours—which will be displayed on the website.
+
+Facility data that is successfully added will be stored in the system and can be published on the Tempe Park website frontpage as information for visitors.
+
+---
+
+## Form Fields & Interface Reference
+
+<Frame>
+  ![New Facility Page](/images/0-\(23\).png "New Facility Page")
+</Frame>
+
+<Frame>
+  ![New Facility Page](/images/0-\(24\).png "New Facility Page")
+</Frame>
+
+---
+
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1** | **Tab Draft** _(editable form)_ | Use this form tab when creating or modifying a draft data entry. |
+| **2** | **Tab Published** | Read-only view showing the current published version of the facility data. |
+| **3** | **Title** | Enter the primary facility title. |
+| **4** | **Slug** | Enter the URL-friendly slug for the facility page. |
+| **5** | **Description** | Detailed narrative description outlining facility features and amenities. |
+| **6** | **Publish** | Instantly publishes entry to the website frontpage and enables cross-module relationships. |
+| **7** | **Save** | Stores the entry as a **Draft** without making it publicly visible. |
+| **8** | **Multilingual** | Switch or add content versions in **English**, **Indonesian**, or **Chinese**. |
+| **9** | **short\_description** | Concise summary of the facility for card previews and search results. |
+| **10** | **Cover image** | Main featured header image display for the facility section. |
+| **11** | **Gallery** | Upload multiple secondary images showcasing the facility. |
+| **12** | **opening\_hours\_weekdays** | Enter operating hours during regular weekdays. |
+| **13** | **opening\_hours\_weekdend** | Enter operating/closing schedules for weekends and public holidays. |
+| **14** | **age\_requirement** | Specify recommended age guidelines or restrictions for the facility. |
+| **15** | **Note** | Additional visitor notices, rules, or advisory details. |
+| **16** | **related\_facilities** | Select related facilities from the dropdown menu to link entries together. |
+| **17** | **is\_highlight** | Select `true` to feature/highlight the facility on the landing page, or `false` otherwise. |
+
+---
+
+## Step-by-Step Procedure
 
 <Steps>
-  <Step title="Review the form">
-
-The Create New Entry feature in the Facility module is used to add new facility data  
-available at Tempe Park. This feature allows administrators to input various facility  
-information, such as the facility name, description, image, location, and other supporting  
-information, which will be displayed on the website.  
-Facility data that is successfully added will be stored in the system and can be published on  
-the Tempe Park website frontpage as information for visitors.  
-Here is the main view of the New Facility page:
-
+  <Step title="Review the Form Interface">
+    Open the Facility module from the CMS navigation and click on **Create New Entry**.
   </Step>
-  <Step title="Complete the form">
-
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been inputted (published). The form on this  
-tab is read only and cannot be edited.  
-3 Title Enter the facility title  
-4 Slug Enter slug facility  
-5 Description Enter facility description  
-6 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-7 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-8 Multilingual Use this button to switch languages. When the user  
-clicks this button, 3 languages will appear, namely  
-English, Indonesian, and Chinese. When a new user  
-adds 1 multilingual data, this button can be used to  
-add a language version to the data.  
-9 short_description Enter a short description of the facility  
-10 Cover image Enter cover image for facility section  
-11 Gallery Select multiple gallery images for the facility section  
-12 opening_hours_weekdays Enter the operating hours of the facility to be  
-included in Tempe Park.  
-13 opening_hours_weekdend Enter the closing hours of the facility to be included  
-in Tempe Park.  
-14 age_requirement Enter the recommended age of the facilities to be  
-included in Tempe Park.  
-15 Note Enter facility notes  
-16 related_facilities Select related facilities to be included in Tempe Park  
-17 is_highlight Select false if the facility to be entered will not be  
-highlighted, select true otherwise.
-
+  <Step title="Fill Required Fields">
+    Input the core facility parameters including **Title**, **Slug**, **Description**, and **short\_description**.
+  </Step>
+  <Step title="Configure Schedule, Media & Links">
+    Upload the **Cover image** and **Gallery** photos, specify **opening\_hours\_weekdays** and **opening\_hours\_weekdend**, set the **age\_requirement**, and select any **related\_facilities**.
+  </Step>
+  <Step title="Save or Publish">
+    Click **Save** to keep the record in a draft state for internal review, or click **Publish** to make the facility live on the Tempe Park website.
   </Step>
 </Steps>
+
+---
+
+## Key Features
+
+<CardGroup cols={3}>
+  <Card title="Rich Media & Galleries" color="#10b981" icon="images">
+    Configure cover graphics and multi-image galleries for comprehensive facility showcasing.
+  </Card>
+
+  <Card title="Operational Hours" color="#38bdf8" icon="clock">
+    Set clear weekday operating hours and weekend closing schedules for visitors.
+  </Card>
+
+  <Card title="Relational Linking" color="#f59e0b" icon="diagram-project">
+    Connect related park facilities and flag prominent entries to be highlighted on the main landing page.
+  </Card>
+</CardGroup>

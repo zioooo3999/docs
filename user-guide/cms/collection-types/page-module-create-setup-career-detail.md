@@ -1,96 +1,60 @@
+---
+title: "Page Module - Create/Setup Carrer Detail"
+sidebarTitle: "Career Detail"
+description: "Guide for configuring the Career Detail page layout, including job requirements, responsibilities, and application call-to-actions in the Tempe Park CMS."
+---
 
+## Overview
+
+The **Create/Setup Career Detail** feature allows administrators to structure individual job vacancy pages. Using the Page Builder, you can manage the display of critical career information such as job descriptions, responsibilities, requirements, and benefits, ensuring a comprehensive view for potential candidates.
 
 <Tip>
   Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
 </Tip>
 
-## Procedure
+---
 
-<Steps>
-  <Step title="Review the form">
+## Form Configuration
 
-The Create Setup Career Detail feature in the Page module is used to create a Career Detail  
-page, which is also part of the Career page on the front page. This setup is used to organize  
-the content of the Tempe Park website's Career Detail front page, which uses the Page  
-Builder mechanism. Through this feature, administrators can manage Career Detail content,  
-such as job descriptions, key responsibilities, and benefits.  
-Here is the main view of Create Setup Career Detail:
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1-2** | **Tabs** | Switch between **Draft** (editable) and **Published** (read-only view). |
+| **3-4** | **Title / Slug** | Define the page title and unique URL slug. |
+| **5-6** | **SEO** | Click `(+)` to configure `metaTitle`, `metaDescription`, and `shareImage`. |
+| **7** | **Add Component** | Access structural building blocks for the page builder. |
+| **10** | **Multilingual** | Toggle between English, Indonesian, and Chinese versions. |
 
-  </Step>
-  <Step title="Complete the form">
+---
 
-**No Sub Elements Function**  
-**No**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the  
-data that has been input (published), the form on  
-this tab is read only and cannot be edited.  
-3 title Enter the title or page title  
-4 slug Enter the page slug.  
-5 this Column to fill in seo grouping to fill in seo page.  
-6 No entry yet. Click to add Click the (+) button to display the SEO input  
-one.  
-column. After clicking, the metaTitle,  
-metaDescription, and shareImage columns will  
-appear. Fill them in according to the page you  
-want to add.  
-7 Add a component to Use or click this button to add the component  
-blocks  
-blocks needed to structure the cms content on a  
-page.  
-8 Publish Use this button if the user wants to directly  
-publish (implement it on the website landing  
-page) the data that will be entered into the  
-system. Data that has been published in the  
-collection can also be used as a relationship to  
-data from other modules.  
-9 Save button Use this button if the user wants to save new  
-data that will be entered into the system. The  
-saved data will have a Draft status, not a  
-Published one.  
-10 Multilingual Button Use this button if the user wants to switch  
-languages. The data displayed will be based on  
-the multilingual data entered. Available languages  
-are English, Indonesian, and Chinese.  
-To complete the content using this page builder module, follow these steps. (In this case, it's  
-the Plan Your Visit page.)  
-Hero Section  
-11 Career After the previous user clicks "Add a component  
-to blocks", the next user must click on this  
-component group to display the Career Detail  
-component.  
-12 Career Detail Click this component to display the fields  
-required to fill in the static content of the career  
-details.  
-13 back_label Enter the back label (return to the previous page)  
-in the Breadcrumb Navigation on the career  
-detail page.  
-14 share_label Enter share labeling on the career detail page  
-15 job_description_label Enter the title labeling in the job description on  
-the career detail page.  
-16 requirement_heading Enter the title labeling in the requirement  
-description on the career detail page.  
-17 career_label Enter career labeling after back navigation on  
-Breadcrumb Navigation on career detail page  
-18 apply_label Enter the labeling of the apply CTA button on  
-the career detail page.  
-19 responsibilities_heading Enter the title labeling in the responsibilities  
-description on the career detail page.  
-20 perks_benefits_heading Enter the title labeling in the Benefit description  
-on the career detail page.  
-21 To Top Button Go back to the component group and click the  
-shared component group, then click the To Top  
-Button component to display the fields needed  
-to add content to the top button on this career  
-detail page.  
-22 career_variant Select FALSE if the page is not a career page,  
-select TRUE otherwise.  
-23 scroll_label Enter the word "scroll" to bring up the scroll label  
-for scroll up.  
-24 up_label Enter the word "up" to bring up the scroll label  
-for scroll up.  
-25 icon Enter or upload an icon for the scroll up icon
+## Career Detail Setup
 
-  </Step>
-</Steps>
+To populate the career detail page, follow these steps using the Page Builder:
+
+### Component Configuration
+
+- **Access:** Click **Add a component to blocks** (7) and select the **Career** component group (11).
+- **Initialization:** Click on **Career Detail** (12) to begin configuring the layout fields.
+
+### Configuration Fields
+
+| Field | Description |
+| :-- | :-- |
+| **back\_label** | Label for the "Back" button in the breadcrumb navigation. |
+| **career\_label** | Label for the career section in the breadcrumb navigation. |
+| **share\_label** | Label for the article sharing section. |
+| **job\_description\_label** | Header title for the Job Description section. |
+| **responsibilities\_heading** | Header title for the Responsibilities section. |
+| **requirement\_heading** | Header title for the Requirements section. |
+| **perks\_benefits\_heading** | Header title for the Perks & Benefits section. |
+| **apply\_label** | Label text for the "Apply Now" CTA button. |
+
+### Additional Components
+
+- **To Top Button:** Navigate to the **Shared** component group (21) to add the "To Top" feature.
+  - **career\_variant:** Set to `TRUE` for career pages.
+  - **scroll\_label / up\_label:** Define text (e.g., "Scroll", "Up") for the button.
+  - **icon:** Upload the icon asset for the button (25).
+
+<Warning>
+  Always verify that all section headers (Requirements, Perks, etc.) and navigation labels are accurately translated across all language tabs before publishing.
+</Warning>

@@ -1,0 +1,43 @@
+---
+title: "Content Manager Permissions"
+sidebarTitle: "Content Manager"
+description: "User guide for managing view and layout configuration permissions within the Content Manager plugin."
+---
+
+## Overview
+
+The **Content Manager Plugin Permissions** setting allows administrators to manage access control for layout and UI configuration features within the Content Manager tool.
+
+By toggling permissions across **SINGLE TYPES**, **COLLECTION TYPES**, and **COMPONENTS**, administrators can determine whether a role has the authority to **Configure view** (customize entry layout fields, list views, and search settings) or **Configure Layout** for repeatable UI components.
+
+---
+
+<Frame>
+  ![Screenshot 2026-07-23 142521](/images/Screenshot-2026-07-23-142521.png "Content Manager Permissions Overview")
+</Frame>
+
+---
+
+## Permission Categories
+
+| Subsection | Available Action | Description |
+| :-- | :-- | :-- |
+| **SINGLE TYPES** | `Configure view` | Controls authority to customize entry layouts, field arrangements, and edit views for single-instance pages. |
+| **COLLECTION TYPES** | `Configure view` | Permits customizing list views, search filters, and detail form layouts for repeatable content modules. |
+| **COMPONENTS** | `Configure Layout` | Grants authority to edit and reorder the visual structural layouts of reusable UI components. |
+
+---
+
+## Interface Controls & Buttons
+
+- **Expand / Collapse Toggle (Chevron Icon):** Located at the top right of the section header to expand or hide the entire permission configuration panel.
+- **Configure view Checkbox:** Enables users assigned to this role to customize display views (such as form field arrangements, visible columns in list tables, and search filters).
+- **Configure Layout Checkbox:** Grants permission to edit and manage the visual structural layout of components.
+- **Select all Checkbox:** Toggles all permissions within a specific subsection (_SINGLE TYPES_, _COLLECTION TYPES_, or _COMPONENTS_) in a single click.
+- **Settings Button:** Opens an advanced configuration panel to fine-tune granular permission rules and field-level access rights for that specific subsection.
+
+---
+
+<Note>
+  Layout configurations alter the CMS UI for all users. Restrict **Configure view** and **Configure Layout** permissions to roles that manage CMS operational standards.
+</Note>

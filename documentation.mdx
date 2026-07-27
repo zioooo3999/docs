@@ -1,0 +1,40 @@
+---
+title: "Documentation"
+---
+
+## Overview
+
+The **Documentation Plugin Permissions** setting controls access rights and management capabilities for the CMS API documentation feature.
+
+It enables administrators to specify which user roles can view generated API documentation (such as OpenAPI/Swagger specifications), update or remove documentation content, and trigger documentation regenerations as system schema changes occur.
+
+---
+
+<Frame>
+  ![Documentation Permissions](/images/Screenshot-2026-07-23-142602.png "Documentation Permissions Overview")
+</Frame>
+
+---
+
+## Permission Categories
+
+| Subsection | Available Actions | Description |
+| :-- | :-- | :-- |
+| **GENERAL** | `Access the Documentation`, `Update and delete`, `Regenerate`, `Select All` | Controls authorization to view API docs, edit/delete parameters, and trigger schema rebuilds. |
+
+---
+
+## Interface Controls & Options
+
+- **Expand / Collapse Toggle (Chevron Icon):** Located at the top-right corner of the section header to expand or hide the permission settings panel.
+- **Access the Documentation Checkbox:** Grants permission for users assigned to this role to open and view the generated API documentation interface.
+- **Update and delete Checkbox:** Allows users to modify existing API documentation parameters or delete existing documentation entries.
+- **Regenerate Checkbox:** Enables users to trigger a fresh rebuild/regeneration of the API documentation to reflect recent API schema updates.
+- **Select All Checkbox:** Toggles all documentation permissions simultaneously with a single click.
+- **Settings Button:** Opens an advanced configuration menu to customize specific conditions or access scope for the documentation tool.
+
+---
+
+<Note>
+  **API Security:** Restrict **Regenerate** and **Update and delete** permissions to backend developers or system architects to prevent accidental schema doc overrides.
+</Note>

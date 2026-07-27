@@ -1,55 +1,54 @@
+---
+title: "Product Module - Create New Entry"
+sidebarTitle: "Create New Product"
+description: "Guide for adding new products to the Tempe Park website, including metadata, variations, and marketplace links."
+---
 
+## Overview
+
+The **Create New Entry** feature in the Product module allows administrators to add and manage product data. This module captures essential details such as product name, categorization, pricing, imagery, and direct links to supported e-commerce platforms (Tokopedia, TikTok Shop, and Shopee).
 
 <Tip>
   Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
 </Tip>
 
-## Procedure
+---
 
-<Steps>
-  <Step title="Review the form">
+## Form Configuration
 
-The Create New Entry submenu in the Product module is used to add new product data to  
-be displayed on the Tempe Park website. This feature allows administrators to input various  
-product information, such as the product name, product category, description, price,  
-product image, and e-commerce link for purchasing the product.  
-In the data input process, administrators can also link products to categories available in the  
-Product Category module so that products can be grouped and displayed according to  
-category on the website's front page.  
-The following is the main display of the Create New Entry Product page:
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1-2** | **Tabs** | Switch between **Draft** (editable) and **Published** (read-only view). |
+| **3** | **product\_name** | Enter the official name of the product. |
+| **4** | **product\_category** | Assign the product to a category (linked to Product Category module). |
+| **5-6** | **Description** | Enter product details. Use **Expand** to enlarge the text editor. |
+| **7-8** | **Publish / Save** | Push content live immediately or save changes as a draft. |
 
-  </Step>
-  <Step title="Complete the form">
+---
 
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been input (published), the form on this tab  
-is read only and cannot be edited.  
-3 product_name Enter product name  
-4 product_category Enter product category  
-5 description Enter product description  
-6 Expand Use this button to expand or enlarge the text editor  
-in the description column.  
-7 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-8 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-9 Images Enter product image  
-10 Color Enter product color variations  
-11 Size Enter product size variations  
-12 Price Enter product price  
-13 original_price Enter the original product price  
-14 Marketplace_link_tokopedi Enter the Tokopedia marketplace link  
-a  
-15 Marketplace_link_tiktoksh Enter the tiktok marketplace link  
-op  
-16 marketplace_link_shopee Enter the Shopee marketplace link
+## Product Specifications & Links
 
-  </Step>
-</Steps>
+To ensure accurate product listings, complete the following sections:
+
+### Product Attributes
+
+- **Images (9):** Upload the primary product image.
+- **Color (10):** Define available product color variations.
+- **Size (11):** Define available product size variations.
+
+### Pricing Details
+
+- **Price (12):** The current selling price of the product.
+- **original\_price (13):** The original price (useful for showing discounts or standard pricing).
+
+### Marketplace Integration
+
+Enter the direct URLs for the product on external marketplaces:
+
+- **Marketplace\_link\_tokopedia (14):** URL for Tokopedia.
+- **Marketplace\_link\_tiktokshop (15):** URL for TikTok Shop.
+- **marketplace\_link\_shopee (16):** URL for Shopee.
+
+<Warning>
+  Always verify that the `product_category` is correctly assigned to ensure the product appears in the appropriate section on the website front page.
+</Warning>

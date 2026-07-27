@@ -352,6 +352,7 @@
                   {
                     "group": "1.2. Content Manager",
                     "pages": [
+                      "content-manager",
                       {
                         "group": "1.2.1. Collection Types",
                         "pages": [
@@ -462,6 +463,92 @@
                     ]
                   }
                 ]
+              },
+              {
+                "group": "3. Administration Guide",
+                "pages": [
+                  {
+                    "group": "User Management",
+                    "pages": [
+                      "overview-10",
+                      "create-user",
+                      "ediit-user",
+                      "role-and-permision-management"
+                    ]
+                  },
+                  "reset-password",
+                  "konfigurasi-dasar-cms",
+                  {
+                    "group": "Role & Permission Management",
+                    "pages": [
+                      "role-and-permision",
+                      {
+                        "group": "Create Roles",
+                        "pages": [
+                          "untitled-page",
+                          "collection-types-permision",
+                          "create-single-types",
+                          {
+                            "group": "Plugins Permissions",
+                            "pages": [
+                              "plugins",
+                              "content-manager-1",
+                              "content-type-builder",
+                              "media-library",
+                              "documentation",
+                              "seo",
+                              "user-permissions"
+                            ]
+                          },
+                          {
+                            "group": "Setting Permission",
+                            "pages": [
+                              "overview-11"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Documentation Deliverable Guideline",
+            "pages": [
+              "home-1",
+              {
+                "group": "Overview",
+                "pages": [
+                  "project-background",
+                  "project-objective",
+                  "project-scope",
+                  "technology-stack",
+                  "environment-information-development-and-production",
+                  "high-level-architecture-diagram",
+                  "version-information"
+                ]
+              },
+              {
+                "group": "Sitemap",
+                "pages": [
+                  "struktur-menu-website",
+                  "daftar-seluruh-halaman",
+                  "url-setiap-halaman",
+                  "keterangan-halaman-static",
+                  "halaman-yang-kelola-melalui-cms"
+                ]
+              },
+              {
+                "group": "CMS Guide",
+                "pages": [
+                  "login"
+                ]
+              },
+              {
+                "group": "Administration Guide",
+                "pages": []
               }
             ]
           }

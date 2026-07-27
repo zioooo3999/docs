@@ -1,85 +1,56 @@
+---
+title: "Page Module - Create/ Setup News Detail"
+sidebarTitle: "News Detail"
+description: "Guide for configuring the News Detail page layout, metadata, and sidebar ticket components in the Tempe Park CMS."
+---
 
+## Overview
+
+The **Create/Setup News Detail** feature enables administrators to structure the individual detail page for news articles using the Page Builder. This module manages critical display elements such as breadcrumb navigation, publication date labels, sharing functionality, and sidebar redirect links for ticketing.
 
 <Tip>
   Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
 </Tip>
 
-## Procedure
+---
 
-<Steps>
-  <Step title="Review the form">
+## Form Configuration
 
-The Create Setup News Detail feature in the Page module is used to create a News Detail  
-page, which is also part of the News page on the front page. This setup is used to organize  
-the Education Detail front page content for the Tempe Park website, which uses the Page  
-Builder mechanism. Through this feature, administrators can manage Education Detail  
-content, such as detail content, a section explaining operating hours, and related attraction  
-sections.  
-Here is the main view of Create Setup News Detail:
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1-2** | **Tabs** | Switch between **Draft** (editable) and **Published** (read-only view). |
+| **3-4** | **Title / Slug** | Define the page title and unique URL slug. |
+| **5-6** | **SEO** | Click `(+)` to configure `metaTitle`, `metaDescription`, and `shareImage`. |
+| **7** | **Add Component** | Access structural block components for the page builder. |
+| **10** | **Multilingual** | Toggle between English, Indonesian, and Chinese versions. |
 
-  </Step>
-  <Step title="Complete the form">
+---
 
-**No Sub Elements Function**  
-**No**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the  
-data that has been input (published), the form on  
-this tab is read only and cannot be edited.  
-3 title Enter the title or page title  
-4 slug Enter the page slug.  
-5 this Column to fill in seo grouping to fill in seo page.  
-6 No entry yet. Click to add Click the (+) button to display the SEO input  
-one.  
-column. After clicking, the metaTitle,  
-metaDescription, and shareImage columns will  
-appear. Fill them in according to the page you  
-want to add.  
-7 Add a component to Use or click this button to add the component  
-blocks  
-blocks needed to structure the cms content on a  
-page.  
-8 Publish Use this button if the user wants to directly  
-publish (implement it on the website landing  
-page) the data that will be entered into the  
-system. Data that has been published in the  
-collection can also be used as a relationship to  
-data from other modules.  
-9 Save button Use this button if the user wants to save new  
-data that will be entered into the system. The  
-saved data will have a Draft status, not a  
-Published one.  
-10 Multilingual Button Use this button if the user wants to switch  
-languages. The data displayed will be based on  
-the multilingual data entered. Available languages  
-are English, Indonesian, and Chinese.  
-To complete the content using this page builder module, follow these steps. (In this case, it's  
-the News Detail page.)  
-News Detail  
-11 News Click on this component group to bring up News  
-Details.  
-12 News Detail After clicking the News component group, the  
-user then clicks on this component to display the  
-fields required to fill in the news details.  
-13 breadcrumb_parent_pane Enter the parent labeling of the Breadcrumb  
-l  
-navigation on the news detail page.  
-14 share_label Enter content share labeling on the news detail  
-page  
-15 published_date_label Enter the published date labeling on the news  
-detail page.  
-16 To Top Button Go back to the shared components group and  
-select the To Top Button component.  
-17 career_variant Select false if this page is not a career page,  
-select true otherwise.  
-18 ticket_label Enter the ticket labeling position in the right  
-sidebar on the News Detail page.  
-19 ticket_icon Enter or upload an icon for the ticketing icon  
-which is positioned on the right sidebar on the  
-News Detail page.  
-20 ticket_href Enter the href or slug link of the page to redirect  
-to the ticketing landing page.
+## News Detail Setup
 
-  </Step>
-</Steps>
+To populate the news article details, follow these steps using the Page Builder:
+
+### Component Configuration
+
+- **Access:** Click **Add a component to blocks** (7) and select the **News** component group (11).
+- **Initialization:** Click on **News Detail** (12) to begin configuring the layout fields.
+
+### Configuration Fields
+
+| Field | Description |
+| :-- | :-- |
+| **breadcrumb\_parent\_label** | Parent labeling for the breadcrumb navigation. |
+| **share\_label** | Custom label for the article sharing section. |
+| **published\_date\_label** | Custom label for the publication date display. |
+| **career\_variant** | Set to `false` (default for news) or `true` if this page is a career entry. |
+| **ticket\_label** | Label for the ticketing section in the right sidebar. |
+| **ticket\_icon** | Icon for the ticketing sidebar element. |
+| **ticket\_href** | Target URL/slug for the ticketing page. |
+
+### Additional Components
+
+- **To Top Button:** Navigate to the **Shared** component group (16) and select the **To Top Button** component to add the quick-scroll feature to the page.
+
+<Warning>
+  Always verify that the `ticket_href` links to a valid page to ensure the call-to-action correctly redirects users to the ticketing landing page.
+</Warning>

@@ -1,59 +1,65 @@
-
+---
+title: "Create New Entry"
+sidebarTitle: "Create New Entry"
+description: "User guide for creating, managing, and publishing activity entries in the Tempe Park CMS."
+---
 
 <Tip>
-  Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
+  Use the **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
 </Tip>
 
-## Procedure
+## Overview
 
-<Steps>
-  <Step title="Review the form">
+The **Create New Entry** feature in the Activity module is used to add new activity data for Tempe Park. Administrators can input various details such as the activity name, description, images, schedule, and location for display on the website.
 
-The Create New Entry feature in the Activity module is used to add new activity data  
-available at Tempe Park. This feature allows administrators to input various activity  
-information, such as the activity name, description, image, schedule, location, and other  
-supporting information needed for display on the website.  
-Successfully added activity data will be stored in the system and can be published on the  
-Tempe Park website frontpage as information for visitors.  
-Here is the main view of the New Entry Activity page:
+<Frame>
+  ![0 (4)](/images/0-\(4\).png "0 (4)")
+</Frame>
 
-  </Step>
-  <Step title="Complete the form">
+<Frame>
+  ![0 (5)](/images/0-\(5\).png "0 (5)")
+</Frame>
 
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been input (published), the form on this tab  
-is read only and cannot be edited.  
-3 Title Enter the activity title  
-4 Slug Enter activity slug  
-5 Description Enter activity description  
-6 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-7 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-8 Multilingual Use this button to switch languages. When the user  
-clicks this button, 3 languages will appear, namely  
-English, Indonesian, and Chinese. When a new user  
-adds 1 multilingual data, this button can be used to  
-add a language version to the data.  
-9 short_description Enter a short description of the activity  
-10 Cover image Enter the cover image of the activity section  
-11 Gallery Enter gallery activity image  
-12 opening_hours_weekdays Enter Tempe Park's weekday operating hours  
-13 opening_hours_weekend Enter Tempe Park's operating hours on holidays  
-14 age_requirement Enter age recommendations for Tempe Park  
-activities.  
-15 Note Enter activity notes  
-16 related_activities Click the dropdown to select some related Tempe  
-Park activities to add.  
-17 is_highlight Select false if the activity data to be added will not  
-be highlighted, select true otherwise.
+## Form Fields
 
-  </Step>
-</Steps>
+| No | Element | Description |
+| :-- | :-- | :-- |
+| **1** | **Tab Draft** | Used for creating or editing new data entries. |
+| **2** | **Tab Published** | Read-only view of data that has already been published. |
+| **3** | **Title** | The official title of the activity. |
+| **4** | **Slug** | The unique URL identifier for the activity page. |
+| **5** | **Description** | Detailed information regarding the activity. |
+| **6** | **Publish** | Makes the data live on the website. |
+| **7** | **Save button** | Saves content as a Draft without making it public. |
+| **8** | **Multilingual** | Toggles content between English, Indonesian, and Chinese. |
+| **9** | **short\_description** | A brief summary of the activity for previews. |
+| **10** | **Cover image** | Primary image for the activity section. |
+| **11** | **Gallery** | Additional images for the activity gallery. |
+| **12** | **opening\_hours\_weekdays** | Operating hours during weekdays. |
+| **13** | **opening\_hours\_weekend** | Operating hours during weekends/holidays. |
+| **14** | **age\_requirement** | Recommended age range for the activity. |
+| **15** | **Note** | Additional notes or special instructions. |
+| **16** | **related\_activities** | Dropdown to link and display associated activities. |
+| **17** | **is\_highlight** | Toggle to set the activity as a featured/highlighted item. |
+
+---
+
+## Module Highlights
+
+<CardGroup cols={3}>
+  <Card title="Dual-State Workflow" color="#10b981" icon="floppy-disk">
+    Supports Draft saving for ongoing content iteration and immediate Publishing for live website display.
+  </Card>
+
+  <Card title="Multilingual Support" color="#38bdf8" icon="language">
+    Localization toggle enabling activity information in English, Indonesian, and Chinese.
+  </Card>
+
+  <Card title="Relational Linking" color="#f59e0b" icon="diagram-project">
+    Connects activities dynamically to related modules and highlights feature status on landing pages.
+  </Card>
+</CardGroup>
+
+<Note>
+  Ensure all required fields, including operational hours and cover images, are verified before switching status from Draft to Published.
+</Note>

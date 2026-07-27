@@ -1,77 +1,82 @@
 ---
-title: "Event / Calendar Module - Edit"
+title: "Edit"
 sidebarTitle: "Edit"
-description: "The Event / Calendar module in the Tempe Park CMS is used to manage event and calendar information displayed on the Tempe Park website."
+description: "Overview and step-by-step procedure for editing existing event and calendar entries in the Tempe Park CMS."
 ---
 
-<CardGroup cols={3}>
-  <Card title="Manage content" icon="calendar-days" color="#10b981">Use this module to manage structured CMS content for Tempe Park.</Card>
-  <Card title="Publish workflow" icon="clock" color="#38bdf8">Save content as Draft or publish it for the website frontpage.</Card>
-  <Card title="Relationships" icon="map-pin" color="#f59e0b">Use related data, categories, images, and multilingual fields where the module provides them.</Card>
-</CardGroup>
+## Overview
 
-<Note>
-This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` and organizes it into Mintlify components for easier scanning.
-</Note>
+The **Edit Data** feature in the Event/Calendar module is used to update or modify event information stored in the system. Administrators can make changes to event data such as the activity name, date, time, location, description, image, and other information as needed.
 
-## Reference view
+Changes to data made through this feature will immediately affect the event information displayed on the Tempe Park website after the data is successfully saved, so that the schedule and activity information available to visitors remains accurate and up-to-date.
+
+---
+
+## Form Fields & Interface Reference
 
 <Frame>
+  ![Edit Event / Calendar Page](/images/0-\(19\).png "Edit Event / Calendar Page")
 </Frame>
 
-## Procedure
+<Frame>
+  ![Edit Event / Calendar Page](/images/0-\(20\).png "Edit Event / Calendar Page")
+</Frame>
+
+| No | Field / Element | Function & Description |
+| :-- | :-- | :-- |
+| **1** | **Tab Draft** _(editable form)_ | Switch to this tab when editing active form fields. |
+| **2** | **Tab Published** | Read-only view showing the current live content on the frontend. |
+| **3** | **Title** | Update the primary event/calendar title. |
+| **4** | **Slug** | Modify the URL-friendly identifier for the event page. |
+| **5** | **Description** | Edit the main narrative/body description. |
+| **6** | **Publish** | Save and deploy changes immediately to the live website landing page. |
+| **7** | **Save** | Preserve edits as a **Draft** without publishing them publicly. |
+| **8** | **Set up Preview** | Preview content layout before publishing live. |
+| **9** | **Multilingual** | Switch between localized languages (**English**, **Indonesian**, **Chinese**). |
+| **10** | **short\_description** | Update the brief summary used in listing cards and teasers. |
+| **11** | **Cover image** | Change or replace the main hero cover image. |
+| **12** | **Gallery** | Upload, replace, or remove secondary images showcasing the event. |
+| **13** | **start\_date** | Adjust the starting date and time of the event. |
+| **14** | **end\_date** | Adjust the concluding date and time of the event. |
+| **15** | **location** | Update the designated venue or location within Tempe Park. |
+| **16** | **event\_tipe** | Select or update the event category/type. |
+
+---
+
+## Step-by-Step Procedure
 
 <Steps>
-  <Step title="Review the form">
-
-Edit Data in the Event/Calendar module is used to update or modify event information  
-stored in the system. Administrators can make changes to event data such as the activity  
-name, date, time, location, description, image, and other information as needed.  
-Changes to data made through this feature will immediately affect the event information  
-displayed on the Tempe Park website after the data is successfully saved, so that the  
-schedule and activity information available to visitors remains accurate and up-to-date.  
-The following is the main view of the Edit Event / Calendar page.
-
+  <Step title="Review the Form Interface">
+    Open the desired event/calendar record from the main list view to access the editor.
   </Step>
-  <Step title="Complete the form">
-
-**No Elements Function**  
-1 Tab Draft Use this form tab when the user wants to add  
-(editable form) new data entry  
-2 Tab Published Use this form tab if the user wants to see the data  
-that has been input (published), the form on this tab  
-is read only and cannot be edited.  
-3 Title Enter changes to the event title / calendar  
-4 Slug Enter event / calendar slug changes  
-5 Description Enter changes to the event / calendar description  
-6 Publish Use this button if the user wants to directly publish  
-(implement it on the website landing page) the data  
-that will be entered into the system. Data that has  
-been published in the collection can also be used as  
-a relationship to data from other modules.  
-7 Save button Use this button if the user wants to save new data  
-that will be entered into the system. The saved data  
-will have a Draft status, not a Published one.  
-8 Set up Preview Use this button to preview previously entered  
-content.  
-9 Multilingual Use this button to switch languages. When the user  
-clicks this button, 3 languages will appear, namely  
-English, Indonesian, and Chinese. When a new user  
-adds 1 multilingual data, this button can be used to  
-add a language version to the data.  
-10 short_description Enter changes to the short description of the event  
-/ calendar  
-10 Cover image Enter changes to the event / calendar section cover  
-image  
-11 Gallery Enter changes to the attraction gallery image, the  
-gallery image can be added with several images  
-12 start_date Enter changes to the start time of the event /  
-calendar  
-13 end_date Enter changes to the event / calendar end time  
-14 location Enter Tempe Park location changes for events /  
-calendar  
-15 event_tipe Enter or select one of the event/calendar type  
-changes
-
+  <Step title="Update Form Fields">
+    Modify the necessary field values according to your schedule updates (such as event title, start/end dates, location, or gallery images).
+  </Step>
+  <Step title="Preview & Save">
+    Use **Set up Preview** to check layout changes, then click **Save** to keep as a draft or click **Publish** to push updates live to the website calendar.
   </Step>
 </Steps>
+
+---
+
+## Key Features
+
+<CardGroup cols={3}>
+  <Card title="Real-Time Schedule Sync" color="#10b981" icon="arrows-rotate">
+    Updated dates, venues, and activity details reflect immediately on the visitor-facing calendar upon saving or publishing.
+  </Card>
+
+  <Card title="Live Preview & Drafts" color="#38bdf8" icon="eye">
+    Inspect changes via Set Up Preview or preserve modifications safely in Draft state before making them live.
+  </Card>
+
+  <Card title="Multilingual Updates" color="#f59e0b" icon="language">
+    Manage synchronized schedule updates across English, Indonesian, and Chinese language versions.
+  </Card>
+</CardGroup>
+
+---
+
+<Note>
+  **Note:** Verify both `start_date` and `end_date` fields when adjusting multi-day events to prevent scheduling overlaps on the frontend.
+</Note>
