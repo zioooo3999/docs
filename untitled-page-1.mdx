@@ -1,108 +1,143 @@
 ---
 title: "Installation Guide"
+sidebarTitle: "Installation Guide"
+description: "Step-by-step instructions for setting up the Tempe Park backend (Strapi) and frontend (Next.js) environments."
 ---
 
-## **5.1 Prerequisites**
+## Prerequisites
 
-Before starting the installation, make sure the environment meets the following requirements:
+Before starting the installation, make sure the target environment meets the following technical requirements:
 
-- Node.js version ≥ 20 and ≤ 24
-- npm (bundled with Node.js)
-- PostgreSQL 16
-- Access to a MinIO / S3-compatible object storage (for media uploads)
-- Nginx as a reverse proxy (optional)
+| Component | Requirement | Note |
+| :-- | :-- | :-- |
+| **Node.js** | Version `≥ 20` and `≤ 24` | Required for both backend and frontend environments. |
+| **Package Manager** | `npm` | Bundled with Node.js. |
+| **Database** | PostgreSQL 16 | Primary relational database engine. |
+| **Object Storage** | MinIO / S3-compatible | Used for persistent media upload storage. |
+| **Web Server** | Nginx _(Optional)_ | Recommended as a reverse proxy for SSL & domain routing. |
 
-## **5.2 Backend Installation (Strapi)**
+---
 
-Clone the backend repository and check out the develop branch, which is the active branch (main is nearly empty). Then install the dependencies and prepare the environment file:
+## Backend Installation (Strapi)
 
-git clone \[repo-web-be\]
+<Steps>
+  <Step title="Repository Setup & Dependencies">
+    Clone the backend repository, checkout the active `develop` branch, install dependencies, and create the local environment file:
 
-cd web-be
+    ```bash
+    git clone [repo-web-be]
+    cd web-be
+    git checkout develop
+    npm install
+    cp .env.example .env
+    ```
 
-git checkout develop
+    <Note>
+      Fill in the `.env` file according to the system Configuration Guide before proceeding to database setup.
+    </Note>
+  </Step>
+  <Step title="Database Provisioning & Data Restoration">
+    Prepare the PostgreSQL database with `strapi` as the owner and restore the delivered dump file:
 
-npm install
+    ```bash
+    createdb tempepark
+    pg_restore --no-owner --role=strapi -d tempepark tempepark.dump
+    ```
 
-cp .env.example .env
+    <Warning>
+      The delivered `tempepark.dump` file is in PostgreSQL custom format and **must** be restored using `pg_restore`, not standard SQL import scripts (`mysql <`).
+    </Warning>
+  </Step>
+  <Step title="Run Application Server">
+    - **Development Mode:** Starts local development server with hot-reloading at [http://localhost:1337](http://localhost:1337):
+      ```bash
+      npm run develop
+      ```
+    - **Production Build:** Builds administrative panel assets and launches the production server:
+      ```bash
+      npm run build
+      npm run start
+      ```
+  </Step>
+</Steps>
 
-<br />
+---
 
-Fill in the .env file according to the Configuration Guide. Next, prepare the PostgreSQL database with strapi as the owner and restore the delivered dump:
+## Frontend Installation (Next.js)
 
-createdb tempepark
+<Steps>
+  <Step title="Repository Setup & Configuration">
+    Clone the frontend repository, switch to `develop`, install packages, and initialize local configuration:
 
-pg\_restore --no-owner --role=strapi -d tempepark tempepark.dump
+    ```bash
+    git clone [repo-web-fe]
+    cd web-fe
+    git checkout develop
+    npm install
+    cp .env.example .env.local
+    ```
 
-<br />
+    Configure the API endpoint and authorization token inside `.env.local`:
 
-Run the application. For development, use the following command; the application will be available at [http://localhost:1337](http://localhost:1337):
+    - `NEXT_PUBLIC_STRAPI_URL`
+    - `STRAPI_API_TOKEN`
+  </Step>
+  <Step title="Run Application Server">
+    - **Development Mode:** Runs local web application at [http://localhost:3000](http://localhost:3000):
+      ```bash
+      npm run dev
+      ```
+    - **Production Build:** Compiles optimized production build and starts application:
+      ```bash
+      npm run build
+      npm run start
+      ```
+  </Step>
+</Steps>
 
-npm run develop
+---
 
-<br />
+## Database Migration Strategy
 
-For production, build the application first and then start the server:
+The database schema is fully managed by **Strapi**.
 
-npm run build
+For a fresh server using delivered data, simply restore the PostgreSQL dump as outlined in the backend setup. Strapi applies its own internal schema migrations automatically upon application boot, requiring **no additional manual migration steps**.
 
-npm run start
+---
 
-<br />
+## Installation Verification
 
-## **5.3 Frontend Installation (Next.js)**
+Confirm that services are functioning properly by verifying the following health checks:
 
-Clone the frontend repository, check out the develop branch, then install the dependencies and prepare the environment file:
+<CardGroup cols={2}>
+  <Card title="Admin Dashboard" color="#10b981" icon="desktop">
+    `GET [cms-url]/admin` returns **HTTP 200** and loads admin UI.
+  </Card>
 
-git clone \[repo-web-fe\]
+  <Card title="Public API Endpoint" color="#38bdf8" icon="globe">
+    `GET [cms-url]/api/pages` returns **HTTP 200**.
+  </Card>
 
-cd web-fe
+  <Card title="Protected API Endpoint" color="#f59e0b" icon="lock">
+    `GET [cms-url]/api/attractions` with `Bearer [token]` header returns **HTTP 200**.
+  </Card>
 
-git checkout develop
+  <Card title="Frontend Application" color="#6366f1" icon="browser">
+    Next.js application renders pages correctly in modern browsers.
+  </Card>
+</CardGroup>
 
-npm install
+### Verification Commands
 
-cp .env.example .env.local
+Execute the following `curl` verification checks to validate API accessibility:
 
-<br />
+```bash
+# 1. Admin Panel Check
+curl -i [cms-url]/admin
 
-In the .env.local file, set the values for NEXT\_PUBLIC\_STRAPI\_URL and STRAPI\_API\_TOKEN. Run the application. For development, it will be available at [http://localhost:3000](http://localhost:3000):
+# 2. Public Route Verification
+curl -i [cms-url]/api/pages
 
-npm run dev
-
-<br />
-
-For production, build the application first and then start the server:
-
-npm run build
-
-npm run start
-
-<br />
-
-## **5.4 Database Migration**
-
-The database schema is fully managed by Strapi. For a fresh server using the delivered data, simply restore the provided PostgreSQL dump as described in section 5.2. Strapi then applies its own internal migrations automatically every time the application starts, so no additional manual migration step is required.
-
-## **5.5 Installation Verification**
-
-The installation is considered successful when all of the following checks pass:
-
-- The endpoint GET \[cms-url\]/admin returns HTTP 200 and the admin panel loads.
-- The public endpoint GET \[cms-url\]/api/pages returns HTTP 200.
-- A protected endpoint, for example GET \[cms-url\]/api/attractions, returns HTTP 200 when sent with the header Authorization: Bearer \[token\].
-- The frontend page loads correctly in the browser.
-
-These checks can be performed quickly using curl:
-
-curl -i \[cms-url\]/admin
-
-curl -i \[cms-url\]/api/pages
-
-curl -i -H "Authorization: Bearer \[token\]" \[cms-url\]/api/attractions
-
-<br />
-
-**Note:** The database is PostgreSQL. The delivered file tempepark.dump is a PostgreSQL custom-format dump and must therefore be restored using pg\_restore, not mysql \<.
-
-<br />
+# 3. Authenticated Bearer Token Verification
+curl -i -H "Authorization: Bearer [token]" [cms-url]/api/attractions
+```

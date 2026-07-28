@@ -534,24 +534,28 @@
                   "project-objective",
                   "project-scope",
                   "technology-stack",
-                  "environment-information-development-and-production",
                   "high-level-architecture-diagram",
-                  "version-information"
+                  "version-information",
+                  "env"
                 ]
               },
-              {
-                "group": "Sitemap",
-                "pages": []
-              },
+              "site-mp",
               {
                 "group": "CMS Guide",
                 "pages": [
-                  "login"
+                  "login",
+                  "untitled-page-5"
                 ]
               },
               {
                 "group": "Administration Guide",
                 "pages": []
+              },
+              {
+                "group": "Technical Doccumentation",
+                "pages": [
+                  "technology-stack-1"
+                ]
               }
             ]
           }

@@ -1,95 +1,45 @@
 ---
 title: "Configuration Guide"
+sidebarTitle: "Configuration Guide"
+description: "Environment variables, database settings, object storage, and proxy configurations for Tempe Park services."
 ---
 
-## **6.1 Backend Environment Variables (.env)**
+## Overview
 
-The backend configuration is defined in the .env file at the root of the web-be project. The variables are grouped into application settings, database credentials, and object storage credentials:
+The Tempe Park platform relies on environment variables and service configurations to manage connectivity between Next.js, Strapi, PostgreSQL, MinIO object storage, and Nginx reverse proxies.
 
+---
+
+## Backend Environment Variables (.env)
+
+The backend configuration file resides at `web-be/.env`. Variables are structured across core application parameters, database access, and MinIO storage configuration:
+
+```bash web-be/.env
+# Application Core Settings
 HOST=0.0.0.0
-
 PORT=1337
+APP_KEYS=[key1],[key2]
+API_TOKEN_SALT=[salt]
+ADMIN_JWT_SECRET=[secret]
+TRANSFER_TOKEN_SALT=[salt]
+JWT_SECRET=[secret]
+ENCRYPTION_KEY=[key]
 
-APP\_KEYS=\[key1\],\[key2\]
-
-API\_TOKEN\_SALT=\[salt\]
-
-ADMIN\_JWT\_SECRET=\[secret\]
-
-TRANSFER\_TOKEN\_SALT=\[salt\]
-
-JWT\_SECRET=\[secret\]
-
-ENCRYPTION\_KEY=\[key\]
-
-<br />
-
-# Database (PostgreSQL)
-
-DATABASE\_CLIENT=postgres
-
-DATABASE\_HOST=localhost
-
-DATABASE\_PORT=5432
-
-DATABASE\_NAME=tempepark
-
-DATABASE\_USERNAME=\[user\]
-
-DATABASE\_PASSWORD=\[password\]
-
-DATABASE\_SSL=false
-
-DATABASE\_SCHEMA=public
-
-<br />
+# Database Configuration (PostgreSQL)
+DATABASE_CLIENT=postgres
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_NAME=tempepark
+DATABASE_USERNAME=[user]
+DATABASE_PASSWORD=[password]
+DATABASE_SSL=false
+DATABASE_SCHEMA=public
 
 # Object Storage (MinIO / S3-compatible)
-
-MINIO\_BASE\_URL=https://\[host\]/tempe-park
-
-MINIO\_ENDPOINT=https://\[host\]
-
-MINIO\_ACCESS\_KEY=\[access-key\]
-
-MINIO\_SECRET\_KEY=\[secret-key\]
-
-MINIO\_REGION=us-east-1
-
-MINIO\_BUCKET=tempe-park
-
-<br />
-
-## **6.2 Frontend Environment Variables (.env.local)**
-
-The frontend configuration is defined in the .env.local file at the root of the web-fe project. The API token is generated from the CMS through Settings → API Tokens:
-
-NEXT\_PUBLIC\_STRAPI\_URL=https://\[cms-url\]
-
-STRAPI\_URL=https://\[cms-url\]
-
-STRAPI\_API\_TOKEN=\[full-access-api-token\]
-
-NEXT\_PUBLIC\_GTM\_ID=\[google-tag-manager-id\]
-
-PREVIEW\_SECRET=\[preview-secret\]
-
-<br />
-
-## **6.3 Database Configuration**
-
-The backend connects to PostgreSQL through the DATABASE\_\* variables described above, using public as the default schema. Connection pooling is applied with a minimum of two and a maximum of ten simultaneous connections.
-
-## **6.4 Object Storage Configuration (MinIO)**
-
-Media uploads are stored in a MinIO bucket that is S3-compatible, served through the @strapi/provider-upload-aws-s3 provider and configured in config/plugins.ts using the MINIO\_\* variables. Path-style access (forcePathStyle) is enabled to maintain compatibility with MinIO. The public bucket name is tempe-park.
-
-## **6.5 SMTP Configuration**
-
-Email is not configured in the current codebase, so this item is Not Applicable. Should email features such as password reset be required later, a Strapi email provider can be registered in config/plugins.ts and the corresponding credentials added to the .env file.
-
-## **6.6 Domain Configuration**
-
-Each application sits behind an Nginx reverse proxy. The frontend domain is proxied to the Next.js server on port 3000, while the CMS/API domain is proxied to Strapi on port 1337. WebSocket upgrade headers must be forwarded so that the admin panel and hot reload continue to work correctly.
-
-<br />
+MINIO_BASE_URL=https://[host]/tempe-park
+MINIO_ENDPOINT=https://[host]
+MINIO_ACCESS_KEY=[access-key]
+MINIO_SECRET_KEY=[secret-key]
+MINIO_REGION=us-east-1
+MINIO_BUCKET=tempe-park
+```

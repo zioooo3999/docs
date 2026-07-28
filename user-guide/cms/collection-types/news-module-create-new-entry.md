@@ -1,6 +1,6 @@
 ---
 title: "News Module - Create New Entry"
-sidebarTitle: "Create New Ent"
+sidebarTitle: "Create New Entry"
 description: "User guide for creating and publishing news articles and announcements in the Tempe Park CMS."
 ---
 

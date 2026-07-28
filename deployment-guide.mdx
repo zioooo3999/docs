@@ -1,69 +1,87 @@
 ---
 title: "Deployment Guide"
+sidebarTitle: "Deployment Guide"
+description: "Standard operating procedures for building, deploying, verifying, and rolling back Tempe Park production services."
 ---
 
-## **7.1 Deployment Process**
+## Overview
 
-Deployment to the production environment follows a fixed sequence of steps:
+Deployments to the production environment follow a strict, deterministic deployment pipeline to maintain uptime and ensure consistent backend and frontend performance.
 
-1. Check out the production branch.
-2. Pull the latest source code on the server.
-3. Install the dependencies.
-4. Build the application.
-5. Apply the environment configuration.
-6. Restart the service.
-7. Verify the deployment.
+---
 
-## **7.2 Update Source Code**
+## Deployment Pipeline
 
-On the server, pull the latest changes from the production branch, reinstall the dependencies to account for any package changes, and rebuild the application:
+<Steps>
+  <Step title="Update Source Code">
+    Fetch and pull the latest code updates from the production branch on the target server, install package updates, and build the application assets:
 
-git pull origin \[production-branch\]
+    ```bash
+    git pull origin [production-branch]
+    npm install
+    npm run build
+    ```
+  </Step>
+  <Step title="Restart System Services">
+    Restart the application using the process management tool configured on your production host environment:
 
-npm install
+    <CodeGroup>
 
-npm run build
+    ```bash PM2 Process Manager
+    pm2 restart [app-name]
+    ```
 
-<br />
+    ```bash Docker Compose
+    docker compose up -d --build
+    ```
 
-## **7.3 Restart Service**
+    ```bash Systemd Service
+    sudo systemctl restart [service-name]
+    ```
 
-Restart the application using the mechanism configured on the server — a process manager such as pm2, a systemd unit, or Docker. The typical commands for each option are as follows.
+    </CodeGroup>
+  </Step>
+  <Step title="Verify Production Deployment">
+    Validate service health against production URLs following standard verification checks:
 
-Using pm2:
+    - Execute API endpoints checks (`/admin`, `/api/pages`, and authenticated endpoints).
+    - Perform a **content verification check**: update an item in the CMS and verify that changes propagate correctly to the Next.js frontend.
+  </Step>
+</Steps>
 
-pm2 restart \[app-name\]
+---
 
-<br />
+## Rollback Procedure
 
-Using Docker:
+If a deployment fails, introduces errors, or degrades system stability, execute the following rollback steps immediately:
 
-docker compose up -d --build
+<Steps>
+  <Step title="Revert Repository State">
+    Checkout the last known stable Git commit tag or hash, reinstall dependencies, and re-compile application builds:
 
-<br />
+    ```bash
+    git checkout [previous-tag-or-commit]
+    npm install
+    npm run build
+    ```
+  </Step>
+  <Step title="Restart Services">
+    Restart the backend or frontend instance via your process manager (`pm2`, `docker`, or `systemd`).
+  </Step>
+  <Step title="Database Restoration (If Required)">
+    <Warning>
+      If a schema change or corrupted data state occurred during deployment, restore the PostgreSQL database from the latest valid backup snapshot before re-verifying services.
+    </Warning>
+  </Step>
+</Steps>
 
-Using systemd:
+---
 
-sudo systemctl restart \[service-name\]
+## Deployment Summary
 
-<br />
-
-## **7.4 Deployment Verification**
-
-Repeat the checks described in section 5.5 against the production URLs. In addition, confirm that a recently edited piece of content in the CMS is correctly reflected on the frontend, which verifies that the connection between the backend and the frontend is functioning as expected.
-
-## **7.5 Rollback Procedure**
-
-If the deployment fails or causes issues in production, roll back to the previous stable version by checking out the corresponding tag or commit, reinstalling the dependencies, rebuilding the application, and restarting the service:
-
-git checkout \[previous-tag-or-commit\]
-
-npm install
-
-npm run build
-
-<br />
-
-Restart the service afterwards using the same mechanism described in section 7.3. If a database migration also needs to be reverted, restore the database from the most recent backup as described in section 8.
-
-<br />
+| Stage | Mechanism / Command | Purpose |
+| :-- | :-- | :-- |
+| **Code Update** | `git pull origin [production-branch]` | Retrieve latest production codebase. |
+| **Build** | `npm run build` | Generate production bundle for Strapi / Next.js. |
+| **Process Management** | `pm2` / `Docker` / `systemd` | Safely recycle application processes. |
+| **Verification** | Endpoint checks \+ CMS-to-FE content pass | Ensure end-to-end service connectivity. |
