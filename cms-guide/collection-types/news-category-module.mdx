@@ -1,0 +1,68 @@
+---
+title: "News Category Module"
+sidebarTitle: "News Category"
+description: "User guide and field reference for managing news categories in the Tempe Park CMS."
+---
+
+## Overview
+
+The News Category module in the Tempe Park CMS is used to manage and store news category data used in the News module. This module serves as a CMS collection for grouping news so that the information content displayed on the Tempe Park website can be arranged more neatly, structured, and easily accessed by visitors.
+
+Through this module, administrators can create and organize various news categories as needed, such as events, promotions, announcements, activities, latest information, and other categories. These categories will then be used in the News module to group each news item published on the website.
+
+<Note>
+  This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` and organizes it into Mintlify components for easier scanning.
+</Note>
+
+---
+
+## Main Menu Controls
+
+Here is the main display of the News Category menu:<br />
+
+<Frame>
+  ![0 (41)](/images/0-\(41\).png "0 (41)")
+</Frame>
+
+| No | Field / Element | Function & Description |
+| :-: | :-- | :-- |
+| **1** | **Search Button** | Click this icon to search for the desired keyword, the keyword will appear based on general information data, namely title, slug, and short\_description. |
+| **2** | **Filter Button** | Use this button to search for keywords within a specific field, such as searching for keywords in only one field. When the user clicks, they will be prompted to select a field and then type in keywords that match the data in that field. |
+| **3** | **Checkbox Button** | Use this button if the user wants to perform multiple actions, such as deleting, publishing, or unpublishing more than one record simultaneously. Clicking multiple records will bring up the publish, unpublish, and delete buttons. Clicking one of the action options will cause the selected record to respond accordingly. |
+| **4** | **Id** | ID information from News data. |
+| **5** | **Name** | News category name information. |
+| **6** | **Slug** | News category slug information. |
+| **7** | **CreatedAt** | Data creation date and time information. |
+| **8** | **Available In** | Multilingual data information allows users to edit data using this button. Select multi-language based on the data to be selected. After clicking multi-language, the user will be directed to edit the data in the selected multi-language. |
+| **9** | **Status** | Data status information whether it has been published or is a draft. |
+| **10** | **Multilingual Button** | Use this button if the user wants to switch languages. The data displayed will be based on the multilingual data entered. Available languages are English, Indonesian, and Chinese. |
+| **11** | **Settings** | Use this button if the user wants to display fields or columns according to their wishes. |
+| **12** | **Tombol Create New Entry** | Use this button if the user wants to add new News Category data to the system. |
+
+---
+
+## Frontend Presentation
+
+The following is a frontend view based on data taken from the News Category collection module. The contents of this module will become the frontend content on the News page under the News category:<br />
+
+<Frame>
+  ![0 (42)](/images/0-\(42\).png "0 (42)")
+</Frame>
+
+<CardGroup cols={3}>
+  <Card title="Structured Content Taxonomy" color="#10b981" icon="folder-tree">
+    Groups news articles into distinct thematic streams like events, announcements, and promotions.
+  </Card>
+
+  <Card title="Creation Metadata" color="#38bdf8" icon="calendar">
+    Tracks creation timestamps for accurate auditing and chronological collection filtering.
+  </Card>
+
+  <Card title="Localized Category Labels" color="#f59e0b" icon="language">
+    Renders localized category names for English, Indonesian, and Chinese visitors.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Review multilingual, status, and relationship fields before publishing content.
+</Warning>

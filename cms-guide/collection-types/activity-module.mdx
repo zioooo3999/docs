@@ -1,0 +1,89 @@
+---
+title: "Activity Module"
+sidebarTitle: "Activity"
+description: "The Activity module in the Tempe Park CMS is used to manage information about the various activities and events available at Tempe Park."
+---
+
+<CardGroup cols={3}>
+  <Card title="Frontend Display" icon="desktop">
+    Feeds content directly to the **Experience** section on the website.
+  </Card>
+
+  <Card title="Multilingual" icon="language">
+    Supports localized content for English, Indonesian, and Chinese.
+  </Card>
+
+  <Card title="Bulk Management" icon="list-check">
+    Easily publish, unpublish, or delete multiple activity entries.
+  </Card>
+</CardGroup>
+
+<Note>
+  This page preserves the original wording from `[EN] Tempe Park Doc-part-3.pdf` and organizes it into Mintlify step-by-step procedures for easier scanning.
+</Note>
+
+## Overview
+
+The Activity module in the Tempe Park CMS is used to manage information about the various activities and events available at Tempe Park. This module serves as a medium for managing activity content, which will then be displayed on the website's front page as information for visitors.
+
+Through this module, administrators can add and organize various activity data, such as activity name, description, images, schedule, location, and other supporting information as needed. The activity content displayed aims to provide visitors with an overview of the experiences and activities available at Tempe Park.
+
+<Warning>
+  Review multilingual, status, and relationship fields before publishing content.
+</Warning>
+
+---
+
+<Frame>
+  ![0 (2)](/images/0-\(2\).png "0 (2)")
+</Frame>
+
+<br /><br />How to Manage Activities in the CMS Dashboard
+
+Follow the step-by-step guidance below to navigate and operate the main display of the Activity menu:
+
+<Steps>
+  <Step title="Locate Data using Search">
+    **Search Button (1)**: Click this icon to search for the desired keyword. The keyword search will match general information data, specifically `title`, `slug`, and `short_description`.
+  </Step>
+  <Step title="Filter Content by Specific Field">
+    **Filter Button (2)**: Use this button to search for keywords within a specific field.
+
+    1. Click the Filter button.
+    2. Select the targeted field from the prompt.
+    3. Type in the keywords matching the data in that field.
+  </Step>
+  <Step title="Customize Interface Columns">
+    **Settings (11)**: Click this button if you want to customize or toggle which fields/columns are displayed in the main table view.
+  </Step>
+  <Step title="Manage Content Status & Multilingual Options">
+    Review the table columns for each record:
+
+    - **ID (4)**: View the unique Data ID information.
+    - **Title (5) & Slug (6)**: Review the title and URL slug of the activity.
+    - **Short Description (7)**: Check the brief summary of the activity content.
+    - **Available In (8)**: View multilingual availability. Click a language flag/icon to directly edit data in that language.
+    - **Status (9)**: Check whether the data is currently `Published` or a `Draft`.
+    - **Multilingual Button (10)**: Switch the active interface view language (**English**, **Indonesian**, or **Chinese**).
+  </Step>
+  <Step title="Perform Bulk Actions on Multiple Records">
+    **Checkbox Button (3)**: Perform actions on multiple entries simultaneously:
+
+    1. Select the checkboxes next to the records you want to modify.
+    2. The action bar will appear with **Publish**, **Unpublish**, and **Delete** options.
+    3. Click the desired action button to apply changes to all selected records.
+  </Step>
+  <Step title="Create a New Activity Entry">
+    **Create New Entry Button (12)**: Click this button when you want to add a new activity entry into the system. Fill in the required fields (name, description, images, schedule, location) and save/publish.
+  </Step>
+</Steps>
+
+---
+
+## Frontend Integration
+
+The contents of this module will become the frontend content on the **Experience** section of the **Activities** page.
+
+<Frame>
+  ![0 (3)](/images/0-\(3\).png "0 (3)")
+</Frame>
