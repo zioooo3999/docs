@@ -543,7 +543,6 @@
               {
                 "group": "CMS Guide",
                 "pages": [
-<<<<<<< HEAD
                   "cms-guide/overview",
                   "cms-guide/login",
                   {
@@ -659,10 +658,6 @@
                       }
                     ]
                   }
-=======
-                  "login",
-                  "untitled-page-5"
->>>>>>> 2bb8c4d3e3f1a37e59a0f3618f5eec9f9f8cb790
                 ]
               },
               {
