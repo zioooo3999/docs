@@ -1,0 +1,45 @@
+---
+title: "Configuration Guide"
+sidebarTitle: "Configuration Guide"
+description: "Environment variables, database settings, object storage, and proxy configurations for Tempe Park services."
+---
+
+## Overview
+
+The Tempe Park platform relies on environment variables and service configurations to manage connectivity between Next.js, Strapi, PostgreSQL, MinIO object storage, and Nginx reverse proxies.
+
+---
+
+## Backend Environment Variables (.env)
+
+The backend configuration file resides at `web-be/.env`. Variables are structured across core application parameters, database access, and MinIO storage configuration:
+
+```bash web-be/.env
+# Application Core Settings
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=[key1],[key2]
+API_TOKEN_SALT=[salt]
+ADMIN_JWT_SECRET=[secret]
+TRANSFER_TOKEN_SALT=[salt]
+JWT_SECRET=[secret]
+ENCRYPTION_KEY=[key]
+
+# Database Configuration (PostgreSQL)
+DATABASE_CLIENT=postgres
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_NAME=tempepark
+DATABASE_USERNAME=[user]
+DATABASE_PASSWORD=[password]
+DATABASE_SSL=false
+DATABASE_SCHEMA=public
+
+# Object Storage (MinIO / S3-compatible)
+MINIO_BASE_URL=https://[host]/tempe-park
+MINIO_ENDPOINT=https://[host]
+MINIO_ACCESS_KEY=[access-key]
+MINIO_SECRET_KEY=[secret-key]
+MINIO_REGION=us-east-1
+MINIO_BUCKET=tempe-park
+```

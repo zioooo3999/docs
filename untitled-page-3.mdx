@@ -1,0 +1,21 @@
+---
+title: "Troubleshooting Guide"
+sidebarTitle: "Troubleshooting"
+description: "Common issues, root causes, and resolutions for website, CMS, and infrastructure services."
+---
+
+## Common Issues & Resolutions
+
+Each case below is detailed by its observed **Symptoms**, **Possible Causes**, and recommended **Resolution** steps.
+
+| Symptoms | Possible Causes | Resolution |
+| :-- | :-- | :-- |
+| **Website cannot be accessed** | Frontend (Next.js) down, Nginx stopped, or DNS issue | Check the Next.js process (port `3000`); run `nginx -t` and reload; verify DNS / host mapping. |
+| **Cannot log in to the CMS** | Strapi down, database not connected, or `.env` secrets changed | Check the Strapi process (port `1337`); verify the PostgreSQL connection; confirm `ADMIN_JWT_SECRET` is stable. |
+| **Image upload fails** | Wrong MinIO credentials/endpoint, missing bucket, or ACL issue | Check the `MINIO_*` values in `.env`; confirm the `tempe-park` bucket exists; check permissions. |
+| **Object storage cannot be accessed** | MinIO service down or network issue | Check the MinIO service status and verify connectivity to the endpoint. |
+| **Storage capacity full** | Server disk or bucket full | Clean logs/temp files, increase disk capacity, and check usage via `df -h`. |
+| **Frontend receives HTTP 403 from API** | `STRAPI_API_TOKEN` empty/expired, or public role permissions missing | Regenerate a full-access API token; set correct permissions under Users & Permissions role. |
+| **Docker container stopped** | Application crash, out of memory (OOM), or failed deploy | Run `docker ps -a` to inspect status, check logs via `docker logs [name]`, then restart container. |
+| **Email (SMTP) not sent** | Email provider not configured or wrong SMTP credentials | Configure a Strapi email provider and verify the SMTP credentials in settings. |
+| **SSL certificate problem** | Expired or misconfigured SSL/TLS certificate | Renew the certificate (e.g., via Certbot); verify Nginx TLS configuration. |

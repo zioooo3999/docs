@@ -1,0 +1,87 @@
+---
+title: "Deployment Guide"
+sidebarTitle: "Deployment Guide"
+description: "Standard operating procedures for building, deploying, verifying, and rolling back Tempe Park production services."
+---
+
+## Overview
+
+Deployments to the production environment follow a strict, deterministic deployment pipeline to maintain uptime and ensure consistent backend and frontend performance.
+
+---
+
+## Deployment Pipeline
+
+<Steps>
+  <Step title="Update Source Code">
+    Fetch and pull the latest code updates from the production branch on the target server, install package updates, and build the application assets:
+
+    ```bash
+    git pull origin [production-branch]
+    npm install
+    npm run build
+    ```
+  </Step>
+  <Step title="Restart System Services">
+    Restart the application using the process management tool configured on your production host environment:
+
+    <CodeGroup>
+
+    ```bash PM2 Process Manager
+    pm2 restart [app-name]
+    ```
+
+    ```bash Docker Compose
+    docker compose up -d --build
+    ```
+
+    ```bash Systemd Service
+    sudo systemctl restart [service-name]
+    ```
+
+    </CodeGroup>
+  </Step>
+  <Step title="Verify Production Deployment">
+    Validate service health against production URLs following standard verification checks:
+
+    - Execute API endpoints checks (`/admin`, `/api/pages`, and authenticated endpoints).
+    - Perform a **content verification check**: update an item in the CMS and verify that changes propagate correctly to the Next.js frontend.
+  </Step>
+</Steps>
+
+---
+
+## Rollback Procedure
+
+If a deployment fails, introduces errors, or degrades system stability, execute the following rollback steps immediately:
+
+<Steps>
+  <Step title="Revert Repository State">
+    Checkout the last known stable Git commit tag or hash, reinstall dependencies, and re-compile application builds:
+
+    ```bash
+    git checkout [previous-tag-or-commit]
+    npm install
+    npm run build
+    ```
+  </Step>
+  <Step title="Restart Services">
+    Restart the backend or frontend instance via your process manager (`pm2`, `docker`, or `systemd`).
+  </Step>
+  <Step title="Database Restoration (If Required)">
+    <Warning>
+      If a schema change or corrupted data state occurred during deployment, restore the PostgreSQL database from the latest valid backup snapshot before re-verifying services.
+    </Warning>
+  </Step>
+</Steps>
+
+---
+
+## Deployment Summary
+
+| Stage | Mechanism / Command | Purpose |
+| :-- | :-- | :-- |
+| **Code Update** | `git pull origin [production-branch]` | Retrieve latest production codebase. |
+| **Build** | `npm run build` | Generate production bundle for Strapi / Next.js. |
+| **Process Management** | `pm2` / `Docker` / `systemd` | Safely recycle application processes. |
+| **Verification** | Endpoint checks \+ CMS-to-FE content pass | Ensure end-to-end service connectivity. |

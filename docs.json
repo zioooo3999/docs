@@ -335,7 +335,16 @@
                   },
                   "4-3-entity-relationship-diagram"
                 ]
-              }
+              },
+              "untitled-page-1",
+              "configuration-guide",
+              "deployment-guide",
+              "untitled-page-2",
+              "server-operation-and-maintenance-guide",
+              "untitled-page-3",
+              "sitemap",
+              "cms-guide",
+              "untitled-page-4"
             ]
           },
           {
@@ -525,24 +534,16 @@
                   "project-objective",
                   "project-scope",
                   "technology-stack",
-                  "environment-information-development-and-production",
                   "high-level-architecture-diagram",
-                  "version-information"
+                  "version-information",
+                  "env"
                 ]
               },
-              {
-                "group": "Sitemap",
-                "pages": [
-                  "struktur-menu-website",
-                  "daftar-seluruh-halaman",
-                  "url-setiap-halaman",
-                  "keterangan-halaman-static",
-                  "halaman-yang-kelola-melalui-cms"
-                ]
-              },
+              "site-mp",
               {
                 "group": "CMS Guide",
                 "pages": [
+<<<<<<< HEAD
                   "cms-guide/overview",
                   "cms-guide/login",
                   {
@@ -658,11 +659,21 @@
                       }
                     ]
                   }
+=======
+                  "login",
+                  "untitled-page-5"
+>>>>>>> 2bb8c4d3e3f1a37e59a0f3618f5eec9f9f8cb790
                 ]
               },
               {
                 "group": "Administration Guide",
                 "pages": []
+              },
+              {
+                "group": "Technical Doccumentation",
+                "pages": [
+                  "technology-stack-1"
+                ]
               }
             ]
           }

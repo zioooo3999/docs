@@ -1,0 +1,55 @@
+---
+title: "CMS Guide"
+---
+
+The content management system is Strapi 5, accessible at \[cms-url\]/admin. This section covers the common content operations for internal users. Screenshots are to be captured from the production instance.
+
+## **_12.1 Login_**
+
+Open \[cms-url\]/admin, enter the registered email and password, and click Login. \[Screenshot: login page\]
+
+## **_12.2 Dashboard_**
+
+After logging in, the Content Manager lists all collection types and single types in the left sidebar. \[Screenshot: dashboard / content manager\]
+
+## **_12.3 Managing Banners_**
+
+Banners and hero content are managed through the relevant page single type (for example the Home page) using its dynamic-zone components. Open the page, edit the banner component fields and images, then Save and Publish. \[Screenshot: banner component\]
+
+## **_12.4 Managing Articles / News_**
+
+In Content Manager, open the News collection. Use Create new entry to add an article, fill in the title, slug, content and cover image, assign a category, then Save and Publish. \[Screenshot: news entry\]
+
+## **_12.5 Managing Gallery_**
+
+Gallery images are managed through the media components on the relevant page, and through the Media Library for the underlying files. \[Screenshot: gallery / media component\]
+
+## **_12.6 Managing Pages_**
+
+Open the Pages collection to edit page content and its dynamic-zone components (sections). Each page is identified by its slug (see Sitemap). Save and Publish to apply changes. \[Screenshot: page editor\]
+
+## **_12.7 Uploading Media_**
+
+Use the Media Library (or the media field within an entry) to upload images and files. Uploaded files are stored in the MinIO bucket. \[Screenshot: media library upload\]
+
+## **_12.8 Publishing Content_**
+
+Click Publish on an entry to make it visible on the frontend. Published entries are served through the public API.
+
+## **_12.9 Draft Content_**
+
+Save without publishing to keep an entry as a draft. Drafts are not shown on the public frontend.
+
+## **_12.10 Deleting Content_**
+
+Open the entry and choose Delete, or select multiple entries in the list view and delete them together. \[Screenshot: delete confirmation\]
+
+## **_12.11 Search & Filter Content_**
+
+Use the search box and column filters in each collection list view to locate entries by title, status, or other fields.
+
+## **_12.12 Logout_**
+
+Open the user menu at the bottom-left of the admin panel and choose Logout.
+
+<br />
