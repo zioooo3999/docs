@@ -670,7 +670,59 @@
               },
               {
                 "group": "Administration Guide",
-                "pages": []
+                "pages": [
+                  {
+                    "group": "User Management",
+                    "pages": [
+                      "overview-10",
+                      "create-user",
+                      "ediit-user",
+                      "role-and-permision-management"
+                    ]
+                  },
+                  "reset-password",
+                  "konfigurasi-dasar-cms",
+                  {
+                    "group": "Role & Permission Management",
+                    "pages": [
+                      "role-and-permision",
+                      {
+                        "group": "Create Roles",
+                        "pages": [
+                          "untitled-page",
+                          "collection-types-permision",
+                          "create-single-types",
+                          {
+                            "group": "Plugins Permissions",
+                            "pages": [
+                              "plugins",
+                              "content-manager-1",
+                              "content-type-builder",
+                              "media-library",
+                              "documentation",
+                              "seo",
+                              "user-permissions"
+                            ]
+                          },
+                          {
+                            "group": "Setting Permission",
+                            "pages": [
+                              "overview-11",
+                              "untitled-page-7",
+                              "untitled-page-8",
+                              "untitled-page-9",
+                              "untitled-page-10",
+                              "untitled-page-11",
+                              "untitled-page-12",
+                              "untitled-page-13",
+                              "untitled-page-14"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "group": "Technical Doccumentation",
