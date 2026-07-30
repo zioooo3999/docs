@@ -1,0 +1,47 @@
+---
+title: "Email Permissions"
+sidebarTitle: "Email"
+icon: "envelope"
+description: "Configure role-based access control for global email settings and SMTP server configurations."
+---
+
+<Frame>
+  ![Email Settings Permissions Panel](/images/Screenshot-2026-07-29-150328.png)
+</Frame>
+
+## Overview
+
+The **Email Settings Permissions** panel controls role-based access rights to the system's global email configuration settings. It allows administrators to define which roles are authorized to view and modify SMTP server parameters, outbound email providers, and default sender addresses for system notifications.
+
+---
+
+## Available Controls & Options
+
+<AccordionGroup>
+  <Accordion title="Expand / Collapse Panel" icon="chevron-down">
+    Located at the top-right corner of the section header. Toggles the visibility of the Email plugin's permission controls.
+  </Accordion>
+
+  <Accordion title="Access Email Settings Page" icon="square-check">
+    **Checkbox Permission:** Grants assigned roles access to view and update system-level email parameters, provider selection, and SMTP credentials.
+  </Accordion>
+
+  <Accordion title="Select All Options" icon="list-check">
+    **Checkbox Action:** Toggles all general email setting permissions within this panel simultaneously.
+  </Accordion>
+
+  <Accordion title="Advanced Settings" icon="gear">
+    **Settings Dialog:** Opens a granular configuration modal to define specific conditional rules and fine-grained access constraints.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Permission Reference
+
+| Option | Control Type | Function |
+| :-- | :-- | :-- |
+| **Panel Toggle** | Chevron Icon | Expands or collapses the email settings section. |
+| **Access Page** | Checkbox | Enables viewing and editing of SMTP & email server options. |
+| **Select All** | Checkbox | Bulk toggles all available permissions in the section. |
+| **Settings** | Button | Configures conditional access policies for the role. |

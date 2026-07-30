@@ -2,48 +2,153 @@
 title: "Server Operation & Maintenance Guide"
 ---
 
-## **9.1 Docker Operation**
+## Overview
 
-Routine container operations are performed with the following commands. Container status can be viewed with docker ps, and a container can be restarted with docker restart \[name\] or docker compose restart \[service\]. Images are updated by pulling the latest version and recreating the containers:
+This guide details essential operational procedures and maintenance routines required to maintain the stability, performance, and security of the Tempe Park infrastructure.
 
-docker ps
+---
 
-docker restart \[name\]
+## 1. Docker Management
 
-docker compose pull && docker compose up -d
+Routine container management and maintenance tasks are executed using standard Docker CLI commands.
 
-<br />
+<Tabs>
+  <Tab title="Container Operations">
+    ### Container Status & Lifecycle
 
-Unused images can be removed with docker image prune. The broader docker system prune also cleans up other unused resources and should be used with care, as it removes networks and volumes that may still be needed:
+    Monitor active containers or perform service restarts when applying updates or resolving performance bottlenecks:
 
-docker image prune
+    ```bash
+    # View active containers and status
+    docker ps
+    
+    # Restart a specific container by name
+    docker restart [container_name]
+    
+    # Pull latest images and recreate containers in background
+    docker compose pull && docker compose up -d
+    ```
+  </Tab>
+  <Tab title="Cleanup & Pruning">
+    ### Resource Cleanup
 
-docker system prune
+    Periodically clear unused resources to maintain host disk capacity:
 
-<br />
+    ```bash
+    # Remove dangling and unused images safely
+    docker image prune
+    ```
 
-## **9.2 Storage Management**
+    <Warning>
+      **Use `docker system prune` with extreme caution.** It removes all stopped containers, unused networks, and dangling volumes, which may contain critical persistent data if not properly mapped.
+    </Warning>
 
-Media files are stored in the MinIO bucket named tempe-park. Server disk capacity can be monitored with df -h, while bucket usage can be reviewed through the MinIO console or its metrics endpoint.
+    ```bash
+    # Advanced cleanup (clears unused networks, volumes, and containers)
+    docker system prune
+    ```
+  </Tab>
+</Tabs>
 
-The following must never be deleted: the contents of the MinIO bucket, the PostgreSQL data directory, and the .env files.
+---
 
-## **9.3 Log Management**
+## 2. Storage & Critical Assets
 
-Application logs consist of the process output from Strapi and Next.js, accessible through the mechanism configured on the server — pm2 logs, docker logs, or journalctl. Web server logs are located at /var/log/nginx/access.log and /var/log/nginx/error.log.
+Media assets are stored within the dedicated MinIO bucket `tempe-park`. Regularly check host disk usage to prevent system crashes due to low storage capacity.
 
-When investigating an issue, check the application log first, then the web server log.
+```bash
+# Check host system disk space availability
+df -h
+```
 
-## **9.4 Basic Health Check**
+<Note>
+  Bucket usage and object limits can be monitored directly via the **MinIO Console** dashboard or through the MinIO metrics endpoint.
+</Note>
 
-If the website becomes unreachable, perform the check in the following order: Docker containers, then the web server (Nginx), then the database (PostgreSQL), then the object storage (MinIO), and finally the disk capacity.
+<Warning>
+  ### Critical Persistent Data — Do Not Delete
 
-## **9.5 Patching & Update Procedure**
+  Under **no circumstances** should any administrator or script remove:
 
-Before performing any update, back up the database, the source code, and the object storage. The update itself may cover the application, the Docker image, the operating system, and the dependencies, as needed.
+  1. The contents of the **MinIO object storage bucket** (`tempe-park`).
+  2. The **PostgreSQL data directory** on the database host.
+  3. Active production **`.env` files** across the application directories.
+</Warning>
 
-After the update is applied, verify the system using the checks described in section 5.5. If the update fails, roll back following the procedure in section 7.5.
+---
 
-Updates should be performed during a low-traffic maintenance window to minimise the impact on users.
+## 3. Log Management & Troubleshooting
 
-<br />
+When diagnosing errors or downtime, inspect log files in a top-down order (Application Layer $$\rightarrow$$ Web Server Layer).
+
+<AccordionGroup>
+  <Accordion title="Application Logs (Strapi & Next.js)" icon="terminal">
+    Inspect live process streams and application errors using your active supervisor or container engine:
+
+    ```bash
+    # PM2 log stream
+    pm2 logs
+    
+    # Docker container logs
+    docker logs -f [container_name]
+    
+    # Systemd / Journalctl logs
+    journalctl -u [service_name] -f
+    ```
+  </Accordion>
+
+  <Accordion title="Web Server Logs (Nginx)" icon="globe">
+    Nginx logs capture routing errors, SSL failures, proxy timeouts, and client requests:
+
+    - **Access Log:** `/var/log/nginx/access.log`
+    - **Error Log:** `/var/log/nginx/error.log`
+
+    ```bash
+    # Tail web server error logs in real time
+    tail -f /var/log/nginx/error.log
+    ```
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## 4. Basic Health Check Flow
+
+If the platform becomes unreachable, run diagnostics sequentially in the following priority order:
+
+```text
+[1. Docker Containers] ➔ [2. Nginx Web Server] ➔ [3. PostgreSQL DB] ➔ [4. MinIO Storage] ➔ [5. Host Disk Capacity]
+```
+
+| Order | Component | Diagnostic Focus |
+| :-: | :-- | :-- |
+| **1** | **Docker Containers** | Verify if application containers (Strapi/Next.js) are active (`docker ps`). |
+| **2** | **Nginx Web Server** | Confirm Nginx service status and check for reverse proxy errors (502/504). |
+| **3** | **PostgreSQL Database** | Validate connection status, port `5432` availability, and active pool limits. |
+| **4** | **MinIO Storage** | Ensure storage service is online and S3 endpoints respond to API calls. |
+| **5** | **Disk Capacity** | Verify that host root and volume partitions have sufficient space (`df -h`). |
+
+---
+
+## 5. Patching & Update Procedure
+
+Perform system maintenance during designated low-traffic maintenance windows to minimize disruption.
+
+<Steps>
+  <Step title="System Backup">
+    Create comprehensive backups prior to applying any updates or OS patches:
+
+    - Export a PostgreSQL database snapshot.
+    - Backup the codebase and configuration `.env` files.
+    - Ensure MinIO bucket state is preserved.
+  </Step>
+  <Step title="Apply Updates">
+    Execute required software updates across application source code, Docker base images, OS packages, and npm dependencies.
+  </Step>
+  <Step title="System Verification">
+    Verify operational health across services. Run health checks to validate API routes and frontend page rendering.
+  </Step>
+  <Step title="Rollback Contingency">
+    If critical errors occur post-update, immediately initiate the system rollback procedure to restore the last verified backup state.
+  </Step>
+</Steps>

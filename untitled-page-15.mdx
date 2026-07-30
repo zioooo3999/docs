@@ -1,0 +1,59 @@
+## Overview
+
+The **Project Permissions** panel manages access to overall configuration settings for the CMS instance or project level. It allows administrators to define which roles can view or modify global project settings and apply conditional rules to enforce access policies.
+
+<Frame>
+  ![Project Permissions Panel](/images/Screenshot-2026-07-29-151837.png)
+</Frame>
+
+---
+
+## Main Panel Controls
+
+<AccordionGroup>
+  <Accordion title="Expand / Collapse Panel" icon="chevron-down">
+    Located at the top-right corner of the section header. Toggles the visibility of the project settings permission panel.
+  </Accordion>
+
+  <Accordion title="GENERAL Sub-section Settings" icon="sliders">
+    - **Update the project level settings Checkbox:** Grants permission to edit and save changes to global project configurations.
+    - **Read the project level settings Checkbox:** Allows users to view global project-level settings without editing rights.
+  </Accordion>
+
+  <Accordion title="Select All Options" icon="list-check">
+    **Checkbox Action:** Toggles all permissions under the GENERAL subsection simultaneously.
+  </Accordion>
+
+  <Accordion title="Advanced Settings Button" icon="gear">
+    **Gear Icon:** Opens the advanced conditional permissions modal (_Project / General_) to set granular access rules.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Advanced Conditions Modal (_Project / General_)
+
+Clicking the **Settings** gear icon opens a conditional rules modal to specify exact conditions (_WHEN_) governing project-level configuration rights.
+
+<Frame>
+  ![Project Advanced Conditions Modal](/images/Screenshot-2026-07-29-162240.png)
+</Frame>
+
+### Conditional Rule Dropdowns
+
+| Action Condition | Description & Function |
+| :-- | :-- |
+| **CAN UPDATE THE PROJEC... WHEN** | Defines specific conditional rules under which a role is allowed to update project-level settings. |
+| **CAN READ THE PROJECT L... WHEN** | Defines specific conditional rules under which a role can view project-level configurations. |
+
+---
+
+## Control Action Summary
+
+| Section | Control / Action | Type | Function |
+| :-- | :-- | :-- | :-- |
+| **Global** | **Panel Toggle** | Chevron Icon | Expands or collapses the entire Project permissions panel. |
+| **General** | **Read / Update Settings** | Checkboxes | Grants rights to view or edit global project configuration settings. |
+| **General** | **Select All** | Checkbox | Bulk toggles all project-level permissions simultaneously. |
+| **General** | **Settings (Gear Icon)** | Modal Trigger | Opens conditional access rules modal (_Project / General_). |
+| **Modal** | **Apply** | Modal Button | Saves and attaches the selected conditional criteria to the permission rule. |

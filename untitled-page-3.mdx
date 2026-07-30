@@ -4,18 +4,212 @@ sidebarTitle: "Troubleshooting"
 description: "Common issues, root causes, and resolutions for website, CMS, and infrastructure services."
 ---
 
-## Common Issues & Resolutions
+## Overview
 
-Each case below is detailed by its observed **Symptoms**, **Possible Causes**, and recommended **Resolution** steps.
+This guide provides structured troubleshooting steps for common failure modes across the Next.js frontend, Strapi CMS, PostgreSQL database, MinIO object storage, and Nginx reverse proxy.
 
-| Symptoms | Possible Causes | Resolution |
+---
+
+## Quick Reference Matrix
+
+| Symptoms | Primary Suspect | Quick Action |
 | :-- | :-- | :-- |
-| **Website cannot be accessed** | Frontend (Next.js) down, Nginx stopped, or DNS issue | Check the Next.js process (port `3000`); run `nginx -t` and reload; verify DNS / host mapping. |
-| **Cannot log in to the CMS** | Strapi down, database not connected, or `.env` secrets changed | Check the Strapi process (port `1337`); verify the PostgreSQL connection; confirm `ADMIN_JWT_SECRET` is stable. |
-| **Image upload fails** | Wrong MinIO credentials/endpoint, missing bucket, or ACL issue | Check the `MINIO_*` values in `.env`; confirm the `tempe-park` bucket exists; check permissions. |
-| **Object storage cannot be accessed** | MinIO service down or network issue | Check the MinIO service status and verify connectivity to the endpoint. |
-| **Storage capacity full** | Server disk or bucket full | Clean logs/temp files, increase disk capacity, and check usage via `df -h`. |
-| **Frontend receives HTTP 403 from API** | `STRAPI_API_TOKEN` empty/expired, or public role permissions missing | Regenerate a full-access API token; set correct permissions under Users & Permissions role. |
-| **Docker container stopped** | Application crash, out of memory (OOM), or failed deploy | Run `docker ps -a` to inspect status, check logs via `docker logs [name]`, then restart container. |
-| **Email (SMTP) not sent** | Email provider not configured or wrong SMTP credentials | Configure a Strapi email provider and verify the SMTP credentials in settings. |
-| **SSL certificate problem** | Expired or misconfigured SSL/TLS certificate | Renew the certificate (e.g., via Certbot); verify Nginx TLS configuration. |
+| **Website unreachable** | Next.js / Nginx | Check port `3000` status & run `nginx -t` |
+| **CMS login fails** | Strapi / PostgreSQL | Check port `1337` & verify `ADMIN_JWT_SECRET` |
+| **Image upload errors** | MinIO / AWS S3 SDK | Verify `MINIO_*` variables & `tempe-park` bucket |
+| **HTTP 403 API Errors** | Strapi API Token | Regenerate token & check role permissions |
+| **Container crashed** | Docker OOM / Runtime | Run `docker logs [name]` to inspect error |
+
+---
+
+## Issue Breakdowns & Resolutions
+
+<AccordionGroup>
+  <Accordion title="1. Website Cannot Be Accessed (Service Unreachable)" icon="globe">
+    **Symptoms:**
+
+    - Users receive `502 Bad Gateway`, `504 Gateway Timeout`, or browser connection errors.
+
+    **Possible Causes:**
+
+    - Next.js frontend process on port `3000` is down or crashed.
+    - Nginx reverse proxy service stopped or misconfigured.
+    - DNS resolution failure or invalid host mapping.
+
+    **Resolution Steps:**
+
+    1. Verify Next.js container or process state:
+       ```bash
+       docker ps | grep next
+       # OR check process binding on port 3000
+       lsof -i :3000
+       ```
+    2. Test Nginx syntax and reload configuration:
+       ```bash
+       nginx -t && systemctl reload nginx
+       ```
+    3. Check web server error logs for proxy pass failures:
+       ```bash
+       tail -f /var/log/nginx/error.log
+       ```
+  </Accordion>
+
+  <Accordion title="2. Unable to Log In to Strapi CMS" icon="lock">
+    **Symptoms:**
+
+    - Admin panel fails to load, returns authentication errors, or hangs indefinitely.
+
+    **Possible Causes:**
+
+    - Strapi backend process on port `1337` is down.
+    - PostgreSQL database is offline or rejecting connection pools.
+    - `ADMIN_JWT_SECRET` in `web-be/.env` was modified or cleared.
+
+    **Resolution Steps:**
+
+    1. Check Strapi process logs:
+       ```bash
+       docker logs -f [strapi_container_name]
+       ```
+    2. Test PostgreSQL connectivity on port `5432`:
+       ```bash
+       pg_isready -h localhost -p 5432
+       ```
+    3. Ensure `ADMIN_JWT_SECRET`, `JWT_SECRET`, and `APP_KEYS` are properly populated in `web-be/.env`.
+  </Accordion>
+
+  <Accordion title="3. Image & Asset Upload Failures" icon="image">
+    **Symptoms:**
+
+    - Uploading media in Strapi returns `500 Internal Server Error` or upload timeout.
+
+    **Possible Causes:**
+
+    - Invalid `MINIO_*` environment credentials or mismatched endpoints.
+    - The target bucket `tempe-park` does not exist or has incorrect access permissions.
+    - Missing `forcePathStyle: true` setting in Strapi provider configuration (`config/plugins.ts`).
+
+    **Resolution Steps:**
+
+    1. Verify Object Storage credentials in `web-be/.env`:
+       - `MINIO_ENDPOINT`
+       - `MINIO_ACCESS_KEY` / `MINIO_SECRET_KEY`
+       - `MINIO_BUCKET=tempe-park`
+    2. Ensure the `tempe-park` bucket exists via MinIO Console or Client (`mc`).
+    3. Check network routing from backend container to MinIO host.
+  </Accordion>
+
+  <Accordion title="4. API Returns HTTP 403 Forbidden to Frontend" icon="shield-exclamation">
+    **Symptoms:**
+
+    - Next.js pages fail to render CMS content; browser console reports 403 Forbidden errors.
+
+    **Possible Causes:**
+
+    - `STRAPI_API_TOKEN` in `web-fe/.env.local` is missing, expired, or invalid.
+    - Roles & Permissions settings in Strapi do not grant read permissions to the Public/API role.
+
+    **Resolution Steps:**
+
+    1. Log into Strapi Admin Panel $$\rightarrow$$ **Settings** $$\rightarrow$$ **API Tokens**.
+    2. Generate a new API token with **Full Access** or custom read permissions.
+    3. Update `STRAPI_API_TOKEN` in `web-fe/.env.local` and restart the Next.js process.
+    4. Check **Settings** $$\rightarrow$$ **Users & Permissions Plugin** $$\rightarrow$$ **Roles** $$\rightarrow$$ **Public** to verify endpoint access rules.
+  </Accordion>
+
+  <Accordion title="5. Docker Container Stopped / Crashing" icon="docker">
+    **Symptoms:**
+
+    - Container exits unexpectedly or enters a restart loop (`CrashLoopBackOff`).
+
+    **Possible Causes:**
+
+    - Unhandled application runtime exception during startup.
+    - Out-of-Memory (OOM) killer invoked by host OS.
+    - Misconfigured environment variables or missing dependencies.
+
+    **Resolution Steps:**
+
+    1. List all containers including stopped ones:
+       ```bash
+       docker ps -a
+       ```
+    2. Inspect crash logs preceding the termination:
+       ```bash
+       docker logs --tail 100 [container_name]
+       ```
+    3. Check host kernel memory logs for OOM events:
+       ```bash
+       dmesg -T | grep -i oom
+       ```
+    4. Restart service:
+       ```bash
+       docker compose restart [service_name]
+       ```
+  </Accordion>
+
+  <Accordion title="6. Storage Capacity Full" icon="hard-drive">
+    **Symptoms:**
+
+    - Database writes fail, image uploads fail, or log files stop updating.
+
+    **Possible Causes:**
+
+    - Host root partition exhausted due to bloated Docker logs, temp files, or MinIO data expansion.
+
+    **Resolution Steps:**
+
+    1. Inspect disk usage breakdown across mounts:
+       ```bash
+       df -h
+       ```
+    2. Safely prune unused Docker layers and build caches:
+       ```bash
+       docker image prune -a
+       ```
+    3. Truncate bloated system logs if necessary:
+       ```bash
+       journalctl --vacuum-size=500M
+       ```
+  </Accordion>
+
+  <Accordion title="7. SSL/TLS Certificate Issues" icon="shield-check">
+    **Symptoms:**
+
+    - Browsers display `NET::ERR_CERT_DATE_INVALID` or connection security warnings.
+
+    **Possible Causes:**
+
+    - Let's Encrypt / Certbot TLS certificate has expired.
+    - Nginx configuration file points to incorrect certificate path files.
+
+    **Resolution Steps:**
+
+    1. Trigger manual certificate renewal:
+       ```bash
+       certbot renew --dry-run
+       ```
+    2. Verify Nginx SSL directives point to valid `.pem` certificate paths.
+    3. Reload Nginx to load renewed certificates:
+       ```bash
+       systemctl reload nginx
+       ```
+  </Accordion>
+
+  <Accordion title="8. SMTP Email Not Sent" icon="envelope">
+    **Symptoms:**
+
+    - System emails (e.g., password reset requests) fail to deliver.
+
+    **Possible Causes:**
+
+    - Email provider plugin not installed or missing in `config/plugins.ts`.
+    - Incorrect SMTP server credentials or blocked outbound ports (`587` / `465`).
+
+    **Resolution Steps:**
+
+    1. Confirm email features are required (currently set as _N/A_ in standard setup).
+    2. If needed, install a Strapi email provider (e.g., `@strapi/provider-email-nodemailer`).
+    3. Configure provider credentials in `config/plugins.ts` and set SMTP environment variables in `web-be/.env`.
+  </Accordion>
+</AccordionGroup>

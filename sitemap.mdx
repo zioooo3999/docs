@@ -6,13 +6,78 @@ description: "Directory of dynamic and system URL routes managed through the Str
 
 ## Overview
 
-The frontend renders pages dynamically from Strapi using Next.js catch-all routes (`[[...slug]]`), meaning the page inventory is directly driven by the CMS content structure.
+The Tempe Park frontend renders pages dynamically from Strapi using Next.js catch-all routes (`[[...slug]]`), meaning the page inventory is directly driven by the CMS content structure.
 
 The primary navigation covers key site sections including **Home**, **Plan Your Visit**, **Experience**, **Education**, **Innovation**, **Production**, **News**, **Career**, and **Contact**.
 
 ---
 
-## Page Inventory & Route Mapping
+## Route Breakdown
+
+<AccordionGroup>
+  <Accordion title="Main & Discovery Pages" icon="house">
+    Primary landing pages and essential information hubs.
+
+    | Page Name | Path | Type | Managed via CMS |
+    | :-- | :-- | :-- | :-- |
+    | **Home** | `/` | Dynamic | Yes |
+    | **About Us** | `/about-us` | Dynamic | Yes |
+    | **Plan Your Visit** | `/plan-your-visit` | Dynamic | Yes |
+    | **Tickets** | `/tickets` | Dynamic | Yes |
+    | **Contact Us** | `/contact-us` | Dynamic | Yes |
+  </Accordion>
+
+  <Accordion title="Experiences & Attractions" icon="sparkles">
+    Interactive tours, educational programs, and experience routes.
+
+    | Page Name | Path | Type | Managed via CMS |
+    | :-- | :-- | :-- | :-- |
+    | **Experience (List)** | `/experience` | Dynamic | Yes |
+    | **Experience (Detail)** | `/experience/[slug]` | Dynamic | Yes |
+    | **Education (List)** | `/educations` | Dynamic | Yes |
+    | **Education (Detail)** | `/educations/[slug]` | Dynamic | Yes |
+  </Accordion>
+
+  <Accordion title="Innovation, Production & Articles" icon="lightbulb">
+    Manufacturing processes, research, menu inspirations, and product showcases.
+
+    | Page Name | Path | Type | Managed via CMS |
+    | :-- | :-- | :-- | :-- |
+    | **Innovation (List)** | `/innovation` | Dynamic | Yes |
+    | **Innovation (Detail)** | `/innovation/[slug]` | Dynamic | Yes |
+    | **Production (List)** | `/production` | Dynamic | Yes |
+    | **Production (Detail)** | `/production/[slug]` | Dynamic | Yes |
+    | **Menu Inspiration (Detail)** | `/menu-inspiration/[slug]` | Dynamic | Yes |
+    | **Product Article** | `/product-article` | Dynamic | Yes |
+  </Accordion>
+
+  <Accordion title="News & Career" icon="newspaper">
+    Company updates, media publications, and job openings.
+
+    | Page Name | Path | Type | Managed via CMS |
+    | :-- | :-- | :-- | :-- |
+    | **News (List)** | `/news` | Dynamic | Yes |
+    | **News (Detail)** | `/news/[slug]` | Dynamic | Yes |
+    | **Career (List)** | `/career` | Dynamic | Yes |
+    | **Career (Detail)** | `/career/[slug]` | Dynamic | Yes |
+  </Accordion>
+
+  <Accordion title="Support & System Pages" icon="shield-check">
+    Policy documents, legal disclosures, FAQs, and application utility pages.
+
+    | Page Name | Path | Type | Managed via CMS |
+    | :-- | :-- | :-- | :-- |
+    | **FAQ** | `/faq` | Dynamic | Yes |
+    | **Safety Guidelines** | `/safety-guidelines` | Dynamic | Yes |
+    | **Photography Policy** | `/photography-policy` | Dynamic | Yes |
+    | **Terms & Conditions** | `/terms-conditions` | Dynamic | Yes |
+    | **Search** | `/search` | Dynamic | No _(System Page)_ |
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Full Route Inventory
 
 | Page | URL Path | Type | Managed via CMS |
 | :-- | :-- | :-- | :-- |

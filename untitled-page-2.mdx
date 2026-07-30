@@ -2,46 +2,93 @@
 title: "Backup & Restore Guide"
 ---
 
-## **8.1 Backup**
+## Overview
 
-The backup covers three components: the database, the source code, and the object storage.
+A complete system backup for the Tempe Park platform covers three critical components: the **PostgreSQL database**, the **application source code**, and the **MinIO object storage bucket**.
 
-The database is backed up using pg\_dump in custom format, with the date included in the file name so that each backup can be identified:
+---
 
-pg\_dump -Fc -d tempepark -f tempepark\_\[date\].dump
+## 1. Backup Procedures
 
-<br />Backup & Restore Guide
+<AccordionGroup>
+  <Accordion title="Database Backup (PostgreSQL)" icon="database">
+    The database is backed up using `pg_dump` in custom binary format (`-Fc`). Always append the current date to the filename for clear identification and point-in-time recovery tracking.
 
-The source code is backed up through the Git remote by keeping the production branch up to date, or alternatively by archiving the application folder using tar.
+    ```bash
+    pg_dump -Fc -d tempepark -f tempepark_[date].dump
+    ```
+  </Accordion>
 
-The object storage is backed up by mirroring the MinIO bucket to a backup location:
+  <Accordion title="Source Code Backup (Git / Archive)" icon="code-branch">
+    The codebase is primarily backed up via Git by pushing and keeping the `production` branch up to date with the remote repository.
 
-mc mirror \[alias\]/tempe-park \[backup-path\]
+    Alternatively, create a full compressed tarball of the application directory:
 
-<br />
+    ```bash
+    tar -czvf tempepark-app_[date].tar.gz /path/to/tempepark
+    ```
+  </Accordion>
 
-The equivalent aws s3 sync command may be used instead if the AWS CLI is preferred.
+  <Accordion title="Object Storage Backup (MinIO / S3)" icon="box-archive">
+    Mirror the active MinIO bucket contents to a local or remote backup location using the MinIO Client (`mc`):
 
-## **8.2 Restore**
+    ```bash
+    mc mirror [alias]/tempe-park [backup-path]
+    ```
 
-To restore the database, create the database and the role first, then restore the dump file:
+    <Note>
+      If using the **AWS CLI**, the equivalent synchronization command can be used instead:
 
-pg\_restore --no-owner --role=\[user\] -d tempepark \[file\].dump
+      ```bash
+      aws s3 sync s3://tempe-park [backup-path]
+      ```
+    </Note>
+  </Accordion>
+</AccordionGroup>
 
-<br />
+---
 
-To restore the source code, clone the repository, check out the intended branch, install the dependencies, and rebuild the application:
+## 2. Restore Procedures
 
-git clone \[repo-url\]
+<AccordionGroup>
+  <Accordion title="Database Restoration" icon="rotate-left">
+    Before restoring, ensure the target database and user role are created in PostgreSQL, then run `pg_restore`:
 
-git checkout \[branch\]
+    ```bash
+    pg_restore --no-owner --role=[user] -d tempepark [file].dump
+    ```
+  </Accordion>
 
-npm install
+  <Accordion title="Source Code Restoration" icon="github">
+    Clone the repository, check out the intended branch, install all project dependencies, and trigger a fresh production build:
 
-npm run build
+    ```bash
+    # Clone the repository and navigate to folder
+    git clone [repo-url]
+    cd [repo-folder]
+    
+    # Checkout target branch and build
+    git checkout [branch]
+    npm install
+    npm run build
+    ```
+  </Accordion>
 
-<br />
+  <Accordion title="Object Storage Restoration" icon="cloud-arrow-up">
+    To restore media files and user uploads, mirror the backup content back into the primary MinIO bucket:
 
-To restore the object storage, mirror the backup contents back into the MinIO bucket.
+    ```bash
+    mc mirror [backup-path] [alias]/tempe-park
+    ```
+  </Accordion>
+</AccordionGroup>
 
-<br />
+---
+
+## Summary Reference
+
+| Component | Backup Command / Strategy | Restore Command / Strategy |
+| :-- | :-- | :-- |
+| **Database** | `pg_dump -Fc -d tempepark -f ...` | `pg_restore --no-owner --role=[user] -d ...` |
+| **Source Code** | `git push` or `tar -czvf` archive | `git clone` → `npm install` → `npm run build` |
+| **Object Storage** | `mc mirror [alias]/tempe-park [backup-path]` | `mc mirror [backup-path] [alias]/tempe-park` |

@@ -1,0 +1,92 @@
+---
+title: "Users and Roles Permissions"
+sidebarTitle: "Users & Roles"
+icon: "user-gear"
+description: "Configure administrative account management, role definitions, and conditional permission rules in the CMS."
+---
+
+## Overview
+
+The **Users and Roles Permissions** panel controls access to administrative account management within the CMS. It defines what actions a role can perform regarding team member accounts (**USERS**) and access control definitions (**ROLES**).
+
+<Frame>
+  ![Users and Roles Permissions Panel](/images/Screenshot-2026-07-29-151706.png)
+</Frame>
+
+---
+
+## Main Panel Controls
+
+<AccordionGroup>
+  <Accordion title="Expand / Collapse Panel" icon="chevron-down">
+    Located at the top-right corner of the section header. Toggles the visibility of the entire Users and Roles panel.
+  </Accordion>
+
+  <Accordion title="USERS Management Sub-section" icon="users">
+    - **Create (invite) Checkbox:** Permits inviting new admin users to the dashboard via email or direct creation.
+    - **Read Checkbox:** Grants permission to view the list of system users and their profile details.
+    - **Update Checkbox:** Allows editing existing user details, operational status, or assigned roles.
+    - **Delete Checkbox:** Permits revoking access or removing user accounts.
+    - **Select All Checkbox:** Toggles all permissions under the _USERS_ subsection simultaneously.
+    - **Settings Button (Gear Icon):** Opens advanced conditional permissions for user management.
+  </Accordion>
+
+  <Accordion title="ROLES Definition Sub-section" icon="shield-halved">
+    - **Create Checkbox:** Grants permission to define and add new custom roles to the system.
+    - **Read Checkbox:** Allows viewing existing roles and their configured permission matrices.
+    - **Update Checkbox:** Permits modifying existing role permissions or settings.
+    - **Delete Checkbox:** Allows deleting custom roles from the system.
+    - **Select All Checkbox:** Toggles all permissions under the _ROLES_ subsection simultaneously.
+    - **Settings Button (Gear Icon):** Opens the advanced conditions modal (_Users and roles / Roles_) to set granular access rules.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Advanced Conditions Modals
+
+Clicking the **Settings** gear icon next to either subsection opens a dedicated conditional rules modal to set execution criteria (_WHEN_) for each operation.
+
+### 1. User Management Conditions (_Users and roles / Users_)
+
+Controls granular criteria required for user account operations.
+
+<Frame>
+  ![Users Conditional Permissions Modal](/images/Screenshot-2026-07-29-162144.png)
+</Frame>
+
+| Action Condition | Description & Function |
+| :-- | :-- |
+| **CAN CREATE (INVITE) WHEN** | Defines specific conditions under which a user can invite or register new admin accounts. |
+| **CAN READ WHEN** | Sets conditions required to view existing user profiles and accounts. |
+| **CAN UPDATE WHEN** | Specifies conditions under which a user can edit profile details, status, or assigned roles. |
+| **CAN DELETE WHEN** | Establishes conditions required to remove or revoke access for user accounts. |
+
+---
+
+### 2. Role Definition Conditions (_Users and roles / Roles_)
+
+Controls granular criteria required for role definition and authorization management.
+
+<Frame>
+  ![Roles Advanced Conditions Modal](/images/Screenshot-2026-07-29-162153.png)
+</Frame>
+
+| Action Condition | Description & Function |
+| :-- | :-- |
+| **CAN CREATE WHEN** | Sets specific conditions under which a user can create new system roles. |
+| **CAN READ WHEN** | Defines conditional criteria for viewing existing roles and permission matrices. |
+| **CAN UPDATE WHEN** | Establishes requirements for modifying role permissions or security configurations. |
+| **CAN DELETE WHEN** | Specifies conditions required to remove custom roles from the system. |
+
+---
+
+## Control Action Summary
+
+| Section | Control / Action | Type | Function |
+| :-- | :-- | :-- | :-- |
+| **Global** | **Panel Toggle** | Chevron Icon | Expands or collapses the entire permissions panel. |
+| **Users** | **CRUD \+ Invite** | Checkboxes | Grants rights to create, read, update, or delete user accounts. |
+| **Roles** | **CRUD Actions** | Checkboxes | Grants rights to create, read, update, or delete system roles. |
+| **Both** | **Settings (Gear)** | Modal Trigger | Opens conditional access rules modal (_WHEN dropdowns_). |
+| **Both** | **Apply** | Modal Button | Saves and binds the configured conditional logic to the role. |

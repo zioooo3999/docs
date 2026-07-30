@@ -6,40 +6,109 @@ description: "Environment variables, database settings, object storage, and prox
 
 ## Overview
 
-The Tempe Park platform relies on environment variables and service configurations to manage connectivity between Next.js, Strapi, PostgreSQL, MinIO object storage, and Nginx reverse proxies.
+The Tempe Park platform utilizes environment files to manage system settings, security keys, database parameters, object storage endpoints, and reverse proxy settings across both backend (Strapi) and frontend (Next.js) applications.
 
 ---
 
-## Backend Environment Variables (.env)
+## Environment Variables
 
-The backend configuration file resides at `web-be/.env`. Variables are structured across core application parameters, database access, and MinIO storage configuration:
+<Tabs>
+  <Tab title="Backend (web-be/.env)">
+    The backend configuration is managed via `.env` located at the root of `web-be/`.
 
-```bash web-be/.env
-# Application Core Settings
-HOST=0.0.0.0
-PORT=1337
-APP_KEYS=[key1],[key2]
-API_TOKEN_SALT=[salt]
-ADMIN_JWT_SECRET=[secret]
-TRANSFER_TOKEN_SALT=[salt]
-JWT_SECRET=[secret]
-ENCRYPTION_KEY=[key]
+    ```bash web-be/.env
+    # Application Settings & Security Keys
+    HOST=0.0.0.0
+    PORT=1337
+    APP_KEYS=[key1],[key2]
+    API_TOKEN_SALT=[salt]
+    ADMIN_JWT_SECRET=[secret]
+    TRANSFER_TOKEN_SALT=[salt]
+    JWT_SECRET=[secret]
+    ENCRYPTION_KEY=[key]
+    
+    # Database Credentials (PostgreSQL)
+    DATABASE_CLIENT=postgres
+    DATABASE_HOST=localhost
+    DATABASE_PORT=5432
+    DATABASE_NAME=tempepark
+    DATABASE_USERNAME=[user]
+    DATABASE_PASSWORD=[password]
+    DATABASE_SSL=false
+    DATABASE_SCHEMA=public
+    
+    # Object Storage (MinIO / S3-compatible)
+    MINIO_BASE_URL=https://[host]/tempe-park
+    MINIO_ENDPOINT=https://[host]
+    MINIO_ACCESS_KEY=[access-key]
+    MINIO_SECRET_KEY=[secret-key]
+    MINIO_REGION=us-east-1
+    MINIO_BUCKET=tempe-park
+    ```
+  </Tab>
+  <Tab title="Frontend (web-fe/.env.local)">
+    The frontend configuration is managed via `.env.local` located at the root of `web-fe/`.
 
-# Database Configuration (PostgreSQL)
-DATABASE_CLIENT=postgres
-DATABASE_HOST=localhost
-DATABASE_PORT=5432
-DATABASE_NAME=tempepark
-DATABASE_USERNAME=[user]
-DATABASE_PASSWORD=[password]
-DATABASE_SSL=false
-DATABASE_SCHEMA=public
+    <Note>
+      Generate the `STRAPI_API_TOKEN` directly from the Strapi Admin Panel under **Settings** → **API Tokens** with **Full Access** permissions.
+    </Note>
 
-# Object Storage (MinIO / S3-compatible)
-MINIO_BASE_URL=https://[host]/tempe-park
-MINIO_ENDPOINT=https://[host]
-MINIO_ACCESS_KEY=[access-key]
-MINIO_SECRET_KEY=[secret-key]
-MINIO_REGION=us-east-1
-MINIO_BUCKET=tempe-park
-```
+    ```bash web-fe/.env.local
+    # Strapi API Connection
+    NEXT_PUBLIC_STRAPI_URL=https://[cms-url]
+    STRAPI_URL=https://[cms-url]
+    STRAPI_API_TOKEN=[full-access-api-token]
+    
+    # Analytics & Preview Configuration
+    NEXT_PUBLIC_GTM_ID=[google-tag-manager-id]
+    PREVIEW_SECRET=[preview-secret]
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Service Configurations
+
+<AccordionGroup>
+  <Accordion title="Database Configuration (PostgreSQL)" icon="database">
+    The backend connects to PostgreSQL using the `DATABASE_*` credentials.
+
+    - **Default Schema:** `public`
+    - **Connection Pooling:** Minimum **2** and maximum **10** concurrent connections.
+  </Accordion>
+
+  <Accordion title="Object Storage (MinIO / S3)" icon="box-archive">
+    Media assets and uploaded files are stored using an S3-compatible MinIO bucket (`tempe-park`).
+
+    - **Upload Provider:** `@strapi/provider-upload-aws-s3`
+    - **Configuration File:** `config/plugins.ts`
+    - **Compatibility:** `forcePathStyle` is enabled to ensure seamless compatibility with MinIO.
+  </Accordion>
+
+  <Accordion title="SMTP Configuration" icon="envelope">
+    Email services are currently **Not Applicable** in the current codebase.
+
+    - If features such as password resets are required in future releases, register a Strapi email provider in `config/plugins.ts` and set the corresponding SMTP credentials in `web-be/.env`.
+  </Accordion>
+
+  <Accordion title="Domain & Proxy Setup (Nginx)" icon="network-wired">
+    Both applications operate behind an Nginx reverse proxy.
+
+    - **Frontend Proxy:** Directs incoming requests to Next.js on port `3000`.
+    - **CMS / API Proxy:** Directs incoming requests to Strapi on port `1337`.
+    - **WebSocket Forwarding:** Reverse proxy rules **must** forward `Upgrade` and `Connection` headers so that the admin panel and hot reload continue to work correctly.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Configuration Reference Summary
+
+| Service / Module | Provider / Tech | Configuration File | Key Parameters |
+| :-- | :-- | :-- | :-- |
+| **Backend Core** | Strapi CMS | `web-be/.env` | `PORT=1337`, `APP_KEYS`, `JWT_SECRET` |
+| **Frontend Core** | Next.js | `web-fe/.env.local` | `STRAPI_URL`, `STRAPI_API_TOKEN` |
+| **Database** | PostgreSQL | `web-be/.env` | Pool Min: 2 / Max: 10, Schema: `public` |
+| **Media Storage** | MinIO (AWS S3 SDK) | `config/plugins.ts` | `MINIO_*`, `forcePathStyle: true` |
+| **Reverse Proxy** | Nginx | Server Config | Ports `3000` (FE) & `1337` (BE), WS headers |
