@@ -1,0 +1,95 @@
+---
+title: "Backup & Restore Guide"
+icon: "refresh"
+---
+
+## Overview
+
+A complete system backup for the Tempe Park platform covers three critical components: the **PostgreSQL database**, the **application source code**, and the **MinIO object storage bucket**.
+
+---
+
+## 1. Backup Procedures
+
+<AccordionGroup>
+  <Accordion title="Database Backup (PostgreSQL)" icon="database">
+    The database is backed up using `pg_dump` in custom binary format (`-Fc`). Always append the current date to the filename for clear identification and point-in-time recovery tracking.
+
+    ```bash
+    pg_dump -Fc -d tempepark -f tempepark_[date].dump
+    ```
+  </Accordion>
+
+  <Accordion title="Source Code Backup (Git / Archive)" icon="code-branch">
+    The codebase is primarily backed up via Git by pushing and keeping the `production` branch up to date with the remote repository.
+
+    Alternatively, create a full compressed tarball of the application directory:
+
+    ```bash
+    tar -czvf tempepark-app_[date].tar.gz /path/to/tempepark
+    ```
+  </Accordion>
+
+  <Accordion title="Object Storage Backup (MinIO / S3)" icon="box-archive">
+    Mirror the active MinIO bucket contents to a local or remote backup location using the MinIO Client (`mc`):
+
+    ```bash
+    mc mirror [alias]/tempe-park [backup-path]
+    ```
+
+    <Note>
+      If using the **AWS CLI**, the equivalent synchronization command can be used instead:
+
+      ```bash
+      aws s3 sync s3://tempe-park [backup-path]
+      ```
+    </Note>
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## 2. Restore Procedures
+
+<AccordionGroup>
+  <Accordion title="Database Restoration" icon="rotate-left">
+    Before restoring, ensure the target database and user role are created in PostgreSQL, then run `pg_restore`:
+
+    ```bash
+    pg_restore --no-owner --role=[user] -d tempepark [file].dump
+    ```
+  </Accordion>
+
+  <Accordion title="Source Code Restoration" icon="github">
+    Clone the repository, check out the intended branch, install all project dependencies, and trigger a fresh production build:
+
+    ```bash
+    # Clone the repository and navigate to folder
+    git clone [repo-url]
+    cd [repo-folder]
+    
+    # Checkout target branch and build
+    git checkout [branch]
+    npm install
+    npm run build
+    ```
+  </Accordion>
+
+  <Accordion title="Object Storage Restoration" icon="cloud-arrow-up">
+    To restore media files and user uploads, mirror the backup content back into the primary MinIO bucket:
+
+    ```bash
+    mc mirror [backup-path] [alias]/tempe-park
+    ```
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Summary Reference
+
+| Component | Backup Command / Strategy | Restore Command / Strategy |
+| :-- | :-- | :-- |
+| **Database** | `pg_dump -Fc -d tempepark -f ...` | `pg_restore --no-owner --role=[user] -d ...` |
+| **Source Code** | `git push` or `tar -czvf` archive | `git clone` → `npm install` → `npm run build` |
+| **Object Storage** | `mc mirror [alias]/tempe-park [backup-path]` | `mc mirror [backup-path] [alias]/tempe-park` |
