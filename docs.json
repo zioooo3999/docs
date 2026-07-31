@@ -532,7 +532,7 @@
             ]
           },
           {
-            "group": "Documentation Deliverable Guideline",
+            "group": "Documentation Deliverable Guideline (User)",
             "pages": [
               "home-1",
               {
@@ -723,9 +723,20 @@
                     ]
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "group": "Documentation Deliverables Guideline (Technical)",
+            "pages": [
+              "untitled-page-20",
+              "untitled-page-18",
+              "untitled-page-21",
+              "untitled-page-22",
+              "untitled-page-23",
+              "untitled-page-24",
               {
-                "group": "Technical Doccumentation",
+                "group": "Technical Documentation",
                 "pages": [
                   "technology-stack-1",
                   "untitled-page-16",
@@ -882,17 +893,6 @@
                   }
                 ]
               },
-              "untitled-page-20",
-              "untitled-page-18",
-              "untitled-page-21",
-              "untitled-page-22",
-              "untitled-page-23",
-              "untitled-page-24"
-            ]
-          },
-          {
-            "group": "Documentation Deliverables Guideline (Technical)",
-            "pages": [
               "untitled-page-25"
             ]
           }
