@@ -669,7 +669,7 @@
                 ]
               },
               {
-                "group": "Administration Guide",
+                "group": "Administrator Guide",
                 "pages": [
                   {
                     "group": "User Management",
@@ -888,6 +888,12 @@
               "untitled-page-22",
               "untitled-page-23",
               "untitled-page-24"
+            ]
+          },
+          {
+            "group": "Documentation Deliverables Guideline (Technical)",
+            "pages": [
+              "untitled-page-25"
             ]
           }
         ]
