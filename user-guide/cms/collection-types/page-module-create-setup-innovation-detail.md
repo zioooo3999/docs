@@ -1,48 +1,118 @@
 ---
-title: "Page Module - Create/Setup Innovation Detail"
+title: "Create / Setup Innovation Detail"
 sidebarTitle: "Innovation Detail"
-description: "Guide for configuring the Innovation Detail page layout and product labels in the Tempe Park CMS."
+description: "Comprehensive guide for setting up the Innovation Detail page layout and static product labels in the Tempe Park CMS."
+icon: "cube"
 ---
+
+<Tip>
+  Use the **Save** button to keep content as a Draft, or click **Publish** when the data is ready to appear on the website frontpage.
+</Tip>
 
 ## Overview
 
-The **Create/Setup Innovation Detail** feature is used to build the detail page for specific innovation or product entries. By utilizing the **Page Builder** mechanism, administrators can configure essential interface labels for product variants, sizing options, and availability information, ensuring a clear and consistent user experience for product details.
+The **Create/Setup Innovation Detail** feature in the Page module is used to build and configure the template and static interface labels for specific innovation or product detail pages. Utilizing the **Page Builder** mechanism, administrators can configure essential interface labels for product variants, sizing options, and retail availability information, ensuring a clear, localized, and consistent user experience across product detail views.
 
-<Tip>
-  Use **Save button** to keep content as Draft, or **Publish** when the data is ready to appear on the website frontpage.
-</Tip>
+Administrators can organize content, section order, and page layout to ensure the front page remains attractive, dynamic, and intuitive for visitors.
 
 ---
 
-## Form Configuration
+## Form Fields & Interface Reference
 
-| No | Field / Element | Function & Description |
-| :-- | :-- | :-- |
-| **1-2** | **Tabs** | Switch between **Draft** (editable) and **Published** (read-only view). |
-| **3-4** | **Title / Slug** | Define the page title and unique URL slug. |
-| **5-6** | **SEO** | Click `(+)` to configure `metaTitle`, `metaDescription`, and `shareImage`. |
-| **7** | **Add Component** | Access structural block components for the page builder. |
-| **10** | **Multilingual** | Toggle between English, Indonesian, and Chinese versions. |
+<Frame>
+  ![Innovation Detail Setup Form Interface](/images/0-\(53\).png)
+</Frame>
+
+| No | Field / Element | Type | Function & Description |
+| :-- | :-- | :-- | :-- |
+| **1** | **Tab Draft** _(editable form)_ | Tab | Use this form tab when creating or modifying a draft data entry. |
+| **2** | **Tab Published** | Tab | Read-only view showing the current published version of the page. |
+| **3** | **title** | Text Field | Enter the primary page title. |
+| **4** | **slug** | Text Field | Enter the unique URL-friendly slug identifier for the page. |
+| **5** | **this** | Group Field | Column to fill in SEO grouping to fill in SEO page. |
+| **6** | **No entry yet. Click to add one.** | Action Button | Click the (\+) button to display the SEO input column. After clicking, the `metaTitle`, `metaDescription`, and `shareImage` columns will appear. Fill them in according to the page you want to add. |
+| **7** | **Add a component to blocks** | Action Button | Use or click this button to add the component blocks needed to structure the CMS content on a page. |
+| **8** | **Publish** | Control | Use this button to directly publish the data to the website landing page. Data published in the collection can also be used as a relationship to data from other modules. |
+| **9** | **Save button** | Control | Stores the entry as a **Draft** without making it publicly visible on the live website. |
+| **10** | **Multilingual Button** | Control | Switch or add content versions in **English**, **Indonesian**, or **Chinese**. |
 
 ---
 
-## Innovation Detail Setup
+## Section Builder Reference & Procedures
 
-To populate the innovation product details, follow these steps using the Page Builder:
+Configure the Innovation Detail template and labels sequentially using the controls detailed below.
 
-### Component Configuration
+<Tabs>
+  <Tab title="1. Innovation Detail Setup">
+    ### Innovation Detail Controls (No. 11–15)
 
-- **Access:** Click **Add a component to blocks** (7) and select the **Innovation** component group (11).
-- **Initialization:** Click on **Innovation Detail** (12) to begin configuring the layout fields.
+    <Frame>
+      ![Innovation Detail Component Configuration](/images/0-\(53\).png)
+    </Frame>
 
-### Configuration Fields
+    | No | Component / Field | Type | Function & Description |
+    | :-- | :-- | :-- | :-- |
+    | **11** | **innovation** | Group Button | To display this component, click step No. 7 (**Add a component to blocks**), then click this component group. |
+    | **12** | **Innovation Detail** | Component | Click on this component in the innovation group to set up the static content of the innovation detail page. |
+    | **13** | **select\_variant\_label** | Text Field | Enter or name the static label text for the product variant selector (e.g., _Select Variant_). |
+    | **14** | **choose\_size\_label** | Text Field | Enter or name the static label text for the product size option selector (e.g., _Choose Size_). |
+    | **15** | **available\_on\_label** | Text Field | Enter or name the static label text for the retail/platform availability section (e.g., _Available On_). |
 
-| Field | Description |
-| :-- | :-- |
-| **select\_variant\_label** | Custom label for the variant selection section (e.g., "Select Variant"). |
-| **choose\_size\_label** | Custom label for the size selection section (e.g., "Choose Size"). |
-| **available\_on\_label** | Custom label for the product availability section (e.g., "Available On"). |
+    #### Step-by-Step Procedure
+
+    <Steps>
+      <Step title="Add Component Block">
+        Click **Add a component to blocks** (No. 7), select the **innovation** component group (No. 11), and click **Innovation Detail** (No. 12).
+      </Step>
+      <Step title="Set Product Option Labels">
+        Enter the localized static text for variant selection in **select\_variant\_label** (No. 13) and sizing options in **choose\_size\_label** (No. 14).
+      </Step>
+      <Step title="Configure Availability Heading">
+        Define the availability channel label in **available\_on\_label** (No. 15) matching the selected active language view.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+---
+
+## Finalizing Page Publication
+
+<Steps>
+  <Step title="Review the Form Interface">
+    Navigate to the Page module in the CMS navigation bar and select **Create/Setup Innovation Detail**.
+  </Step>
+  <Step title="Configure Page Titles & SEO Metadata">
+    Enter page **title** (No. 3), page **slug** (No. 4), and click **(\+) No entry yet** (No. 6) to fill in `metaTitle`, `metaDescription`, and `shareImage`.
+  </Step>
+  <Step title="Assemble Component Controls via Page Builder">
+    Click **Add a component to blocks** (No. 7) to insert the **Innovation Detail** block and configure variant, size, and channel availability labels.
+  </Step>
+  <Step title="Save or Publish">
+    Click **Save button** (No. 9) to keep configurations as a draft, or click **Publish** (No. 8) to push the detail template live.
+  </Step>
+</Steps>
+
+---
+
+## Key Features
+
+<CardGroup cols={3}>
+  <Card title="Variant Selection Labels" color="#10b981" icon="layer-group">
+    Customizable interface labels for product colorways, flavors, or material variations.
+  </Card>
+
+  <Card title="Sizing & Specification Controls" color="#38bdf8" icon="ruler-combined">
+    Configurable front-end headings for unit sizing, portions, or package volume choices.
+  </Card>
+
+  <Card title="Multi-Channel Retail Display" color="#f59e0b" icon="store">
+    Dedicated section headers to display store locations, partner retailers, or e-commerce links.
+  </Card>
+</CardGroup>
+
+---
 
 <Warning>
-  Always verify that all labels are accurately translated across all multilingual tabs before publishing to ensure a seamless experience for all global users.
+  Always verify that all static text labels (`select_variant_label`, `choose_size_label`, `available_on_label`) are accurately translated across all multilingual tabs before publishing to ensure a seamless experience for all global users.
 </Warning>
