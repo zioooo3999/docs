@@ -1,0 +1,66 @@
+---
+title: "Documentation Permissions"
+sidebarTitle: "Documentation"
+icon: "file-lines"
+description: "Configure role-based access controls and conditional permissions for the Documentation plugin."
+---
+
+## Overview
+
+The **Documentation Settings Permissions** panel controls user authority to view and manage global configuration settings for the Documentation plugin within the CMS (such as API specification parameters, endpoint restrictions, or documentation access tokens).
+
+It also supports **conditional permissions** to limit access based on specific operational criteria or team hierarchies.
+
+---
+
+## Main Panel Controls
+
+<Frame>
+  ![Documentation Settings Permissions Panel](/images/Screenshot-2026-07-29-150413.png)
+</Frame>
+
+<AccordionGroup>
+  <Accordion title="Expand / Collapse Panel" icon="chevron-down">
+    Located at the top-right corner of the section header. Toggles the visibility of the Documentation settings permission panel.
+  </Accordion>
+
+  <Accordion title="Access Documentation Settings Page" icon="square-check">
+    **Checkbox Permission:** Grants assigned roles access to view and modify global documentation configuration parameters.
+  </Accordion>
+
+  <Accordion title="Select All Options" icon="list-check">
+    **Checkbox Action:** Bulk toggles all general documentation settings permissions at once.
+  </Accordion>
+
+  <Accordion title="Advanced Settings Button" icon="gear">
+    **Gear Icon:** Opens the advanced conditional permissions modal (_Documentation / General_) to set execution criteria.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Advanced Conditions Modal (_Documentation / General_)
+
+Clicking the **Settings** gear icon opens a conditional rules modal allowing administrators to specify exact conditions (_WHEN_) required to grant access.
+
+<Frame>
+  ![Documentation Advanced Conditions Modal](/images/Screenshot-2026-07-29-162021.png)
+</Frame>
+
+### Conditional Rule Options
+
+| Access Condition | Description & Function |
+| :-- | :-- |
+| **CAN ACCESS THE DOCUMENTATION SETTINGS... WHEN** | Dropdown field to select policy constraints or execution rules required for accessing the documentation configuration page. |
+
+---
+
+## Summary Reference
+
+| Control / Action | Type | Function |
+| :-- | :-- | :-- |
+| **Panel Toggle** | Chevron Icon | Expands or collapses the Documentation permissions panel. |
+| **Access Settings Page** | Checkbox | Enables viewing and editing of global documentation preferences. |
+| **Select All** | Checkbox | Toggles all permissions within this section simultaneously. |
+| **Settings (Gear Icon)** | Modal Trigger | Opens conditional access rules modal (_Documentation / General_). |
+| **Apply** | Modal Button | Saves and attaches the selected conditional criteria to the permission rule. |

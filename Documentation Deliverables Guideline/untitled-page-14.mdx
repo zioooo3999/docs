@@ -1,0 +1,88 @@
+---
+title: "API Tokens Permissions"
+sidebarTitle: "API Tokens"
+icon: "key"
+description: "Configure role-based access control, token generation rights, and conditional permissions for API token management."
+---
+
+## Overview
+
+The **API Tokens Permissions** panel manages administrative access for generating and maintaining API tokens used to authenticate external applications and programmatic requests with the CMS.
+
+<Frame>
+  ![API Tokens Permissions Panel](/images/Screenshot-2026-07-29-151726.png)
+</Frame>
+
+---
+
+## Main Panel Controls
+
+<AccordionGroup>
+  <Accordion title="Expand / Collapse Panel" icon="chevron-down">
+    Located at the top-right corner of the section header. Toggles the visibility of the entire API Tokens panel.
+  </Accordion>
+
+  <Accordion title="API TOKENS Sub-section" icon="shield-halved">
+    - **Access the API tokens settings page Checkbox:** Grants permission to open and view the main API Tokens management interface.
+    - **Select All Checkbox:** Toggles access permissions for the _API TOKENS_ sub-section.
+    - **Settings Button (Gear Icon):** Opens the conditional modal (_Api tokens / Api Tokens_) for access control rules.
+  </Accordion>
+
+  <Accordion title="GENERAL Sub-section" icon="sliders">
+    - **Create (generate) Checkbox:** Permits users to generate new API tokens.
+    - **Read Checkbox:** Allows viewing the list of existing API tokens and their metadata.
+    - **Update Checkbox:** Permits modifying existing token properties (e.g., descriptions or expiration rules).
+    - **Regenerate Checkbox:** Allows generating a new token secret key while retaining existing configurations.
+    - **Delete (revoke) Checkbox:** Permits revoking or removing existing API tokens from the system.
+    - **Select All Checkbox:** Toggles all token operational permissions simultaneously.
+    - **Settings Button (Gear Icon):** Opens the advanced conditions modal (_Api tokens / General_) to set granular CRUD rules.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Advanced Conditions Modals
+
+Clicking the **Settings** gear icon next to either sub-section opens a dedicated conditional rules modal to specify exact conditions (_WHEN_) governing access.
+
+### 1. Page Access Conditions (_Api tokens / Api Tokens_)
+
+Controls access rules for viewing the main API Tokens management page.
+
+<Frame>
+  ![API Tokens Page Access Modal](/images/Screenshot-2026-07-29-162213.png)
+</Frame>
+
+| Action Condition | Description & Function |
+| :-- | :-- |
+| **CAN ACCESS THE API TOK... WHEN** | Defines specific conditional rules under which a user can open and view the API tokens configuration page. |
+
+---
+
+### 2. Operations Conditions (_Api tokens / General_)
+
+Controls execution policies for token lifecycle actions (creation, revocation, regeneration).
+
+<Frame>
+  ![API Tokens Operations Modal](/images/Screenshot-2026-07-29-162225.png)
+</Frame>
+
+| Action Condition | Description & Function |
+| :-- | :-- |
+| **CAN CREATE (GENERATE) WHEN** | Defines conditions required for a user to generate new API tokens. |
+| **CAN READ WHEN** | Specifies conditions under which a user can view existing API tokens and metadata. |
+| **CAN UPDATE WHEN** | Sets conditions required to modify existing API token parameters. |
+| **CAN REGENERATE WHEN** | Establishes conditions required to reset/regenerate secret token keys. |
+| **CAN DELETE (REVOKE) WHEN** | Sets conditions required to revoke or delete active API tokens. |
+
+---
+
+## Control Action Summary
+
+| Section | Control / Action | Type | Function |
+| :-- | :-- | :-- | :-- |
+| **Global** | **Panel Toggle** | Chevron Icon | Expands or collapses the entire permissions panel. |
+| **API Tokens** | **Page Access** | Checkbox | Grants access to open the API Tokens management panel. |
+| **General** | **Token Operations** | Checkboxes | Grants rights to generate, read, update, regenerate, or revoke tokens. |
+| **Both** | **Settings (Gear)** | Modal Trigger | Opens conditional access rules modal (_WHEN dropdowns_). |
+| **Both** | **Apply** | Modal Button | Saves and binds the configured conditional logic to the role. |

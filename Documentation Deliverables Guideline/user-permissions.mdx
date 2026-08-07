@@ -1,0 +1,38 @@
+---
+title: "User Permissions"
+---
+
+## Overview
+
+The **Users Permissions Plugin Permissions** setting controls access rights to the core identity and access management configurations of the CMS. It allows administrators to define granular authority over user roles, authentication providers, automated email templates, and advanced security settings.
+
+---
+
+<Frame>
+  ![Users Permissions Plugin Overview](/images/Screenshot-2026-07-23-142637.png "Users Permissions Plugin Overview")
+</Frame>
+
+---
+
+## Permission Categories
+
+| Subsection | Available Actions | Description |
+| :-- | :-- | :-- |
+| **1. Roles** | `Create`, `Read`, `Update`, `Delete`, `Select All` | Controls authority to define, view, modify, or remove user roles within the system. |
+| **2. Providers** | `Read`, `Edit`, `Select All` | Regulates access to third-party authentication providers (e.g., OAuth, Google, GitHub). |
+| **3. Email Templates** | `Read`, `Edit`, `Select All` | Controls authorization to customize automated system emails (e.g., password resets, account activations). |
+| **4. Advanced Settings** | `Read`, `Edit`, `Select All` | Controls access to system security configurations, default roles, and token expiration rules. |
+
+---
+
+## Interface Controls & Options
+
+- **Expand / Collapse Toggle (Chevron Icon):** Located at the top-right corner of the section header to expand or collapse the permission panel.
+- **Select All Checkbox:** Toggles all permissions within a specific subsection (_Roles_, _Providers_, _Email Templates_, or _Advanced Settings_) simultaneously.
+- **Settings Button:** Opens an advanced configuration panel to fine-tune detailed options for each respective subsection.
+
+---
+
+<Note>
+  **Security Advisory:** Restrict modification rights under **Providers** and **Advanced Settings** exclusively to _Super Admin_ accounts to prevent unintended security breaches or authentication misconfigurations.
+</Note>

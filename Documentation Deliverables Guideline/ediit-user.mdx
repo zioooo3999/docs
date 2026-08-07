@@ -1,0 +1,47 @@
+---
+title: "Edit User"
+---
+
+## Overview
+
+The **Edit Admin CMS** feature in the User Management module allows administrators to modify existing user account details, update credentials, adjust roles, and toggle account status (Active/Inactive).
+
+Once saved, updated roles and credentials take effect immediately, ensuring accurate permission management and secure operational access within the CMS.
+
+---
+
+## Form Fields & Actions
+
+<Frame>
+  ![Edit User Form](/images/Group-2.png "Edit User Form")
+</Frame>
+
+| Field / Action | Requirement | Function & Description |
+| :-- | :-- | :-- |
+| **First Name** | _Required_ | Update the user's given name. |
+| **Last Name** | _Optional_ | Update the user's surname or family name. |
+| **Email** | _Required_ | Update the user's email address used for authentication and notifications. |
+| **Username** | _Optional_ | Set or update the unique system identifier for the account. |
+| **Password** | _Optional_ | Input a new password to reset credentials. Leave blank to retain current password. |
+| **Confirm Password** | _Conditional_ | Re-type the new password. Required if the **Password** field is filled. |
+| **Active Status** | _Required_ | Set to **TRUE** to enable account access or **FALSE** to deactivate the account. |
+| **User's Roles** | _Required_ | Modify assigned roles (_Author_, _Editor_, _Super Admin_) to adjust system privileges. |
+| **Save** | _Action_ | Click to permanently apply updates to the user account. |
+
+---
+
+## Modifying User Accounts
+
+To update an existing account, perform the following steps within the form:
+
+1. **Update Personal Information:** Modify the **First Name**, **Last Name**, **Email**, or **Username** as needed.
+2. **Reset Password (Optional):** Enter a new value in the **Password** field and re-enter it in **Confirm Password**. Leave both fields empty if no password reset is required.
+3. **Set Account Status:** Toggle **Active Status** to **TRUE** to maintain active access or **FALSE** to temporarily revoke login access.
+4. **Adjust Roles:** Add or remove permissions using the **User's roles** dropdown menu.
+5. **Save Changes:** Click the **Save** button in the top-right corner to publish all adjustments.
+
+---
+
+<Note>
+  Deactivating an account by setting **Active Status** to `FALSE` preserves all content created by that user while immediately revoking their ability to log into the CMS.
+</Note>
