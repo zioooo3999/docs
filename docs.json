@@ -177,7 +177,14 @@
               "home",
               "list-of-content-1",
               "document-version-and-authorization-1",
-              "Overview",
+              {
+                "group": "2. Overview",
+                "pages": [
+                  "project-background",
+                  "project-objective",
+                  "project-scope"
+                ]
+              },
               {
                 "group": "High-Level Design",
                 "pages": [
